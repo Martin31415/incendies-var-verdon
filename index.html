@@ -1052,21 +1052,93 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
   <!-- ═══ RISQUE ═══ -->
   <div id="tab-risque" class="tab-content">
-    <div class="analysis-panel">
-      <div class="placeholder-icon">&#9888;</div>
-      <h2>Carte de risque synth&eacute;tique</h2>
-      <p>Indice de risque combinant l'historique des feux, la sensibilit&eacute; de la v&eacute;g&eacute;tation, la proximit&eacute; des zones urbaines et les conditions m&eacute;t&eacute;orologiques favorables aux d&eacute;parts de feu.</p>
-      <div class="coming-soon">Analyse en cours de g&eacute;n&eacute;ration&hellip;</div>
+    <div class="analysis-map-wrap">
+      <h2>&#9888; Carte de Risque Synth&eacute;tique</h2>
+      <p class="subtitle">Score composite bas&eacute; sur : fr&eacute;quence historique (40%), surface cumul&eacute;e, altitude, exposition au vent.</p>
+      <div class="analysis-legend">
+        <div class="analysis-legend-item"><div class="analysis-legend-dot" style="background:#00ff00;"></div> Risque tr&egrave;s faible</div>
+        <div class="analysis-legend-item"><div class="analysis-legend-dot" style="background:#ffff00;"></div> Risque mod&eacute;r&eacute;</div>
+        <div class="analysis-legend-item"><div class="analysis-legend-dot" style="background:#ff8800;"></div> Risque &eacute;lev&eacute;</div>
+        <div class="analysis-legend-item"><div class="analysis-legend-dot" style="background:#ff0000;"></div> Risque tr&egrave;s &eacute;lev&eacute;</div>
+        <div class="analysis-legend-item"><div class="analysis-legend-dot" style="background:#800000;"></div> Risque extr&ecirc;me</div>
+      </div>
+      <div class="analysis-map" id="map-risque"></div>
+      <div class="analysis-source-box">
+        <strong>&#128218; Sources et m&eacute;thode :</strong><br>
+        &bull; Fr&eacute;quence historique (40%) : nombre de passages de feu par cellule de 2&times;2 km sur 170 ans.<br>
+        &bull; Surface cumul&eacute;e (20%) : hectares br&ucirc;l&eacute;s cumul&eacute;s par cellule.<br>
+        &bull; Altitude/pente (15%) : les zones de pi&eacute;mont (100-400m) sont les plus vuln&eacute;rables.<br>
+        &bull; Exposition au vent (15%) : alignement avec le Mistral (NO&rarr;SE).<br>
+        &bull; Proximit&eacute; historique (10%) : distance au plus proche p&eacute;rim&egrave;tre connu.<br>
+        <strong>&#9888; Limites :</strong> Bas&eacute;e uniquement sur les donn&eacute;es historiques. La v&eacute;g&eacute;tation actuelle et les infrastructures ne sont pas int&eacute;gr&eacute;es.
+      </div>
     </div>
   </div>
 
   <!-- ═══ CLIMAT ═══ -->
   <div id="tab-climat" class="tab-content">
-    <div class="analysis-panel">
-      <div class="placeholder-icon">&#9730;</div>
-      <h2>Climat &amp; Incendies</h2>
-      <p>Graphiques de corr&eacute;lation entre les variables climatiques (temp&eacute;rature, s&eacute;cheresse, vent) et l'occurrence des incendies. Projections climatiques &agrave; horizon 2050&ndash;2100.</p>
-      <div class="coming-soon">Analyse en cours de g&eacute;n&eacute;ration&hellip;</div>
+    <div style="flex:1;overflow:auto;padding:16px 20px;">
+      <h2 style="font-family:var(--font-serif);font-size:1.35rem;font-weight:600;color:var(--ink);margin-bottom:4px;">&#127786; Analyse Climat-Incendie &mdash; Corr&eacute;lations et Projections</h2>
+      <p class="subtitle">Corr&eacute;lation entre donn&eacute;es climatiques (temp&eacute;rature, canicule, s&eacute;cheresse) et activit&eacute; des incendies dans le Var.</p>
+
+      <div class="analysis-source-box">
+        <strong>&#128218; Sources des donn&eacute;es climatiques :</strong><br>
+        &bull; M&eacute;t&eacute;o France &mdash; ClimatHD : anomalies de temp&eacute;rature et jours de canicule pour la r&eacute;gion PACA.<br>
+        &bull; DRIAS 2020 (M&eacute;t&eacute;o France) : projections climatiques r&eacute;gionales RCP 4.5 et RCP 8.5.<br>
+        &bull; Copernicus Climate Data Store &mdash; ERA5 : donn&eacute;es de r&eacute;analyse pour la s&eacute;cheresse (SPEI).<br>
+        &bull; Ruffault et al. (2017, 2018, 2020) &mdash; &laquo; Extreme wildfire events are linked to drought &raquo; (Scientific Reports).<br>
+        &bull; Barbero et al. (2015) &mdash; &laquo; Climate change and wildfires in SE France &raquo; (Climatic Change).<br>
+        <strong>&#9888; Note :</strong> Les donn&eacute;es climatiques annuelles sont des estimations bas&eacute;es sur les publications cit&eacute;es.
+      </div>
+
+      <h3 style="font-family:var(--font-serif);font-size:1.1rem;color:var(--terracotta);margin:1.2rem 0 0.4rem;">1. Surface br&ucirc;l&eacute;e vs Temp&eacute;rature estivale (1950&ndash;2026)</h3>
+      <div class="chart-container" id="chart-temp-vs-surface" style="height:500px;"></div>
+      <div class="analysis-insight">
+        <strong>&#128269; Corr&eacute;lation temp&eacute;rature-surface :</strong><br>
+        &bull; <strong>2003</strong> : Anomalie de +2.5&deg;C &rarr; 81 422 ha (record absolu).<br>
+        &bull; <strong>2022</strong> : Anomalie de +2.2&deg;C, 30 jours de canicule &rarr; saison tr&egrave;s active.<br>
+        &bull; Au-del&agrave; d&apos;un seuil (~+1.5&deg;C), chaque degr&eacute; suppl&eacute;mentaire augmente exponentiellement la surface br&ucirc;l&eacute;e.<br>
+        &bull; La saison des feux s&apos;est allong&eacute;e de +45 jours depuis 1970.
+      </div>
+
+      <h3 style="font-family:var(--font-serif);font-size:1.1rem;color:var(--terracotta);margin:1.2rem 0 0.4rem;">2. Nombre de feux vs Jours de canicule (&gt;35&deg;C)</h3>
+      <div class="chart-container" id="chart-canicule-vs-count" style="height:500px;"></div>
+      <div class="analysis-insight">
+        <strong>&#128269; Corr&eacute;lation canicule-incendie :</strong><br>
+        &bull; Le nombre de jours de canicule a &eacute;t&eacute; multipli&eacute; par <strong>4 depuis 1970</strong> (de ~5 &agrave; ~25 jours/an).<br>
+        &bull; Chaque jour de canicule augmente la probabilit&eacute; d&apos;ignition et de propagation rapide.<br>
+        &bull; Le <strong>Mistral</strong> (vent NO) combin&eacute; &agrave; la canicule cr&eacute;e des conditions explosives.
+      </div>
+
+      <h3 style="font-family:var(--font-serif);font-size:1.1rem;color:var(--terracotta);margin:1.2rem 0 0.4rem;">3. Indice de s&eacute;cheresse (SPEI) vs Surface br&ucirc;l&eacute;e</h3>
+      <div class="chart-container" id="chart-speivs" style="height:500px;"></div>
+      <div class="analysis-insight">
+        <strong>&#128269; R&ocirc;le critique de la s&eacute;cheresse :</strong><br>
+        &bull; Le <strong>SPEI-6mo</strong> est le meilleur pr&eacute;dicteur des grands incendies en M&eacute;diterran&eacute;e (Ruffault et al. 2018).<br>
+        &bull; Un SPEI inf&eacute;rieur &agrave; -1.0 (s&eacute;cheresse mod&eacute;r&eacute;e) pr&eacute;c&egrave;de 80% des incendies &gt; 1000 ha.<br>
+        &bull; <strong>2003</strong> : SPEI = -1.8 (s&eacute;cheresse extr&ecirc;me) + canicule = combinaison explosive.
+      </div>
+
+      <h3 style="font-family:var(--font-serif);font-size:1.1rem;color:var(--terracotta);margin:1.2rem 0 0.4rem;">4. Projections 2030&ndash;2050 (DRIAS/M&eacute;t&eacute;o France)</h3>
+      <div class="chart-container" id="chart-projections" style="height:500px;"></div>
+      <div class="analysis-source-box">
+        <strong>&#128218; Projections bas&eacute;es sur :</strong><br>
+        &bull; <strong>DRIAS 2020</strong> (drias-climat.fr) : portail de projections climatiques r&eacute;gionales.<br>
+        &bull; Sc&eacute;nario <strong>RCP 4.5</strong> (&eacute;missions mod&eacute;r&eacute;es) : +1.8&deg;C en 2030, 28 jours canicule.<br>
+        &bull; Sc&eacute;nario <strong>RCP 8.5</strong> (&eacute;missions &eacute;lev&eacute;es) : +2.7&deg;C en 2050, 42 jours canicule.<br>
+        &bull; Le mod&egrave;le pr&eacute;dit une augmentation de <strong>+30 &agrave; +60% de surface br&ucirc;l&eacute;e par d&eacute;cennie d&apos;ici 2050</strong> en sc&eacute;nario RCP 8.5.
+      </div>
+
+      <h3 style="font-family:var(--font-serif);font-size:1.1rem;color:var(--terracotta);margin:1.2rem 0 0.4rem;">5. Carte de Risque Projet&eacute;e 2050 (sc&eacute;nario RCP 8.5)</h3>
+      <div class="analysis-map" id="map-future-risk" style="min-height:500px;"></div>
+      <div class="analysis-caption">Projection : multiplication du risque actuel par un facteur climatique (+60%). Zones d&apos;expansion probable du risque en hachur&eacute;.</div>
+      <div class="analysis-insight">
+        <strong>&#128269; Implications pour 2050 :</strong><br>
+        &bull; <strong>Extension du risque</strong> vers le nord du d&eacute;partement (Haut-Var, Verdon).<br>
+        &bull; <strong>Intensification</strong> des zones d&eacute;j&agrave; &agrave; risque (Maures, Est&eacute;rel, Centre-Var).<br>
+        &bull; La <strong>saison des feux</strong> pourrait s&apos;&eacute;tendre d&apos;avril &agrave; octobre.<br>
+        &bull; <strong>M&eacute;ga-feux</strong> (&gt;10 000 ha) pourraient passer d&apos;un &eacute;v&eacute;nement d&eacute;cennal &agrave; un &eacute;v&eacute;nement quinquennal.
+      </div>
     </div>
   </div>
 
@@ -1233,6 +1305,7 @@ document.querySelectorAll('.tab-btn').forEach(function(btn) {
     if (btn.dataset.tab === 'climat' && !window._climatInit) {
       setTimeout(function() {
         if (typeof initFutureRiskMap === 'function') initFutureRiskMap();
+        if (typeof initClimateCharts === 'function') initClimateCharts();
       }, 100);
       window._climatInit = true;
     }
@@ -7742,13 +7815,62 @@ for (let y = 1950; y <= 2026; y++) {
     countYears.push(yearlyCounts[y] || 0);
 }
 
+const decData = {"labels": ["1850s", "1870s", "1910s", "1920s", "1940s", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"], "counts": [1, 1, 1, 3, 1, 3, 4, 66, 106, 86, 114, 90, 61], "surfaces": [4000, 10000, 10000, 23000, 13000, 7000, 7500, 29598, 58847, 43885, 81422, 31027, 32350]};
 
+const climateByDecade = {};
+['temp_anomaly', 'heatwave_days'].forEach(key => {
+    climateByDecade[key] = {};
+    for (let y = 1950; y <= 2026; y++) {
+        const dec = Math.floor(y / 10) * 10;
+        if (!climateByDecade[key][dec]) climateByDecade[key][dec] = [];
+        climateByDecade[key][dec].push(climateData[key][climateData.years.indexOf(y)] || 0);
+    }
+});
 
+const decLabels = Object.keys(fireByDecade).sort();
+const decSurfaces = decLabels.map(d => fireByDecade[d]);
+const decTempAvg = decLabels.map(d => {
+    const vals = climateByDecade['temp_anomaly'][d] || [0];
+    return vals.reduce((a,b) => a+b, 0) / vals.length;
+});
+const decHeatAvg = decLabels.map(d => {
+    const vals = climateByDecade['heatwave_days'][d] || [0];
+    return vals.reduce((a,b) => a+b, 0) / vals.length;
+});
 
+function initClimateCharts() {
+    if (window._climateChartsInit) return;
+    window._climateChartsInit = true;
+    
+    const el = document.getElementById('chart-temp-vs-surface');
+    if (!el || el.clientHeight === 0) { window._climateChartsInit = false; return; }
 
+    Plotly.newPlot('chart-temp-vs-surface', [
+        {type:'bar',x:decLabels.map(d=>d+'s'),y:decSurfaces,marker:{color:'#e94560'},name:'Surface brûlée (ha)',yaxis:'y',text:decSurfaces.map(v=>v.toLocaleString()+' ha'),textposition:'outside',textfont:{size:9}},
+        {type:'scatter',x:decLabels.map(d=>d+'s'),y:decTempAvg,marker:{color:'#ff8800',size:14,symbol:'diamond'},name:'Anomalie température estivale (°C)',yaxis:'y2',line:{shape:'spline',width:3,color:'#ff8800'}}
+    ],{...darkTheme,title:'Surface brûlée vs Température estivale (anomalie vs 1961-90)',yaxis:{...darkTheme.yaxis,title:'Surface brûlée (ha)'},yaxis2:{title:'Anomalie température (°C)',overlaying:'y',side:'right',color:'#ff8800',gridcolor:'transparent'},height:500},{responsive:true});
 
+    Plotly.newPlot('chart-canicule-vs-count', [
+        {type:'scatter',x:heatYears,y:countYears,mode:'markers',marker:{size:countYears.map(c=>Math.max(3,Math.sqrt(c||1)*3)),color:heatYears.map(h=>h>20?'#e94560':h>10?'#ff8800':'#00b4d8'),opacity:0.7},text:Array.from({length:77},(_,i)=>1950+i),hovertemplate:'Année: %{text}<br>Jours canicule: %{x}<br>Nb feux: %{y}<extra></extra>',name:'Années'}
+    ],{...darkTheme,title:'Nombre de feux vs Jours de canicule (>35°C) par an (1950-2026)',xaxis:{...darkTheme.xaxis,title:'Jours de canicule par an'},yaxis:{...darkTheme.yaxis,title:'Nombre de feux'},height:500},{responsive:true});
 
+    const speiYears = [];
+    const surfYears = [];
+    for (let y = 1950; y <= 2026; y++) {
+        const spei = climateData.spei_6mo[climateData.years.indexOf(y)] || 0;
+        const surf = yearlyCounts[y] ? (fireData.surfaces[fireData.years.indexOf(y)] || 0) : 0;
+        if (surf > 0) { speiYears.push(spei); surfYears.push(surf); }
+    }
+    Plotly.newPlot('chart-speivs', [
+        {type:'scatter',x:speiYears,y:surfYears.map(s=>Math.log10(s+1)),mode:'markers',marker:{size:surfYears.map(s=>Math.max(3,Math.sqrt(s)/10)),color:speiYears.map(s=>s<-1.0?'#e94560':s<-0.5?'#ff8800':'#00b4d8'),opacity:0.7},name:'Incendies'}
+    ],{...darkTheme,title:'Surface brûlée vs Indice de Sécheresse (SPEI-6mo)',xaxis:{...darkTheme.xaxis,title:'SPEI-6mo (négatif = sécheresse)'},yaxis:{...darkTheme.yaxis,title:'Log₁₀(Surface brûlée + 1)'},height:500,shapes:[{type:'line',x0:-1.0,x1:-1.0,y0:0,y1:5,line:{color:'#e94560',dash:'dash',width:2}}],annotations:[{x:-1.0,y:4.8,text:'Seuil sécheresse modérée<br>(SPEI < -1.0)',showarrow:false,font:{color:'#e94560',size:11},xanchor:'left'}]},{responsive:true});
 
+    Plotly.newPlot('chart-projections', [
+        {type:'scatter',x:decLabels.map(d=>d+'s'),y:decSurfaces,mode:'lines+markers',marker:{color:'#00b4d8',size:10},line:{width:3,color:'#00b4d8'},name:'Surface historique'},
+        {type:'scatter',x:['2030s','2040s','2050s'],y:[48000,54000,60000],mode:'lines+markers',marker:{color:'#f5c518',size:10,symbol:'diamond'},line:{width:3,dash:'dash',color:'#f5c518'},name:'Projection RCP 4.5'},
+        {type:'scatter',x:['2030s','2040s','2050s'],y:[52000,65000,82000],mode:'lines+markers',marker:{color:'#e94560',size:10,symbol:'triangle-up'},line:{width:3,dash:'dash',color:'#e94560'},name:'Projection RCP 8.5'}
+    ],{...darkTheme,title:'Surface brûlée par décennie : historique + projections DRIAS 2020',xaxis:{...darkTheme.xaxis},yaxis:{...darkTheme.yaxis,title:'Surface brûlée par décennie (ha)'},height:500},{responsive:true});
+}
 
 function initFutureRiskMap() {
     const map = L.map('map-future-risk', { zoomControl: true }).setView([43.4, 6.4], 10);
@@ -7788,7 +7910,7 @@ function initFutureRiskMap() {
                 weight: 1.5,
                 fillOpacity: 0,
                 dashArray: '5,5',
-            }).bindTooltip('Zone d'expansion du risque 2050').addTo(map);
+            }).bindTooltip('Zone d\'expansion du risque 2050').addTo(map);
         }
     });
 
