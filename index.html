@@ -1046,6 +1046,8 @@ var communes = Object.values(communeMap).map(function(c) {
     lat: c.lats / c.count,
     lon: c.lons / c.count,
     _size: Math.min(8000, Math.max(2000, Math.sqrt(c.surface) * 200)),
+  });
+});
 
 // ═══════════════════════════════════════════════
 // TAB SWITCHING
