@@ -1205,7 +1205,7 @@ function decadeColor(y) {
 }
 
 // Process data
-var RAW_DATA = null;
+window.RAW_DATA = null;
 var processed = null;
 var communes = null;
 
@@ -1213,7 +1213,7 @@ var communes = null;
   fetch('data/incendies_verified.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
-      RAW_DATA = data;
+      window.RAW_DATA = data;
       runPipeline();
     })
     .catch(function(e) {
@@ -1223,7 +1223,7 @@ var communes = null;
 })();
 
 function runPipeline() {
-  processed = RAW_DATA.map(function(f) {
+  processed = window.RAW_DATA.map(function(f) {
   var geo = (f.perimetre_geojson && f.perimetre_geojson !== null)
     ? f.perimetre_geojson
     : circlePolygon(f.lon, f.lat, f.surface_ha);
@@ -7936,6 +7936,6 @@ function initFutureRiskMap() {
     });
 }
 </script>
-<div style="text-align:center;padding:6px 0 12px;font-size:0.6rem;color:#8a7d6e;opacity:0.5;font-family:var(--font-sans);">v1.6</div>
+<div style="text-align:center;padding:6px 0 12px;font-size:0.6rem;color:#8a7d6e;opacity:0.5;font-family:var(--font-sans);">v1.7</div>
 </body>
 </html>
