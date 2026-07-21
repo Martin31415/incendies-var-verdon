@@ -1,0 +1,5372 @@
+[
+  {
+    "id": "fire-1854-0000",
+    "lat_depart": 43.275,
+    "lon_depart": 6.36,
+    "source_depart": "Archives historiques - Massif des Maures",
+    "fiabilite_depart": "approximative",
+    "precision_m": 5000,
+    "lieu_dit_depart": "Massif des Maures (centre approximatif)",
+    "contexte_depart": "forêt méditerranéenne"
+  },
+  {
+    "id": "fire-1877-0001",
+    "lat_depart": 43.285,
+    "lon_depart": 6.37,
+    "source_depart": "Archives historiques - Massif des Maures",
+    "fiabilite_depart": "approximative",
+    "precision_m": 5000,
+    "lieu_dit_depart": "Massif des Maures (centre approximatif)",
+    "contexte_depart": "forêt méditerranéenne"
+  },
+  {
+    "id": "fire-1918-0002",
+    "lat_depart": 43.438,
+    "lon_depart": 6.826,
+    "source_depart": "Archives historiques - Saint-Raphaël à Mandelieu",
+    "fiabilite_depart": "approximative",
+    "precision_m": 3000,
+    "lieu_dit_depart": "Valescure / Agay (Saint-Raphaël)",
+    "contexte_depart": "massif forestier de l'Estérel"
+  },
+  {
+    "id": "fire-1921-0003",
+    "lat_depart": 43.495,
+    "lon_depart": 6.815,
+    "source_depart": "Archives historiques - Massif de l'Estérel",
+    "fiabilite_depart": "approximative",
+    "precision_m": 5000,
+    "lieu_dit_depart": "Massif de l'Estérel (cœur du massif)",
+    "contexte_depart": "massif forestier de l'Estérel"
+  },
+  {
+    "id": "fire-1923-0004",
+    "lat_depart": 43.48,
+    "lon_depart": 6.795,
+    "source_depart": "Archives historiques - 8 morts, Estérel",
+    "fiabilite_depart": "approximative",
+    "precision_m": 5000,
+    "lieu_dit_depart": "Massif de l'Estérel (secteur du Mont Vinaigre)",
+    "contexte_depart": "massif forestier de l'Estérel"
+  },
+  {
+    "id": "fire-1927-0005",
+    "lat_depart": 43.505,
+    "lon_depart": 6.8,
+    "source_depart": "Archives historiques - Massif de l'Estérel",
+    "fiabilite_depart": "approximative",
+    "precision_m": 5000,
+    "lieu_dit_depart": "Massif de l'Estérel",
+    "contexte_depart": "massif forestier de l'Estérel"
+  },
+  {
+    "id": "fire-1943-0006",
+    "lat_depart": 43.488,
+    "lon_depart": 6.83,
+    "source_depart": "Archives historiques - 13 000 ha Estérel",
+    "fiabilite_depart": "approximative",
+    "precision_m": 5000,
+    "lieu_dit_depart": "Massif de l'Estérel (secteur est)",
+    "contexte_depart": "massif forestier de l'Estérel"
+  },
+  {
+    "id": "fire-1950-0007",
+    "lat_depart": 43.307538,
+    "lon_depart": 6.359592,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 1000,
+    "lieu_dit_depart": "Zone périurbaine, Massif des Maures, Massif des Maures",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1955-0008",
+    "lat_depart": 43.485484,
+    "lon_depart": 6.814592,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 1000,
+    "lieu_dit_depart": "Zone périurbaine, Massif de l'Estérel, Massif de l'Estérel",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1958-0009",
+    "lat_depart": 43.274559,
+    "lon_depart": 6.328758,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Babaou D41, Collobrières",
+    "contexte_depart": "col, bord de route"
+  },
+  {
+    "id": "fire-1960-0010",
+    "lat_depart": 43.269173,
+    "lon_depart": 6.536905,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D14 vers Cogolin, Grimaud",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1962-0011",
+    "lat_depart": 43.473304,
+    "lon_depart": 6.772506,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Malpasset/Reyran, Fréjus",
+    "contexte_depart": "garrigue, piste"
+  },
+  {
+    "id": "fire-1965-0012",
+    "lat_depart": 43.16527,
+    "lon_depart": 6.370054,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Caguo Ven, Bormes-les-Mimosas",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-1967-0013",
+    "lat_depart": 43.430292,
+    "lon_depart": 6.861838,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Agay D559, Saint-Raphaël",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1970-0014",
+    "lat_depart": 43.588985,
+    "lon_depart": 6.863995,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Chemin des Suvières D562, Tanneron",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1971-0015",
+    "lat_depart": 43.310753,
+    "lon_depart": 6.44953,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Vignon D558, La Garde-Freinet",
+    "contexte_depart": "col, maquis"
+  },
+  {
+    "id": "fire-1972-0016",
+    "lat_depart": 43.473264,
+    "lon_depart": 6.555889,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D125 vers Le Muy, Le Muy",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1973-0017",
+    "lat_depart": 43.302411,
+    "lon_depart": 6.238124,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Carnoules, Pignans",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1973-0018",
+    "lat_depart": 43.259812,
+    "lon_depart": 6.306705,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Notre-Dame-des-Anges, Collobrières",
+    "contexte_depart": "maquis"
+  },
+  {
+    "id": "fire-1973-0019",
+    "lat_depart": 43.263575,
+    "lon_depart": 6.291619,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Taillude, Grimaud",
+    "contexte_depart": "col"
+  },
+  {
+    "id": "fire-1973-0020",
+    "lat_depart": 43.260308,
+    "lon_depart": 6.539725,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D14 vers Grimaud, Cogolin",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1973-0021",
+    "lat_depart": 43.213552,
+    "lon_depart": 6.600347,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Gassin D61, Ramatuelle",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1973-0022",
+    "lat_depart": 43.581343,
+    "lon_depart": 6.889695,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D138 vers Auribeau, Tanneron",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1973-0023",
+    "lat_depart": 43.731665,
+    "lon_depart": 5.957995,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D82 vers Gréoux, Esparron-de-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1973-0024",
+    "lat_depart": 43.735456,
+    "lon_depart": 5.959488,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D82 vers Gréoux, Esparron-de-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1973-0025",
+    "lat_depart": 43.242843,
+    "lon_depart": 6.34635,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D14 vers Grimaud, Collobrières",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1973-0026",
+    "lat_depart": 43.832423,
+    "lon_depart": 5.991555,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Plateau D6, Valensole",
+    "contexte_depart": "plateau, bord de route"
+  },
+  {
+    "id": "fire-1974-0027",
+    "lat_depart": 43.200383,
+    "lon_depart": 5.747862,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D66 vers Le Beausset, Le Castellet",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1974-0028",
+    "lat_depart": 43.461738,
+    "lon_depart": 6.797266,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Valescure D100, Saint-Raphaël",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1974-0029",
+    "lat_depart": 43.224173,
+    "lon_depart": 6.085978,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Pierrefeu, Cuers",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1974-0030",
+    "lat_depart": 43.762284,
+    "lon_depart": 5.755794,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Sainte-Tulle, Corbières-en-Provence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1974-0031",
+    "lat_depart": 43.250368,
+    "lon_depart": 5.789251,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Circuit Paul Ricard, Le Castellet",
+    "contexte_depart": "zone périurbaine"
+  },
+  {
+    "id": "fire-1974-0032",
+    "lat_depart": 43.455304,
+    "lon_depart": 6.667926,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D8 vers la plaine, Puget-sur-Argens",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1974-0033",
+    "lat_depart": 43.842532,
+    "lon_depart": 6.232315,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers La Palud, Moustiers-Sainte-Marie",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1974-0034",
+    "lat_depart": 43.318984,
+    "lon_depart": 6.374561,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Mayons D41, Vidauban",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1975-0035",
+    "lat_depart": 43.782218,
+    "lon_depart": 5.759697,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Sainte-Tulle",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1975-0036",
+    "lat_depart": 43.497967,
+    "lon_depart": 6.838647,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A8 Aire de l'Estérel, Fréjus",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-1975-0037",
+    "lat_depart": 43.635166,
+    "lon_depart": 6.238736,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D557 vers Salernes, Aups",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1975-0038",
+    "lat_depart": 43.550736,
+    "lon_depart": 6.541189,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D25 vers Bargemon, Callas",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1975-0039",
+    "lat_depart": 43.371289,
+    "lon_depart": 6.245122,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Le Luc, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1975-0040",
+    "lat_depart": 43.461301,
+    "lon_depart": 6.70469,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A8 échangeur Puget, Puget-sur-Argens",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-1975-0041",
+    "lat_depart": 43.315394,
+    "lon_depart": 6.360627,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D41, centre, Les Mayons",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1975-0042",
+    "lat_depart": 43.309011,
+    "lon_depart": 6.254813,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D39 vers Gonfaron, Pignans",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1975-0043",
+    "lat_depart": 43.452292,
+    "lon_depart": 6.667916,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D8 vers la plaine, Puget-sur-Argens",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1975-0044",
+    "lat_depart": 43.288544,
+    "lon_depart": 5.848042,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D2 vers Le Beausset, Signes",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1975-0045",
+    "lat_depart": 44.028795,
+    "lon_depart": 5.935692,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Forcalquier, Peyruis",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1975-0046",
+    "lat_depart": 43.337901,
+    "lon_depart": 6.302864,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Aire des Sigues A57, Gonfaron",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-1975-0047",
+    "lat_depart": 43.700553,
+    "lon_depart": 6.053955,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D11, Basses Gorges du Verdon, Quinson",
+    "contexte_depart": "garrigue, gorge"
+  },
+  {
+    "id": "fire-1976-0048",
+    "lat_depart": 43.249021,
+    "lon_depart": 6.519902,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Chemin du Train des Pignes, Cogolin",
+    "contexte_depart": "piste"
+  },
+  {
+    "id": "fire-1976-0049",
+    "lat_depart": 43.042467,
+    "lon_depart": 6.122289,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Presqu'île de Giens, Hyères",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-1976-0050",
+    "lat_depart": 43.212331,
+    "lon_depart": 6.070036,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Solliès-Pont, Cuers",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1976-0051",
+    "lat_depart": 43.418405,
+    "lon_depart": 6.847765,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Le Dramont, Saint-Raphaël",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1976-0052",
+    "lat_depart": 43.875436,
+    "lon_depart": 5.838163,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Volx",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1976-0053",
+    "lat_depart": 43.406205,
+    "lon_depart": 6.395381,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Plaine des Maures D48, Vidauban",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1977-0054",
+    "lat_depart": 43.197568,
+    "lon_depart": 6.666091,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Cap Camarat, Ramatuelle",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-1977-0055",
+    "lat_depart": 43.141574,
+    "lon_depart": 6.351515,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D41 vers Le Lavandou, Bormes-les-Mimosas",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1977-0056",
+    "lat_depart": 43.188368,
+    "lon_depart": 6.576944,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D93, Gigaro, La Croix-Valmer",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1977-0057",
+    "lat_depart": 43.783121,
+    "lon_depart": 5.76161,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Sainte-Tulle",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1978-0058",
+    "lat_depart": 43.263376,
+    "lon_depart": 6.535459,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "ZAC Valensole, Cogolin",
+    "contexte_depart": "zone commerciale"
+  },
+  {
+    "id": "fire-1978-0059",
+    "lat_depart": 43.409894,
+    "lon_depart": 6.066666,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Tourves, Brignoles",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1978-0060",
+    "lat_depart": 43.355784,
+    "lon_depart": 6.197647,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D29 vers Cabasse, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1978-0061",
+    "lat_depart": 43.516794,
+    "lon_depart": 6.792723,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D37 vers Montauroux, Les Adrets-de-l'Estérel",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1978-0062",
+    "lat_depart": 43.615613,
+    "lon_depart": 5.775526,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D561 vers Varages, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1978-0063",
+    "lat_depart": 43.267402,
+    "lon_depart": 6.495233,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Collobrières D14, Grimaud",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1978-0064",
+    "lat_depart": 43.815236,
+    "lon_depart": 6.072552,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Valensole, Riez",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1978-0065",
+    "lat_depart": 43.295116,
+    "lon_depart": 6.499119,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D14 vers Grimaud, La Garde-Freinet",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1978-0066",
+    "lat_depart": 43.427541,
+    "lon_depart": 6.044308,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D554 vers Le Val, Brignoles",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1978-0067",
+    "lat_depart": 43.890975,
+    "lon_depart": 5.855443,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Villeneuve",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1979-0068",
+    "lat_depart": 43.339189,
+    "lon_depart": 6.569754,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D74 vers Sainte-Maxime, Plan-de-la-Tour",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1979-0069",
+    "lat_depart": 43.2683,
+    "lon_depart": 6.3508,
+    "source_depart": "Archives SDIS 83 / Prométhée",
+    "fiabilite_depart": "probable",
+    "precision_m": 2000,
+    "lieu_dit_depart": "Col du Gratteloup / D14, Collobrières",
+    "contexte_depart": "piste forestière, maquis"
+  },
+  {
+    "id": "fire-1979-0070",
+    "lat_depart": 43.370122,
+    "lon_depart": 6.240963,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Le Luc, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1979-0071",
+    "lat_depart": 43.841096,
+    "lon_depart": 5.803783,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Colline de Toutes Aures, Manosque",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1979-0072",
+    "lat_depart": 43.775502,
+    "lon_depart": 6.262492,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D71 Route des Crêtes, Aiguines",
+    "contexte_depart": "bord de route touristique, garrigue"
+  },
+  {
+    "id": "fire-1979-0073",
+    "lat_depart": 43.389665,
+    "lon_depart": 6.343373,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97, Plaine des Maures, Le Cannet-des-Maures",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1979-0074",
+    "lat_depart": 43.403132,
+    "lon_depart": 6.321804,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D12 vers Le Luc, Le Cannet-des-Maures",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1979-0075",
+    "lat_depart": 43.826781,
+    "lon_depart": 6.029676,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Riez, Valensole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1979-0076",
+    "lat_depart": 43.509312,
+    "lon_depart": 6.409948,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D562 vers Draguignan, Lorgues",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1979-0077",
+    "lat_depart": 43.299832,
+    "lon_depart": 6.338094,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Gratteloup, Les Mayons",
+    "contexte_depart": "col, maquis"
+  },
+  {
+    "id": "fire-1979-0078",
+    "lat_depart": 43.208463,
+    "lon_depart": 6.172373,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D12 vers Collobrières, Pierrefeu-du-Var",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1979-0079",
+    "lat_depart": 43.503197,
+    "lon_depart": 6.809243,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col du Testanier, Fréjus",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-1980-0080",
+    "lat_depart": 43.614179,
+    "lon_depart": 6.55209,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D25 vers Callas, Bargemon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1980-0081",
+    "lat_depart": 43.388145,
+    "lon_depart": 6.076248,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Cabasse, Brignoles",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1980-0082",
+    "lat_depart": 43.874849,
+    "lon_depart": 6.383646,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D21 vers Castellane, Blieux",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1980-0083",
+    "lat_depart": 43.229114,
+    "lon_depart": 6.311049,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Capelle, Collobrières",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1980-0084",
+    "lat_depart": 43.624864,
+    "lon_depart": 6.712595,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D562 vers Seillans, Fayence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1980-0085",
+    "lat_depart": 43.160854,
+    "lon_depart": 6.374279,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D41, col de Caguo Ven, Le Lavandou",
+    "contexte_depart": "col"
+  },
+  {
+    "id": "fire-1981-0086",
+    "lat_depart": 43.701062,
+    "lon_depart": 6.519167,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D955 vers Draguignan, Comps-sur-Artuby",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1981-0087",
+    "lat_depart": 43.690786,
+    "lon_depart": 6.477993,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Camp militaire Canjuers, Comps-sur-Artuby",
+    "contexte_depart": "zone militaire"
+  },
+  {
+    "id": "fire-1981-0088",
+    "lat_depart": 43.597761,
+    "lon_depart": 5.721966,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D23 vers Vinon, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1981-0089",
+    "lat_depart": 43.188237,
+    "lon_depart": 6.577899,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D93, Gigaro, La Croix-Valmer",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1981-0090",
+    "lat_depart": 43.908736,
+    "lon_depart": 6.280873,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D17 vers Barrême, Majastres",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1981-0091",
+    "lat_depart": 43.908982,
+    "lon_depart": 6.282745,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D17 vers Barrême, Majastres",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1981-0092",
+    "lat_depart": 43.26366,
+    "lon_depart": 6.28813,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Taillude, Collobrières",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-1981-0093",
+    "lat_depart": 43.216882,
+    "lon_depart": 6.136779,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Cuers, Pierrefeu-du-Var",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1981-0094",
+    "lat_depart": 43.369083,
+    "lon_depart": 6.687755,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Issambres D559, Roquebrune-sur-Argens",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1982-0095",
+    "lat_depart": 43.226617,
+    "lon_depart": 6.083978,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Pierrefeu, Cuers",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1982-0096",
+    "lat_depart": 43.969222,
+    "lon_depart": 6.492251,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D955 vers Digne, Saint-André-les-Alpes",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1982-0097",
+    "lat_depart": 43.355725,
+    "lon_depart": 6.196877,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D29 vers Cabasse, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1982-0098",
+    "lat_depart": 43.825962,
+    "lon_depart": 5.771321,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D907 vers Pierrevert, Manosque",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1982-0099",
+    "lat_depart": 44.001745,
+    "lon_depart": 5.990732,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4 vers Oraison, Les Mées",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1982-0100",
+    "lat_depart": 43.112442,
+    "lon_depart": 6.322226,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Cabasson, Bormes-les-Mimosas",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1982-0101",
+    "lat_depart": 43.7722,
+    "lon_depart": 6.2619,
+    "source_depart": "Archives SDIS 83 / Presse locale",
+    "fiabilite_depart": "probable",
+    "precision_m": 2000,
+    "lieu_dit_depart": "Route des Crêtes (D71), près d'Aiguines",
+    "contexte_depart": "garrigue, bord de route touristique"
+  },
+  {
+    "id": "fire-1982-0102",
+    "lat_depart": 43.418026,
+    "lon_depart": 6.811166,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Boulouris, Saint-Raphaël",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1982-0103",
+    "lat_depart": 43.150773,
+    "lon_depart": 6.226608,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Le Collet D88, La Londe-les-Maures",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1982-0104",
+    "lat_depart": 43.320943,
+    "lon_depart": 6.345123,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Piste DFCI, Les Mayons",
+    "contexte_depart": "piste forestière"
+  },
+  {
+    "id": "fire-1982-0105",
+    "lat_depart": 43.508202,
+    "lon_depart": 6.380133,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Flayosc D557, Lorgues",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1982-0106",
+    "lat_depart": 43.81861,
+    "lon_depart": 6.074988,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Valensole, Riez",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1982-0107",
+    "lat_depart": 43.280955,
+    "lon_depart": 6.291369,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Notre-Dame-des-Anges, Pignans",
+    "contexte_depart": "piste"
+  },
+  {
+    "id": "fire-1983-0108",
+    "lat_depart": 43.40513,
+    "lon_depart": 6.344171,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 Plaine des Maures, Le Luc",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1983-0109",
+    "lat_depart": 43.796299,
+    "lon_depart": 6.411329,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952, Point Sublime, Rougon",
+    "contexte_depart": "garrigue, falaise"
+  },
+  {
+    "id": "fire-1983-0110",
+    "lat_depart": 43.260271,
+    "lon_depart": 6.540949,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D14 vers Grimaud, Cogolin",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1983-0111",
+    "lat_depart": 43.535463,
+    "lon_depart": 6.483532,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Maljournal D557, Draguignan",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1983-0112",
+    "lat_depart": 43.292918,
+    "lon_depart": 5.848134,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D2 vers Le Beausset, Signes",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1983-0113",
+    "lat_depart": 43.410876,
+    "lon_depart": 6.393508,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D72 vers Le Luc, Vidauban",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1983-0114",
+    "lat_depart": 43.39943,
+    "lon_depart": 6.326605,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A57 échangeur Le Luc, Le Luc",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-1983-0115",
+    "lat_depart": 43.733859,
+    "lon_depart": 5.959974,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D82 vers Gréoux, Esparron-de-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1983-0116",
+    "lat_depart": 43.430298,
+    "lon_depart": 6.860086,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Agay D559, Saint-Raphaël",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1983-0117",
+    "lat_depart": 43.083628,
+    "lon_depart": 6.356231,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Cap Bénat, Le Lavandou",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-1983-0118",
+    "lat_depart": 43.322894,
+    "lon_depart": 6.648503,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de la Grange D74, Sainte-Maxime",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-1984-0119",
+    "lat_depart": 43.326255,
+    "lon_depart": 6.310409,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route des Mayons D39, Gonfaron",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1984-0120",
+    "lat_depart": 43.456167,
+    "lon_depart": 6.701004,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A8 échangeur Puget, Puget-sur-Argens",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-1984-0121",
+    "lat_depart": 43.477769,
+    "lon_depart": 6.63468,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Bouverie D7, Roquebrune-sur-Argens",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1984-0122",
+    "lat_depart": 43.617424,
+    "lon_depart": 5.776128,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D561 vers Varages, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1984-0123",
+    "lat_depart": 43.889465,
+    "lon_depart": 5.853268,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Villeneuve",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1984-0124",
+    "lat_depart": 43.719023,
+    "lon_depart": 5.821526,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Gréoux, Vinon-sur-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1984-0125",
+    "lat_depart": 43.700611,
+    "lon_depart": 6.518819,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D955 vers Draguignan, Comps-sur-Artuby",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1984-0126",
+    "lat_depart": 43.30991,
+    "lon_depart": 6.237453,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Carnoules, Pignans",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1985-0127",
+    "lat_depart": 43.319719,
+    "lon_depart": 6.358335,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D41, centre, Les Mayons",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1985-0128",
+    "lat_depart": 43.215098,
+    "lon_depart": 6.066159,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Solliès-Pont, Cuers",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1985-0129",
+    "lat_depart": 43.959405,
+    "lon_depart": 6.357461,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4085 vers Chaudon, Barrême",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1985-0130",
+    "lat_depart": 43.891049,
+    "lon_depart": 5.856707,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Villeneuve",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1985-0131",
+    "lat_depart": 43.548988,
+    "lon_depart": 6.537373,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D25 vers Bargemon, Callas",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1985-0132",
+    "lat_depart": 43.632448,
+    "lon_depart": 6.239434,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D557 vers Salernes, Aups",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1985-0133",
+    "lat_depart": 43.589476,
+    "lon_depart": 6.784778,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D37 vers le lac de Saint-Cassien, Montauroux",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1985-0134",
+    "lat_depart": 43.590638,
+    "lon_depart": 6.784192,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D37 vers le lac de Saint-Cassien, Montauroux",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1985-0135",
+    "lat_depart": 43.368503,
+    "lon_depart": 6.689147,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Issambres D559, Roquebrune-sur-Argens",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1985-0136",
+    "lat_depart": 43.59496,
+    "lon_depart": 6.85217,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Le Mitan, Tanneron",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1985-0137",
+    "lat_depart": 44.183256,
+    "lon_depart": 5.935451,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Massif de la Baume D4, Sisteron",
+    "contexte_depart": "garrigue"
+  },
+  {
+    "id": "fire-1986-0138",
+    "lat_depart": 43.411077,
+    "lon_depart": 6.06928,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Tourves, Brignoles",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1986-0139",
+    "lat_depart": 43.686049,
+    "lon_depart": 6.478158,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Camp militaire Canjuers, Comps-sur-Artuby",
+    "contexte_depart": "zone militaire"
+  },
+  {
+    "id": "fire-1986-0140",
+    "lat_depart": 43.470768,
+    "lon_depart": 6.325635,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D10 vers Le Thoronet, Lorgues",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1986-0141",
+    "lat_depart": 43.208056,
+    "lon_depart": 6.168211,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D12 vers Collobrières, Pierrefeu-du-Var",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1986-0142",
+    "lat_depart": 43.731145,
+    "lon_depart": 5.959475,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D82 vers Gréoux, Esparron-de-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1986-0143",
+    "lat_depart": 43.764575,
+    "lon_depart": 5.88128,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Plateau D6, Gréoux-les-Bains",
+    "contexte_depart": "plateau, végétation méditerranéenne"
+  },
+  {
+    "id": "fire-1986-0144",
+    "lat_depart": 43.199194,
+    "lon_depart": 5.750048,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D66 vers Le Beausset, Le Castellet",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1986-0145",
+    "lat_depart": 44.00655,
+    "lon_depart": 5.990244,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4 vers Oraison, Les Mées",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1986-0146",
+    "lat_depart": 43.288539,
+    "lon_depart": 5.848982,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D2 vers Le Beausset, Signes",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1986-0147",
+    "lat_depart": 43.12978,
+    "lon_depart": 6.248457,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Bormettes, La Londe-les-Maures",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1986-0148",
+    "lat_depart": 43.401414,
+    "lon_depart": 5.929275,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Brignoles, Tourves",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1986-0149",
+    "lat_depart": 43.588915,
+    "lon_depart": 6.782829,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D37 vers le lac de Saint-Cassien, Montauroux",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1986-0150",
+    "lat_depart": 43.4925,
+    "lon_depart": 6.84,
+    "source_depart": "Archives SDIS 83 / Rapport sénatorial 1987",
+    "fiabilite_depart": "probable",
+    "precision_m": 1500,
+    "lieu_dit_depart": "Bord de l'A8, secteur Aire de l'Estérel",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-1986-0151",
+    "lat_depart": 43.097211,
+    "lon_depart": 6.088535,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D559 vers Carqueiranne, Hyères",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1986-0152",
+    "lat_depart": 43.420669,
+    "lon_depart": 6.044777,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D554 vers Le Val, Brignoles",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1986-0153",
+    "lat_depart": 43.28038,
+    "lon_depart": 6.54236,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Gardiole, Grimaud",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1986-0154",
+    "lat_depart": 43.157773,
+    "lon_depart": 6.354438,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Verrerie, Bormes-les-Mimosas",
+    "contexte_depart": "piste forestière"
+  },
+  {
+    "id": "fire-1987-0155",
+    "lat_depart": 43.394409,
+    "lon_depart": 6.362651,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Gonfaron D39, Vidauban",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1987-0156",
+    "lat_depart": 43.390011,
+    "lon_depart": 6.077887,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Cabasse, Brignoles",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1987-0157",
+    "lat_depart": 43.876843,
+    "lon_depart": 5.83522,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Volx",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1987-0158",
+    "lat_depart": 43.20733,
+    "lon_depart": 6.492807,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D98 vers Cogolin, La Môle",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1987-0159",
+    "lat_depart": 44.004359,
+    "lon_depart": 5.988991,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4 vers Oraison, Les Mées",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1987-0160",
+    "lat_depart": 43.591018,
+    "lon_depart": 6.785123,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D37 vers le lac de Saint-Cassien, Montauroux",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1987-0161",
+    "lat_depart": 43.145773,
+    "lon_depart": 6.158255,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D554 vers Pierrefeu, Hyères",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1987-0162",
+    "lat_depart": 43.142182,
+    "lon_depart": 6.265509,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D559 vers Bormes, La Londe-les-Maures",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1988-0163",
+    "lat_depart": 43.406102,
+    "lon_depart": 5.928816,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Brignoles, Tourves",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1988-0164",
+    "lat_depart": 43.784843,
+    "lon_depart": 5.766149,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Sainte-Tulle",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1988-0165",
+    "lat_depart": 43.784375,
+    "lon_depart": 5.761882,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Sainte-Tulle",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1988-0166",
+    "lat_depart": 43.201689,
+    "lon_depart": 6.452561,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de la Grange, La Môle",
+    "contexte_depart": "col"
+  },
+  {
+    "id": "fire-1988-0167",
+    "lat_depart": 43.371917,
+    "lon_depart": 6.245912,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Le Luc, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1988-0168",
+    "lat_depart": 43.501471,
+    "lon_depart": 6.818928,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Pic de l'Ours, Les Adrets-de-l'Estérel",
+    "contexte_depart": "piste"
+  },
+  {
+    "id": "fire-1988-0169",
+    "lat_depart": 43.193796,
+    "lon_depart": 6.693049,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Escalet, Ramatuelle",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-1988-0170",
+    "lat_depart": 43.182023,
+    "lon_depart": 6.5351,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D559 vers Rayol, Cavalaire-sur-Mer",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1989-0171",
+    "lat_depart": 43.612388,
+    "lon_depart": 6.5494,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D25 vers Callas, Bargemon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1989-0172",
+    "lat_depart": 43.609887,
+    "lon_depart": 6.55118,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D25 vers Callas, Bargemon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1989-0173",
+    "lat_depart": 43.589925,
+    "lon_depart": 6.86334,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Chemin des Suvières D562, Tanneron",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1989-0174",
+    "lat_depart": 43.577898,
+    "lon_depart": 6.891908,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D138 vers Auribeau, Tanneron",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1989-0175",
+    "lat_depart": 43.471215,
+    "lon_depart": 6.504823,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D555 vers Trans, Les Arcs",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1989-0176",
+    "lat_depart": 43.2163,
+    "lon_depart": 6.604054,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Gassin D61, Ramatuelle",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1989-0177",
+    "lat_depart": 43.970976,
+    "lon_depart": 6.494466,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D955 vers Digne, Saint-André-les-Alpes",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1989-0178",
+    "lat_depart": 43.3106,
+    "lon_depart": 6.4503,
+    "source_depart": "Archives SDIS 83 / Prométhée",
+    "fiabilite_depart": "probable",
+    "precision_m": 2000,
+    "lieu_dit_depart": "Col de Vignon / D558, La Garde-Freinet",
+    "contexte_depart": "maquis, bord de route"
+  },
+  {
+    "id": "fire-1989-0179",
+    "lat_depart": 43.789071,
+    "lon_depart": 6.381323,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers La Palud, Rougon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1989-0180",
+    "lat_depart": 43.592843,
+    "lon_depart": 5.722966,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D23 vers Vinon, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1989-0181",
+    "lat_depart": 43.910069,
+    "lon_depart": 6.279717,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D17 vers Barrême, Majastres",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1989-0182",
+    "lat_depart": 43.58553,
+    "lon_depart": 6.786694,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D37 vers le lac de Saint-Cassien, Montauroux",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1989-0183",
+    "lat_depart": 43.165818,
+    "lon_depart": 6.370543,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Caguo Ven, Bormes-les-Mimosas",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-1989-0184",
+    "lat_depart": 43.508147,
+    "lon_depart": 6.404228,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D562 vers Draguignan, Lorgues",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1989-0185",
+    "lat_depart": 43.296981,
+    "lon_depart": 6.617148,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Sémaphore D125, Sainte-Maxime",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1990-0186",
+    "lat_depart": 43.324796,
+    "lon_depart": 6.644477,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de la Grange D74, Sainte-Maxime",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-1990-0187",
+    "lat_depart": 43.197461,
+    "lon_depart": 6.668674,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Cap Camarat, Ramatuelle",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-1990-0188",
+    "lat_depart": 43.217789,
+    "lon_depart": 6.464097,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Piste du barrage, La Môle",
+    "contexte_depart": "piste"
+  },
+  {
+    "id": "fire-1990-0189",
+    "lat_depart": 43.251587,
+    "lon_depart": 5.78872,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Circuit Paul Ricard, Le Castellet",
+    "contexte_depart": "zone périurbaine"
+  },
+  {
+    "id": "fire-1990-0190",
+    "lat_depart": 43.877461,
+    "lon_depart": 6.379307,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D21 vers Castellane, Blieux",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1990-0191",
+    "lat_depart": 43.471685,
+    "lon_depart": 6.633545,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Bouverie D7, Roquebrune-sur-Argens",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1990-0192",
+    "lat_depart": 43.462385,
+    "lon_depart": 6.799021,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Valescure D100, Saint-Raphaël",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1990-0193",
+    "lat_depart": 43.783621,
+    "lon_depart": 6.258979,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D19 vers La Palud, Aiguines",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1990-0194",
+    "lat_depart": 43.038348,
+    "lon_depart": 6.119313,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Presqu'île de Giens, Hyères",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-1990-0195",
+    "lat_depart": 43.275,
+    "lon_depart": 6.3256,
+    "source_depart": "Archives SDIS 83 / Var-Matin août 1990",
+    "fiabilite_depart": "probable",
+    "precision_m": 1000,
+    "lieu_dit_depart": "Col de Babaou, D41, Collobrières",
+    "contexte_depart": "bord de route départementale, maquis"
+  },
+  {
+    "id": "fire-1990-0196",
+    "lat_depart": 43.194004,
+    "lon_depart": 6.69216,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Escalet, Ramatuelle",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-1990-0197",
+    "lat_depart": 43.325218,
+    "lon_depart": 6.463576,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Notre-Dame de Miremer, La Garde-Freinet",
+    "contexte_depart": "piste forestière"
+  },
+  {
+    "id": "fire-1990-0198",
+    "lat_depart": 43.206877,
+    "lon_depart": 6.495075,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D98 vers Cogolin, La Môle",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1990-0199",
+    "lat_depart": 43.517022,
+    "lon_depart": 6.794806,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D37 vers Montauroux, Les Adrets-de-l'Estérel",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1990-0200",
+    "lat_depart": 44.095444,
+    "lon_depart": 6.253277,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D900 vers Barles, Digne-les-Bains",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1990-0201",
+    "lat_depart": 43.359354,
+    "lon_depart": 6.196557,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D29 vers Cabasse, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1990-0202",
+    "lat_depart": 43.419248,
+    "lon_depart": 6.846668,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Le Dramont, Saint-Raphaël",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1990-0203",
+    "lat_depart": 43.214502,
+    "lon_depart": 6.141999,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Cuers, Pierrefeu-du-Var",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1990-0204",
+    "lat_depart": 43.849052,
+    "lon_depart": 6.531121,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Rougon, Castellane",
+    "contexte_depart": "garrigue, bord de route"
+  },
+  {
+    "id": "fire-1990-0205",
+    "lat_depart": 43.311615,
+    "lon_depart": 6.254003,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D39 vers Gonfaron, Pignans",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1991-0206",
+    "lat_depart": 43.380917,
+    "lon_depart": 6.309632,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A57 échangeur, Le Cannet-des-Maures",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-1991-0207",
+    "lat_depart": 43.455197,
+    "lon_depart": 6.774401,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Saint-Jean-de-l'Estérel, Fréjus",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1991-0208",
+    "lat_depart": 43.409408,
+    "lon_depart": 6.064276,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Tourves, Brignoles",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1991-0209",
+    "lat_depart": 43.293942,
+    "lon_depart": 6.62037,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Sémaphore D125, Sainte-Maxime",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1991-0210",
+    "lat_depart": 44.092995,
+    "lon_depart": 6.250426,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D900 vers Barles, Digne-les-Bains",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1991-0211",
+    "lat_depart": 43.81353,
+    "lon_depart": 6.075029,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Valensole, Riez",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1991-0212",
+    "lat_depart": 43.322813,
+    "lon_depart": 6.648223,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de la Grange D74, Sainte-Maxime",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-1991-0213",
+    "lat_depart": 43.440925,
+    "lon_depart": 6.753186,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Tour de Mare, Fréjus",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1992-0214",
+    "lat_depart": 43.250285,
+    "lon_depart": 6.521494,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Chemin du Train des Pignes, Cogolin",
+    "contexte_depart": "piste"
+  },
+  {
+    "id": "fire-1992-0215",
+    "lat_depart": 43.182503,
+    "lon_depart": 6.579847,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D93, Gigaro, La Croix-Valmer",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1992-0216",
+    "lat_depart": 43.41753,
+    "lon_depart": 6.807178,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Boulouris, Saint-Raphaël",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1992-0217",
+    "lat_depart": 43.88781,
+    "lon_depart": 5.858336,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Villeneuve",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1992-0218",
+    "lat_depart": 43.852344,
+    "lon_depart": 6.527899,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Rougon, Castellane",
+    "contexte_depart": "garrigue, bord de route"
+  },
+  {
+    "id": "fire-1992-0219",
+    "lat_depart": 43.200637,
+    "lon_depart": 5.748751,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D66 vers Le Beausset, Le Castellet",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1993-0220",
+    "lat_depart": 43.38625,
+    "lon_depart": 6.305095,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D33 vers Gonfaron, Le Luc",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1993-0221",
+    "lat_depart": 43.519346,
+    "lon_depart": 6.424389,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Lorgues D562, Draguignan",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1993-0222",
+    "lat_depart": 43.73316,
+    "lon_depart": 5.962238,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D82 vers Gréoux, Esparron-de-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1993-0223",
+    "lat_depart": 43.546734,
+    "lon_depart": 6.53678,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D25 vers Bargemon, Callas",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1993-0224",
+    "lat_depart": 43.30538,
+    "lon_depart": 6.291443,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Notre-Dame-des-Anges, Gonfaron",
+    "contexte_depart": "maquis, piste"
+  },
+  {
+    "id": "fire-1993-0225",
+    "lat_depart": 43.411085,
+    "lon_depart": 6.286909,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Bertrands, Le Luc",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1993-0226",
+    "lat_depart": 43.927715,
+    "lon_depart": 6.130852,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D8 vers Mézel, Bras-d'Asse",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1993-0227",
+    "lat_depart": 43.378687,
+    "lon_depart": 6.356063,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Vaux, Le Cannet-des-Maures",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1994-0228",
+    "lat_depart": 43.329639,
+    "lon_depart": 6.514429,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D44 vers Grimaud, Plan-de-la-Tour",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1994-0229",
+    "lat_depart": 43.163132,
+    "lon_depart": 6.373567,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D41, col de Caguo Ven, Le Lavandou",
+    "contexte_depart": "col"
+  },
+  {
+    "id": "fire-1994-0230",
+    "lat_depart": 44.005562,
+    "lon_depart": 5.992275,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4 vers Oraison, Les Mées",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1994-0231",
+    "lat_depart": 43.96526,
+    "lon_depart": 5.792966,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4100 vers Mane, Forcalquier",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1994-0232",
+    "lat_depart": 43.454602,
+    "lon_depart": 6.665388,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D8 vers la plaine, Puget-sur-Argens",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1994-0233",
+    "lat_depart": 43.228303,
+    "lon_depart": 6.082651,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Pierrefeu, Cuers",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1994-0234",
+    "lat_depart": 43.148713,
+    "lon_depart": 6.349558,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D41 vers Le Lavandou, Bormes-les-Mimosas",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1994-0235",
+    "lat_depart": 43.701674,
+    "lon_depart": 6.516166,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D955 vers Draguignan, Comps-sur-Artuby",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1994-0236",
+    "lat_depart": 43.309656,
+    "lon_depart": 6.422966,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Campaux, La Garde-Freinet",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1995-0237",
+    "lat_depart": 43.371071,
+    "lon_depart": 6.685983,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Issambres D559, Roquebrune-sur-Argens",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1995-0238",
+    "lat_depart": 44.095461,
+    "lon_depart": 6.249017,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D900 vers Barles, Digne-les-Bains",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1995-0239",
+    "lat_depart": 43.205634,
+    "lon_depart": 6.167822,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D12 vers Collobrières, Pierrefeu-du-Var",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1995-0240",
+    "lat_depart": 43.793425,
+    "lon_depart": 6.410947,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952, Point Sublime, Rougon",
+    "contexte_depart": "garrigue, falaise"
+  },
+  {
+    "id": "fire-1995-0241",
+    "lat_depart": 43.101929,
+    "lon_depart": 6.086205,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D559 vers Carqueiranne, Hyères",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1996-0242",
+    "lat_depart": 43.108572,
+    "lon_depart": 6.322581,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Cabasson, Bormes-les-Mimosas",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1996-0243",
+    "lat_depart": 44.096006,
+    "lon_depart": 6.249609,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D900 vers Barles, Digne-les-Bains",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1996-0244",
+    "lat_depart": 43.402748,
+    "lon_depart": 5.93037,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Brignoles, Tourves",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1996-0245",
+    "lat_depart": 43.277433,
+    "lon_depart": 6.322945,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Babaou D41, Collobrières",
+    "contexte_depart": "col, bord de route"
+  },
+  {
+    "id": "fire-1996-0246",
+    "lat_depart": 44.096024,
+    "lon_depart": 6.253418,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D900 vers Barles, Digne-les-Bains",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1997-0247",
+    "lat_depart": 43.368321,
+    "lon_depart": 6.248349,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Le Luc, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1997-0248",
+    "lat_depart": 43.390204,
+    "lon_depart": 6.340747,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97, Plaine des Maures, Le Cannet-des-Maures",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1997-0249",
+    "lat_depart": 43.500309,
+    "lon_depart": 6.822821,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Pic de l'Ours, Les Adrets-de-l'Estérel",
+    "contexte_depart": "piste"
+  },
+  {
+    "id": "fire-1997-0250",
+    "lat_depart": 43.158963,
+    "lon_depart": 6.348445,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Verrerie, Bormes-les-Mimosas",
+    "contexte_depart": "piste forestière"
+  },
+  {
+    "id": "fire-1997-0251",
+    "lat_depart": 43.467126,
+    "lon_depart": 6.768461,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Malpasset/Reyran, Fréjus",
+    "contexte_depart": "garrigue, piste"
+  },
+  {
+    "id": "fire-1997-0252",
+    "lat_depart": 43.189831,
+    "lon_depart": 6.581613,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D93, Gigaro, La Croix-Valmer",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1997-0253",
+    "lat_depart": 43.40528,
+    "lon_depart": 5.930753,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Brignoles, Tourves",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1997-0254",
+    "lat_depart": 43.831186,
+    "lon_depart": 5.991957,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Plateau D6, Valensole",
+    "contexte_depart": "plateau, bord de route"
+  },
+  {
+    "id": "fire-1997-0255",
+    "lat_depart": 43.212304,
+    "lon_depart": 6.598865,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Gassin D61, Ramatuelle",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1997-0256",
+    "lat_depart": 43.961126,
+    "lon_depart": 6.356362,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4085 vers Chaudon, Barrême",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1998-0257",
+    "lat_depart": 43.21327,
+    "lon_depart": 6.067391,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Solliès-Pont, Cuers",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1998-0258",
+    "lat_depart": 43.423865,
+    "lon_depart": 6.04974,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D554 vers Le Val, Brignoles",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1998-0259",
+    "lat_depart": 43.824013,
+    "lon_depart": 6.032687,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Riez, Valensole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1998-0260",
+    "lat_depart": 43.461577,
+    "lon_depart": 6.696931,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A8 échangeur Puget, Puget-sur-Argens",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-1998-0261",
+    "lat_depart": 43.612497,
+    "lon_depart": 5.774318,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D561 vers Varages, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1998-0262",
+    "lat_depart": 43.320342,
+    "lon_depart": 6.368247,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Mayons D41, Vidauban",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1998-0263",
+    "lat_depart": 43.266404,
+    "lon_depart": 6.531599,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "ZAC Valensole, Cogolin",
+    "contexte_depart": "zone commerciale"
+  },
+  {
+    "id": "fire-1998-0264",
+    "lat_depart": 43.613814,
+    "lon_depart": 6.551798,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D25 vers Callas, Bargemon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1999-0265",
+    "lat_depart": 43.338751,
+    "lon_depart": 6.574276,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D74 vers Sainte-Maxime, Plan-de-la-Tour",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1999-0266",
+    "lat_depart": 43.596423,
+    "lon_depart": 6.851723,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Le Mitan, Tanneron",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-1999-0267",
+    "lat_depart": 43.535629,
+    "lon_depart": 6.483594,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Maljournal D557, Draguignan",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1999-0268",
+    "lat_depart": 43.750852,
+    "lon_depart": 6.142925,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D111 vers Bauduen, Sainte-Croix-du-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1999-0269",
+    "lat_depart": 43.594522,
+    "lon_depart": 5.726813,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D23 vers Vinon, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-1999-0270",
+    "lat_depart": 43.489844,
+    "lon_depart": 6.582589,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A8 échangeur Le Muy, Le Muy",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-1999-0271",
+    "lat_depart": 44.006152,
+    "lon_depart": 5.991761,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4 vers Oraison, Les Mées",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2000-0272",
+    "lat_depart": 43.360707,
+    "lon_depart": 6.192766,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D29 vers Cabasse, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2000-0273",
+    "lat_depart": 43.279313,
+    "lon_depart": 6.294007,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Notre-Dame-des-Anges, Pignans",
+    "contexte_depart": "piste"
+  },
+  {
+    "id": "fire-2000-0274",
+    "lat_depart": 43.408055,
+    "lon_depart": 6.343754,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 Plaine des Maures, Le Luc",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2000-0275",
+    "lat_depart": 43.367739,
+    "lon_depart": 6.244358,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Le Luc, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2000-0276",
+    "lat_depart": 43.91973,
+    "lon_depart": 5.925838,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4, Vallée de la Durance, Oraison",
+    "contexte_depart": "bord de route, collines"
+  },
+  {
+    "id": "fire-2000-0277",
+    "lat_depart": 43.400355,
+    "lon_depart": 6.322785,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D12 vers Le Luc, Le Cannet-des-Maures",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2000-0278",
+    "lat_depart": 43.957097,
+    "lon_depart": 6.357656,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4085 vers Chaudon, Barrême",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2000-0279",
+    "lat_depart": 43.449482,
+    "lon_depart": 6.492475,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A8 échangeur, Les Arcs",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-2000-0280",
+    "lat_depart": 43.47,
+    "lon_depart": 6.7667,
+    "source_depart": "Var-Matin août 2000 / SDIS 83",
+    "fiabilite_depart": "probable",
+    "precision_m": 1500,
+    "lieu_dit_depart": "Secteur Malpasset / Reyran, Fréjus",
+    "contexte_depart": "interface habitat-forêt, garrigue"
+  },
+  {
+    "id": "fire-2000-0281",
+    "lat_depart": 43.406949,
+    "lon_depart": 6.394973,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Plaine des Maures D48, Vidauban",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2000-0282",
+    "lat_depart": 43.157529,
+    "lon_depart": 6.229203,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Le Collet D88, La Londe-les-Maures",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2000-0283",
+    "lat_depart": 43.763673,
+    "lon_depart": 5.758138,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Sainte-Tulle, Corbières-en-Provence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2000-0284",
+    "lat_depart": 43.289089,
+    "lon_depart": 5.846966,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D2 vers Le Beausset, Signes",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2001-0285",
+    "lat_depart": 43.163456,
+    "lon_depart": 6.371124,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Caguo Ven, Bormes-les-Mimosas",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-2001-0286",
+    "lat_depart": 43.955932,
+    "lon_depart": 6.357142,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4085 vers Chaudon, Barrême",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2001-0287",
+    "lat_depart": 43.507668,
+    "lon_depart": 6.378309,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Flayosc D557, Lorgues",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2001-0288",
+    "lat_depart": 43.294047,
+    "lon_depart": 6.615019,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Sémaphore D125, Sainte-Maxime",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2001-0289",
+    "lat_depart": 43.474403,
+    "lon_depart": 6.560975,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D125 vers Le Muy, Le Muy",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2001-0290",
+    "lat_depart": 44.025529,
+    "lon_depart": 5.930676,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Forcalquier, Peyruis",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2001-0291",
+    "lat_depart": 43.590315,
+    "lon_depart": 6.788376,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D37 vers le lac de Saint-Cassien, Montauroux",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2001-0292",
+    "lat_depart": 43.684594,
+    "lon_depart": 6.477411,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Camp militaire Canjuers, Comps-sur-Artuby",
+    "contexte_depart": "zone militaire"
+  },
+  {
+    "id": "fire-2002-0293",
+    "lat_depart": 43.396917,
+    "lon_depart": 6.327192,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A57 échangeur Le Luc, Le Luc",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-2002-0294",
+    "lat_depart": 43.613074,
+    "lon_depart": 5.773894,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D561 vers Varages, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2002-0295",
+    "lat_depart": 43.309374,
+    "lon_depart": 6.238229,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Carnoules, Pignans",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2002-0296",
+    "lat_depart": 43.145198,
+    "lon_depart": 6.353294,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D41 vers Le Lavandou, Bormes-les-Mimosas",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2002-0297",
+    "lat_depart": 43.753574,
+    "lon_depart": 6.140384,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D111 vers Bauduen, Sainte-Croix-du-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2002-0298",
+    "lat_depart": 43.778288,
+    "lon_depart": 6.359868,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D23, Route des Crêtes, La Palud-sur-Verdon",
+    "contexte_depart": "garrigue, bord de route"
+  },
+  {
+    "id": "fire-2002-0299",
+    "lat_depart": 43.59028,
+    "lon_depart": 6.786123,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D37 vers le lac de Saint-Cassien, Montauroux",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0300",
+    "lat_depart": 43.789568,
+    "lon_depart": 6.384274,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers La Palud, Rougon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0301",
+    "lat_depart": 43.20128,
+    "lon_depart": 6.457299,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de la Grange, La Môle",
+    "contexte_depart": "col"
+  },
+  {
+    "id": "fire-2003-0302",
+    "lat_depart": 43.592551,
+    "lon_depart": 5.724054,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D23 vers Vinon, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0303",
+    "lat_depart": 43.25366,
+    "lon_depart": 6.303134,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Notre-Dame-des-Anges, Collobrières",
+    "contexte_depart": "maquis"
+  },
+  {
+    "id": "fire-2003-0304",
+    "lat_depart": 43.115163,
+    "lon_depart": 6.322119,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Cabasson, Bormes-les-Mimosas",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2003-0305",
+    "lat_depart": 43.306956,
+    "lon_depart": 6.451732,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Vignon D558, La Garde-Freinet",
+    "contexte_depart": "col, maquis"
+  },
+  {
+    "id": "fire-2003-0306",
+    "lat_depart": 43.626028,
+    "lon_depart": 6.714472,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D562 vers Seillans, Fayence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0307",
+    "lat_depart": 43.489635,
+    "lon_depart": 6.583908,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A8 échangeur Le Muy, Le Muy",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-2003-0308",
+    "lat_depart": 43.611026,
+    "lon_depart": 5.777852,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D561 vers Varages, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0309",
+    "lat_depart": 43.32708,
+    "lon_depart": 6.518201,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D44 vers Grimaud, Plan-de-la-Tour",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0310",
+    "lat_depart": 43.3194,
+    "lon_depart": 6.3719,
+    "source_depart": "Rapport sénatorial 2003 / SDIS 83 / Prométhée",
+    "fiabilite_depart": "exacte",
+    "precision_m": 500,
+    "lieu_dit_depart": "Les Mayons, D41 (plusieurs départs simultanés Vidauban-Gonfaron)",
+    "contexte_depart": "départs multiples (7 foyers), bord de route, pyromane"
+  },
+  {
+    "id": "fire-2003-0311",
+    "lat_depart": 43.8417,
+    "lon_depart": 6.1936,
+    "source_depart": "Archives SDIS 04 / Presse locale",
+    "fiabilite_depart": "probable",
+    "precision_m": 2000,
+    "lieu_dit_depart": "Plateau de Valensole, près de Moustiers-Sainte-Marie",
+    "contexte_depart": "plateau agricole en lisière de forêt"
+  },
+  {
+    "id": "fire-2003-0312",
+    "lat_depart": 43.625354,
+    "lon_depart": 6.710663,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D562 vers Seillans, Fayence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0313",
+    "lat_depart": 43.227581,
+    "lon_depart": 6.084965,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Pierrefeu, Cuers",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0314",
+    "lat_depart": 43.39001,
+    "lon_depart": 6.079811,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Cabasse, Brignoles",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2003-0315",
+    "lat_depart": 43.082605,
+    "lon_depart": 6.358665,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Cap Bénat, Le Lavandou",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-2003-0316",
+    "lat_depart": 43.782771,
+    "lon_depart": 6.02252,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Riez, Allemagne-en-Provence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0317",
+    "lat_depart": 43.238704,
+    "lon_depart": 6.350016,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D14 vers Grimaud, Collobrières",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0318",
+    "lat_depart": 43.733261,
+    "lon_depart": 5.960047,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D82 vers Gréoux, Esparron-de-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0319",
+    "lat_depart": 43.7801,
+    "lon_depart": 6.022379,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Riez, Allemagne-en-Provence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0320",
+    "lat_depart": 43.783354,
+    "lon_depart": 6.022788,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Riez, Allemagne-en-Provence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0321",
+    "lat_depart": 43.248446,
+    "lon_depart": 5.791516,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Circuit Paul Ricard, Le Castellet",
+    "contexte_depart": "zone périurbaine"
+  },
+  {
+    "id": "fire-2003-0322",
+    "lat_depart": 43.266943,
+    "lon_depart": 6.537287,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D14 vers Cogolin, Grimaud",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0323",
+    "lat_depart": 43.227705,
+    "lon_depart": 6.308167,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Capelle, Collobrières",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2003-0324",
+    "lat_depart": 43.891697,
+    "lon_depart": 5.854272,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Villeneuve",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0325",
+    "lat_depart": 43.477788,
+    "lon_depart": 6.557273,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D125 vers Le Muy, Le Muy",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0326",
+    "lat_depart": 43.471341,
+    "lon_depart": 6.331246,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D10 vers Le Thoronet, Lorgues",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2003-0327",
+    "lat_depart": 43.587613,
+    "lon_depart": 6.867163,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Chemin des Suvières D562, Tanneron",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2004-0328",
+    "lat_depart": 43.41,
+    "lon_depart": 6.0683,
+    "source_depart": "Var-Matin avril 2004",
+    "fiabilite_depart": "probable",
+    "precision_m": 1500,
+    "lieu_dit_depart": "Route de Tourves (D43), Brignoles",
+    "contexte_depart": "bord de route, garrigue"
+  },
+  {
+    "id": "fire-2004-0329",
+    "lat_depart": 43.854016,
+    "lon_depart": 6.527417,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Rougon, Castellane",
+    "contexte_depart": "garrigue, bord de route"
+  },
+  {
+    "id": "fire-2004-0330",
+    "lat_depart": 43.701937,
+    "lon_depart": 6.519822,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D955 vers Draguignan, Comps-sur-Artuby",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2004-0331",
+    "lat_depart": 43.803959,
+    "lon_depart": 5.753758,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D907 vers Manosque, Pierrevert",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2004-0332",
+    "lat_depart": 43.596079,
+    "lon_depart": 5.725185,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D23 vers Vinon, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2004-0333",
+    "lat_depart": 43.433551,
+    "lon_depart": 6.86219,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Agay D559, Saint-Raphaël",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2004-0334",
+    "lat_depart": 43.260437,
+    "lon_depart": 6.541686,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D14 vers Grimaud, Cogolin",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2005-0335",
+    "lat_depart": 43.907087,
+    "lon_depart": 6.281102,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D17 vers Barrême, Majastres",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2005-0336",
+    "lat_depart": 43.7644,
+    "lon_depart": 5.8808,
+    "source_depart": "Presse locale / SDIS 04",
+    "fiabilite_depart": "probable",
+    "precision_m": 2000,
+    "lieu_dit_depart": "Plateau de Valensole, D6, Gréoux-les-Bains",
+    "contexte_depart": "plateau, végétation méditerranéenne"
+  },
+  {
+    "id": "fire-2005-0337",
+    "lat_depart": 43.217806,
+    "lon_depart": 6.463743,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Piste du barrage, La Môle",
+    "contexte_depart": "piste"
+  },
+  {
+    "id": "fire-2005-0338",
+    "lat_depart": 43.288212,
+    "lon_depart": 5.847543,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D2 vers Le Beausset, Signes",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2005-0339",
+    "lat_depart": 43.29905,
+    "lon_depart": 6.501939,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D14 vers Grimaud, La Garde-Freinet",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2005-0340",
+    "lat_depart": 43.810817,
+    "lon_depart": 5.751911,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D907 vers Manosque, Pierrevert",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2005-0341",
+    "lat_depart": 44.025368,
+    "lon_depart": 5.937783,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Forcalquier, Peyruis",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2005-0342",
+    "lat_depart": 43.383893,
+    "lon_depart": 6.31073,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A57 échangeur, Le Cannet-des-Maures",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-2005-0343",
+    "lat_depart": 43.381794,
+    "lon_depart": 6.3052,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D33 vers Gonfaron, Le Luc",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2005-0344",
+    "lat_depart": 43.771747,
+    "lon_depart": 6.263575,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D71 Route des Crêtes, Aiguines",
+    "contexte_depart": "bord de route touristique, garrigue"
+  },
+  {
+    "id": "fire-2005-0345",
+    "lat_depart": 43.894197,
+    "lon_depart": 5.884239,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4100 vers Valensole, Oraison",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2005-0346",
+    "lat_depart": 43.166573,
+    "lon_depart": 6.380404,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D41, col de Caguo Ven, Le Lavandou",
+    "contexte_depart": "col"
+  },
+  {
+    "id": "fire-2006-0347",
+    "lat_depart": 43.196498,
+    "lon_depart": 5.748792,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D66 vers Le Beausset, Le Castellet",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2006-0348",
+    "lat_depart": 43.78462,
+    "lon_depart": 5.761955,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Sainte-Tulle",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2006-0349",
+    "lat_depart": 43.412107,
+    "lon_depart": 6.290746,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Bertrands, Le Luc",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2006-0350",
+    "lat_depart": 43.181409,
+    "lon_depart": 6.536253,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D559 vers Rayol, Cavalaire-sur-Mer",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2006-0351",
+    "lat_depart": 43.185163,
+    "lon_depart": 6.580959,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D93, Gigaro, La Croix-Valmer",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2006-0352",
+    "lat_depart": 43.197592,
+    "lon_depart": 6.666469,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Cap Camarat, Ramatuelle",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-2006-0353",
+    "lat_depart": 43.489295,
+    "lon_depart": 6.581814,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A8 échangeur Le Muy, Le Muy",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-2006-0354",
+    "lat_depart": 44.200942,
+    "lon_depart": 5.963929,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4085 vers Laragne, Sisteron",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2007-0355",
+    "lat_depart": 43.162586,
+    "lon_depart": 6.353182,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Verrerie, Bormes-les-Mimosas",
+    "contexte_depart": "piste forestière"
+  },
+  {
+    "id": "fire-2007-0356",
+    "lat_depart": 43.760991,
+    "lon_depart": 5.754184,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Sainte-Tulle, Corbières-en-Provence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2007-0357",
+    "lat_depart": 43.495958,
+    "lon_depart": 6.840043,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A8 Aire de l'Estérel, Fréjus",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-2007-0358",
+    "lat_depart": 43.2686,
+    "lon_depart": 6.5453,
+    "source_depart": "Var-Matin juillet 2007 / SDIS 83",
+    "fiabilite_depart": "probable",
+    "precision_m": 1500,
+    "lieu_dit_depart": "Route de Grimaud (D14), entre Cogolin et Grimaud",
+    "contexte_depart": "interface habitat-forêt, bord de route"
+  },
+  {
+    "id": "fire-2007-0359",
+    "lat_depart": 43.376459,
+    "lon_depart": 6.355338,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Vaux, Le Cannet-des-Maures",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2007-0360",
+    "lat_depart": 43.327208,
+    "lon_depart": 6.464034,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Notre-Dame de Miremer, La Garde-Freinet",
+    "contexte_depart": "piste forestière"
+  },
+  {
+    "id": "fire-2007-0361",
+    "lat_depart": 43.300295,
+    "lon_depart": 6.337331,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Gratteloup, Les Mayons",
+    "contexte_depart": "col, maquis"
+  },
+  {
+    "id": "fire-2007-0362",
+    "lat_depart": 43.892553,
+    "lon_depart": 5.857633,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Villeneuve",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2007-0363",
+    "lat_depart": 43.260932,
+    "lon_depart": 6.294007,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Taillude, Collobrières",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-2007-0364",
+    "lat_depart": 43.313344,
+    "lon_depart": 6.271939,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Pradels, Gonfaron",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2007-0365",
+    "lat_depart": 43.795679,
+    "lon_depart": 6.406229,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952, Point Sublime, Rougon",
+    "contexte_depart": "garrigue, falaise"
+  },
+  {
+    "id": "fire-2007-0366",
+    "lat_depart": 43.783392,
+    "lon_depart": 6.257073,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D19 vers La Palud, Aiguines",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2007-0367",
+    "lat_depart": 43.327113,
+    "lon_depart": 6.644331,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de la Grange D74, Sainte-Maxime",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-2007-0368",
+    "lat_depart": 43.180415,
+    "lon_depart": 6.534782,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D559 vers Rayol, Cavalaire-sur-Mer",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2007-0369",
+    "lat_depart": 43.47447,
+    "lon_depart": 6.629337,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Bouverie D7, Roquebrune-sur-Argens",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2007-0370",
+    "lat_depart": 43.339358,
+    "lon_depart": 6.573047,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D74 vers Sainte-Maxime, Plan-de-la-Tour",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2008-0371",
+    "lat_depart": 43.403716,
+    "lon_depart": 6.344079,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 Plaine des Maures, Le Luc",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2008-0372",
+    "lat_depart": 43.275478,
+    "lon_depart": 6.323581,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Babaou D41, Collobrières",
+    "contexte_depart": "col, bord de route"
+  },
+  {
+    "id": "fire-2008-0373",
+    "lat_depart": 43.906769,
+    "lon_depart": 6.279326,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D17 vers Barrême, Majastres",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2008-0374",
+    "lat_depart": 43.356177,
+    "lon_depart": 6.197444,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D29 vers Cabasse, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2009-0375",
+    "lat_depart": 43.615153,
+    "lon_depart": 6.553972,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D25 vers Callas, Bargemon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2009-0376",
+    "lat_depart": 43.960078,
+    "lon_depart": 6.359481,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4085 vers Chaudon, Barrême",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2009-0377",
+    "lat_depart": 43.329896,
+    "lon_depart": 6.519571,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D44 vers Grimaud, Plan-de-la-Tour",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2009-0378",
+    "lat_depart": 43.369755,
+    "lon_depart": 6.244027,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Le Luc, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2009-0379",
+    "lat_depart": 43.7039,
+    "lon_depart": 6.0533,
+    "source_depart": "Presse locale / SDIS 04",
+    "fiabilite_depart": "probable",
+    "precision_m": 1500,
+    "lieu_dit_depart": "D11, près de Quinson, Basses Gorges du Verdon",
+    "contexte_depart": "garrigue, bord de route"
+  },
+  {
+    "id": "fire-2009-0380",
+    "lat_depart": 43.628165,
+    "lon_depart": 6.711598,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D562 vers Seillans, Fayence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2009-0381",
+    "lat_depart": 43.968601,
+    "lon_depart": 5.792249,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4100 vers Mane, Forcalquier",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2009-0382",
+    "lat_depart": 43.502155,
+    "lon_depart": 6.810163,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col du Testanier, Fréjus",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-2009-0383",
+    "lat_depart": 43.355941,
+    "lon_depart": 6.192078,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D29 vers Cabasse, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2009-0384",
+    "lat_depart": 43.919869,
+    "lon_depart": 5.923196,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4, Vallée de la Durance, Oraison",
+    "contexte_depart": "bord de route, collines"
+  },
+  {
+    "id": "fire-2009-0385",
+    "lat_depart": 43.816671,
+    "lon_depart": 6.073974,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Valensole, Riez",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2010-0386",
+    "lat_depart": 43.2125,
+    "lon_depart": 6.065028,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Solliès-Pont, Cuers",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2010-0387",
+    "lat_depart": 43.368864,
+    "lon_depart": 6.245104,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Le Luc, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2010-0388",
+    "lat_depart": 43.830003,
+    "lon_depart": 5.988083,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Plateau D6, Valensole",
+    "contexte_depart": "plateau, bord de route"
+  },
+  {
+    "id": "fire-2010-0389",
+    "lat_depart": 43.461545,
+    "lon_depart": 6.797487,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Valescure D100, Saint-Raphaël",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2010-0390",
+    "lat_depart": 43.751627,
+    "lon_depart": 6.138342,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D111 vers Bauduen, Sainte-Croix-du-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2010-0391",
+    "lat_depart": 43.142838,
+    "lon_depart": 6.159617,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D554 vers Pierrefeu, Hyères",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2010-0392",
+    "lat_depart": 43.971362,
+    "lon_depart": 6.492041,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D955 vers Digne, Saint-André-les-Alpes",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2011-0393",
+    "lat_depart": 43.69035,
+    "lon_depart": 6.475892,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Camp militaire Canjuers, Comps-sur-Artuby",
+    "contexte_depart": "zone militaire"
+  },
+  {
+    "id": "fire-2011-0394",
+    "lat_depart": 43.472546,
+    "lon_depart": 6.500627,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D555 vers Trans, Les Arcs",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2011-0395",
+    "lat_depart": 43.613218,
+    "lon_depart": 6.554693,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D25 vers Callas, Bargemon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2011-0396",
+    "lat_depart": 43.781375,
+    "lon_depart": 6.327875,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Rougon, La Palud-sur-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2011-0397",
+    "lat_depart": 43.208685,
+    "lon_depart": 6.495558,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D98 vers Cogolin, La Môle",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2011-0398",
+    "lat_depart": 43.722043,
+    "lon_depart": 5.826488,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Gréoux, Vinon-sur-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2011-0399",
+    "lat_depart": 43.204034,
+    "lon_depart": 6.449631,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de la Grange, La Môle",
+    "contexte_depart": "col"
+  },
+  {
+    "id": "fire-2012-0400",
+    "lat_depart": 43.25992,
+    "lon_depart": 6.291219,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Taillude, Grimaud",
+    "contexte_depart": "col"
+  },
+  {
+    "id": "fire-2012-0401",
+    "lat_depart": 43.39566,
+    "lon_depart": 6.330353,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A57 échangeur Le Luc, Le Luc",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-2012-0402",
+    "lat_depart": 43.359197,
+    "lon_depart": 6.195086,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D29 vers Cabasse, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2012-0403",
+    "lat_depart": 43.08272,
+    "lon_depart": 6.360452,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Cap Bénat, Le Lavandou",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-2012-0404",
+    "lat_depart": 43.731063,
+    "lon_depart": 5.960111,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D82 vers Gréoux, Esparron-de-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2012-0405",
+    "lat_depart": 43.583291,
+    "lon_depart": 6.892442,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D138 vers Auribeau, Tanneron",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2012-0406",
+    "lat_depart": 43.410801,
+    "lon_depart": 6.38607,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D72 vers Le Luc, Vidauban",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2012-0407",
+    "lat_depart": 43.705428,
+    "lon_depart": 6.057382,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D11, Basses Gorges du Verdon, Quinson",
+    "contexte_depart": "garrigue, gorge"
+  },
+  {
+    "id": "fire-2013-0408",
+    "lat_depart": 43.39627,
+    "lon_depart": 6.362706,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Gonfaron D39, Vidauban",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2013-0409",
+    "lat_depart": 43.7794,
+    "lon_depart": 6.3597,
+    "source_depart": "Presse locale / SDIS 04",
+    "fiabilite_depart": "probable",
+    "precision_m": 1500,
+    "lieu_dit_depart": "D23, près de La Palud-sur-Verdon, Gorges du Verdon",
+    "contexte_depart": "garrigue, bord de route touristique"
+  },
+  {
+    "id": "fire-2013-0410",
+    "lat_depart": 44.091523,
+    "lon_depart": 6.249073,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D900 vers Barles, Digne-les-Bains",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2013-0411",
+    "lat_depart": 43.614941,
+    "lon_depart": 6.550204,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D25 vers Callas, Bargemon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2013-0412",
+    "lat_depart": 43.421913,
+    "lon_depart": 6.845069,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Le Dramont, Saint-Raphaël",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2013-0413",
+    "lat_depart": 43.754783,
+    "lon_depart": 6.141213,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D111 vers Bauduen, Sainte-Croix-du-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2013-0414",
+    "lat_depart": 43.405331,
+    "lon_depart": 5.92493,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Brignoles, Tourves",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2013-0415",
+    "lat_depart": 43.787422,
+    "lon_depart": 6.383879,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers La Palud, Rougon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2014-0416",
+    "lat_depart": 43.893982,
+    "lon_depart": 5.886974,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4100 vers Valensole, Oraison",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2014-0417",
+    "lat_depart": 43.183244,
+    "lon_depart": 6.537452,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D559 vers Rayol, Cavalaire-sur-Mer",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2014-0418",
+    "lat_depart": 43.257339,
+    "lon_depart": 6.3077,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Notre-Dame-des-Anges, Collobrières",
+    "contexte_depart": "maquis"
+  },
+  {
+    "id": "fire-2014-0419",
+    "lat_depart": 43.409436,
+    "lon_depart": 6.06454,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Tourves, Brignoles",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2014-0420",
+    "lat_depart": 44.184607,
+    "lon_depart": 5.939758,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Massif de la Baume D4, Sisteron",
+    "contexte_depart": "garrigue"
+  },
+  {
+    "id": "fire-2014-0421",
+    "lat_depart": 43.628895,
+    "lon_depart": 6.711921,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D562 vers Seillans, Fayence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2014-0422",
+    "lat_depart": 43.366341,
+    "lon_depart": 6.684418,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Issambres D559, Roquebrune-sur-Argens",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2014-0423",
+    "lat_depart": 43.043094,
+    "lon_depart": 6.121905,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Presqu'île de Giens, Hyères",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-2015-0424",
+    "lat_depart": 43.16492,
+    "lon_depart": 6.369669,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Caguo Ven, Bormes-les-Mimosas",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-2015-0425",
+    "lat_depart": 43.511199,
+    "lon_depart": 6.407583,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D562 vers Draguignan, Lorgues",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2015-0426",
+    "lat_depart": 43.799214,
+    "lon_depart": 6.408718,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952, Point Sublime, Rougon",
+    "contexte_depart": "garrigue, falaise"
+  },
+  {
+    "id": "fire-2015-0427",
+    "lat_depart": 43.891389,
+    "lon_depart": 5.853009,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Villeneuve",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2015-0428",
+    "lat_depart": 43.416424,
+    "lon_depart": 6.808006,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Boulouris, Saint-Raphaël",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2015-0429",
+    "lat_depart": 43.92,
+    "lon_depart": 5.9239,
+    "source_depart": "La Provence août 2015 / SDIS 04",
+    "fiabilite_depart": "probable",
+    "precision_m": 1500,
+    "lieu_dit_depart": "D4, près d'Oraison, Vallée de la Durance",
+    "contexte_depart": "collines, végétation méditerranéenne"
+  },
+  {
+    "id": "fire-2015-0430",
+    "lat_depart": 43.77926,
+    "lon_depart": 6.022407,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Riez, Allemagne-en-Provence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2015-0431",
+    "lat_depart": 43.474489,
+    "lon_depart": 6.630001,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Bouverie D7, Roquebrune-sur-Argens",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2015-0432",
+    "lat_depart": 43.288995,
+    "lon_depart": 5.850007,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D2 vers Le Beausset, Signes",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2015-0433",
+    "lat_depart": 43.781522,
+    "lon_depart": 6.355914,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D23, Route des Crêtes, La Palud-sur-Verdon",
+    "contexte_depart": "garrigue, bord de route"
+  },
+  {
+    "id": "fire-2016-0434",
+    "lat_depart": 43.955715,
+    "lon_depart": 6.356305,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4085 vers Chaudon, Barrême",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2016-0435",
+    "lat_depart": 43.509323,
+    "lon_depart": 6.379147,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Flayosc D557, Lorgues",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2016-0436",
+    "lat_depart": 43.612793,
+    "lon_depart": 6.551935,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D25 vers Callas, Bargemon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2016-0437",
+    "lat_depart": 43.223444,
+    "lon_depart": 6.083941,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Pierrefeu, Cuers",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2016-0438",
+    "lat_depart": 43.521549,
+    "lon_depart": 6.79598,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D37 vers Montauroux, Les Adrets-de-l'Estérel",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2016-0439",
+    "lat_depart": 43.188696,
+    "lon_depart": 6.693666,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Escalet, Ramatuelle",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-2016-0440",
+    "lat_depart": 43.891342,
+    "lon_depart": 5.856417,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Villeneuve",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2016-0441",
+    "lat_depart": 43.636876,
+    "lon_depart": 6.240847,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D557 vers Salernes, Aups",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2016-0442",
+    "lat_depart": 43.470574,
+    "lon_depart": 6.332876,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D10 vers Le Thoronet, Lorgues",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2016-0443",
+    "lat_depart": 43.449508,
+    "lon_depart": 6.485911,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A8 échangeur, Les Arcs",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-2016-0444",
+    "lat_depart": 43.840863,
+    "lon_depart": 5.801312,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Colline de Toutes Aures, Manosque",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2017-0445",
+    "lat_depart": 43.78935,
+    "lon_depart": 6.383079,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers La Palud, Rougon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2017-0446",
+    "lat_depart": 43.336741,
+    "lon_depart": 6.573908,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D74 vers Sainte-Maxime, Plan-de-la-Tour",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2017-0447",
+    "lat_depart": 44.005477,
+    "lon_depart": 5.990413,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4 vers Oraison, Les Mées",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2017-0448",
+    "lat_depart": 43.786626,
+    "lon_depart": 6.023684,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Riez, Allemagne-en-Provence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2017-0449",
+    "lat_depart": 43.451222,
+    "lon_depart": 6.773063,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Saint-Jean-de-l'Estérel, Fréjus",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2017-0450",
+    "lat_depart": 43.1535,
+    "lon_depart": 6.2298,
+    "source_depart": "Var-Matin juillet 2017 / SDIS 83 / BEA-RI",
+    "fiabilite_depart": "exacte",
+    "precision_m": 200,
+    "lieu_dit_depart": "Lieu-dit Le Collet, chemin du Collet, La Londe-les-Maures",
+    "contexte_depart": "interface habitat-forêt, piste forestière"
+  },
+  {
+    "id": "fire-2017-0451",
+    "lat_depart": 43.366649,
+    "lon_depart": 6.688452,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Issambres D559, Roquebrune-sur-Argens",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2017-0452",
+    "lat_depart": 43.50187,
+    "lon_depart": 6.821581,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Pic de l'Ours, Les Adrets-de-l'Estérel",
+    "contexte_depart": "piste"
+  },
+  {
+    "id": "fire-2017-0453",
+    "lat_depart": 43.594602,
+    "lon_depart": 6.851517,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Le Mitan, Tanneron",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2017-0454",
+    "lat_depart": 43.703141,
+    "lon_depart": 6.055727,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D11, Basses Gorges du Verdon, Quinson",
+    "contexte_depart": "garrigue, gorge"
+  },
+  {
+    "id": "fire-2017-0455",
+    "lat_depart": 43.471028,
+    "lon_depart": 6.502628,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D555 vers Trans, Les Arcs",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2017-0456",
+    "lat_depart": 43.612077,
+    "lon_depart": 5.778364,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D561 vers Varages, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2017-0457",
+    "lat_depart": 43.8381,
+    "lon_depart": 5.7953,
+    "source_depart": "La Provence août 2017 / SDIS 04",
+    "fiabilite_depart": "probable",
+    "precision_m": 1500,
+    "lieu_dit_depart": "Collines de Manosque, quartier La Thomassine",
+    "contexte_depart": "interface habitat-forêt, collines"
+  },
+  {
+    "id": "fire-2017-0458",
+    "lat_depart": 43.291213,
+    "lon_depart": 6.617647,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Sémaphore D125, Sainte-Maxime",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2017-0459",
+    "lat_depart": 43.450837,
+    "lon_depart": 6.667405,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D8 vers la plaine, Puget-sur-Argens",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2018-0460",
+    "lat_depart": 43.720567,
+    "lon_depart": 5.822585,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Gréoux, Vinon-sur-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2018-0461",
+    "lat_depart": 43.373324,
+    "lon_depart": 6.246237,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Le Luc, Flassans-sur-Issole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2018-0462",
+    "lat_depart": 43.446957,
+    "lon_depart": 6.488744,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A8 échangeur, Les Arcs",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-2018-0463",
+    "lat_depart": 43.889904,
+    "lon_depart": 5.856961,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Villeneuve",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2018-0464",
+    "lat_depart": 43.316044,
+    "lon_depart": 6.342596,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col du Gratteloup D14, Gonfaron",
+    "contexte_depart": "col, maquis"
+  },
+  {
+    "id": "fire-2018-0465",
+    "lat_depart": 43.457991,
+    "lon_depart": 6.702001,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "A8 échangeur Puget, Puget-sur-Argens",
+    "contexte_depart": "bord d'autoroute"
+  },
+  {
+    "id": "fire-2018-0466",
+    "lat_depart": 43.506654,
+    "lon_depart": 6.40734,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D562 vers Draguignan, Lorgues",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2018-0467",
+    "lat_depart": 43.310058,
+    "lon_depart": 6.250262,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D39 vers Gonfaron, Pignans",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2019-0468",
+    "lat_depart": 43.701662,
+    "lon_depart": 6.51476,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D955 vers Draguignan, Comps-sur-Artuby",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2019-0469",
+    "lat_depart": 43.633142,
+    "lon_depart": 6.24285,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D557 vers Salernes, Aups",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2019-0470",
+    "lat_depart": 44.200665,
+    "lon_depart": 5.965228,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4085 vers Laragne, Sisteron",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2019-0471",
+    "lat_depart": 43.469172,
+    "lon_depart": 6.505927,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D555 vers Trans, Les Arcs",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2019-0472",
+    "lat_depart": 43.282183,
+    "lon_depart": 6.294693,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Notre-Dame-des-Anges, Pignans",
+    "contexte_depart": "piste"
+  },
+  {
+    "id": "fire-2019-0473",
+    "lat_depart": 43.962393,
+    "lon_depart": 5.79594,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4100 vers Mane, Forcalquier",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2019-0474",
+    "lat_depart": 43.520302,
+    "lon_depart": 6.42013,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Lorgues D562, Draguignan",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2019-0475",
+    "lat_depart": 43.161069,
+    "lon_depart": 6.377802,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D41, col de Caguo Ven, Le Lavandou",
+    "contexte_depart": "col"
+  },
+  {
+    "id": "fire-2020-0476",
+    "lat_depart": 43.689857,
+    "lon_depart": 6.481346,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Camp militaire Canjuers, Comps-sur-Artuby",
+    "contexte_depart": "zone militaire"
+  },
+  {
+    "id": "fire-2020-0477",
+    "lat_depart": 43.782274,
+    "lon_depart": 6.327198,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Rougon, La Palud-sur-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2020-0478",
+    "lat_depart": 43.180726,
+    "lon_depart": 6.536579,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D559 vers Rayol, Cavalaire-sur-Mer",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2020-0479",
+    "lat_depart": 43.242628,
+    "lon_depart": 6.348848,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D14 vers Grimaud, Collobrières",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2020-0480",
+    "lat_depart": 43.14438,
+    "lon_depart": 6.351353,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D41 vers Le Lavandou, Bormes-les-Mimosas",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2020-0481",
+    "lat_depart": 43.63373,
+    "lon_depart": 6.242267,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D557 vers Salernes, Aups",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2020-0482",
+    "lat_depart": 43.596379,
+    "lon_depart": 5.726703,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D23 vers Vinon, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2020-0483",
+    "lat_depart": 43.910126,
+    "lon_depart": 6.28126,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D17 vers Barrême, Majastres",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2021-0484",
+    "lat_depart": 43.509658,
+    "lon_depart": 6.379966,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Flayosc D557, Lorgues",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2021-0485",
+    "lat_depart": 43.611407,
+    "lon_depart": 5.773141,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D561 vers Varages, Rians",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2021-0486",
+    "lat_depart": 43.956931,
+    "lon_depart": 6.35885,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4085 vers Chaudon, Barrême",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2021-0487",
+    "lat_depart": 43.474684,
+    "lon_depart": 6.63365,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Bouverie D7, Roquebrune-sur-Argens",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2021-0488",
+    "lat_depart": 43.13172,
+    "lon_depart": 6.25137,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Bormettes, La Londe-les-Maures",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2021-0489",
+    "lat_depart": 43.443084,
+    "lon_depart": 6.751424,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Tour de Mare, Fréjus",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2021-0490",
+    "lat_depart": 43.3397,
+    "lon_depart": 6.3014,
+    "source_depart": "Wikipédia / BEA-RI / Var-Matin / SDIS 83",
+    "fiabilite_depart": "exacte",
+    "precision_m": 100,
+    "lieu_dit_depart": "Aire de repos des Sigues, A57, Gonfaron",
+    "contexte_depart": "bord d'autoroute (jet d'objets incandescents)"
+  },
+  {
+    "id": "fire-2021-0491",
+    "lat_depart": 43.7961,
+    "lon_depart": 6.4147,
+    "source_depart": "Presse locale / SDIS 04",
+    "fiabilite_depart": "probable",
+    "precision_m": 1500,
+    "lieu_dit_depart": "D952, près de Rougon, Gorges du Verdon",
+    "contexte_depart": "garrigue, falaise"
+  },
+  {
+    "id": "fire-2021-0492",
+    "lat_depart": 43.473687,
+    "lon_depart": 6.554296,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D125 vers Le Muy, Le Muy",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2021-0493",
+    "lat_depart": 43.21169,
+    "lon_depart": 6.067597,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Solliès-Pont, Cuers",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2021-0494",
+    "lat_depart": 43.956157,
+    "lon_depart": 6.356713,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4085 vers Chaudon, Barrême",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2021-0495",
+    "lat_depart": 43.287514,
+    "lon_depart": 5.846258,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D2 vers Le Beausset, Signes",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2021-0496",
+    "lat_depart": 43.217444,
+    "lon_depart": 6.463345,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Piste du barrage, La Môle",
+    "contexte_depart": "piste"
+  },
+  {
+    "id": "fire-2021-0497",
+    "lat_depart": 43.52146,
+    "lon_depart": 6.79747,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D37 vers Montauroux, Les Adrets-de-l'Estérel",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2021-0498",
+    "lat_depart": 43.385844,
+    "lon_depart": 6.305769,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D33 vers Gonfaron, Le Luc",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2021-0499",
+    "lat_depart": 43.11316,
+    "lon_depart": 6.323177,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Cabasson, Bormes-les-Mimosas",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2022-0500",
+    "lat_depart": 43.307458,
+    "lon_depart": 6.241699,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D97 vers Carnoules, Pignans",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2022-0501",
+    "lat_depart": 43.5908,
+    "lon_depart": 6.8658,
+    "source_depart": "Var-Matin juillet 2022 / SDIS 83",
+    "fiabilite_depart": "exacte",
+    "precision_m": 300,
+    "lieu_dit_depart": "Chemin des Suvières, Tanneron (proche A8)",
+    "contexte_depart": "massif du Tanneron, mimosa/maquis"
+  },
+  {
+    "id": "fire-2022-0502",
+    "lat_depart": 43.311727,
+    "lon_depart": 6.254621,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D39 vers Gonfaron, Pignans",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2022-0503",
+    "lat_depart": 43.633604,
+    "lon_depart": 6.238633,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D557 vers Salernes, Aups",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2022-0504",
+    "lat_depart": 44.094362,
+    "lon_depart": 6.252881,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D900 vers Barles, Digne-les-Bains",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2022-0505",
+    "lat_depart": 43.083805,
+    "lon_depart": 6.359938,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Cap Bénat, Le Lavandou",
+    "contexte_depart": "garrigue côtière"
+  },
+  {
+    "id": "fire-2022-0506",
+    "lat_depart": 44.1867,
+    "lon_depart": 5.9383,
+    "source_depart": "La Provence août 2022 / SDIS 04",
+    "fiabilite_depart": "probable",
+    "precision_m": 1500,
+    "lieu_dit_depart": "Massif de la Baume, D4, Sisteron",
+    "contexte_depart": "garrigue, pente sèche"
+  },
+  {
+    "id": "fire-2022-0507",
+    "lat_depart": 43.218317,
+    "lon_depart": 6.142694,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Cuers, Pierrefeu-du-Var",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2022-0508",
+    "lat_depart": 43.778482,
+    "lon_depart": 6.361943,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D23, Route des Crêtes, La Palud-sur-Verdon",
+    "contexte_depart": "garrigue, bord de route"
+  },
+  {
+    "id": "fire-2022-0509",
+    "lat_depart": 43.321377,
+    "lon_depart": 6.34127,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Piste DFCI, Les Mayons",
+    "contexte_depart": "piste forestière"
+  },
+  {
+    "id": "fire-2022-0510",
+    "lat_depart": 43.317077,
+    "lon_depart": 6.358391,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D41, centre, Les Mayons",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2022-0511",
+    "lat_depart": 43.330678,
+    "lon_depart": 6.520226,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D44 vers Grimaud, Plan-de-la-Tour",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2022-0512",
+    "lat_depart": 43.784229,
+    "lon_depart": 5.765381,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4096 vers Manosque, Sainte-Tulle",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2022-0513",
+    "lat_depart": 43.626273,
+    "lon_depart": 6.710728,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D562 vers Seillans, Fayence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2022-0514",
+    "lat_depart": 43.920345,
+    "lon_depart": 5.925512,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D4, Vallée de la Durance, Oraison",
+    "contexte_depart": "bord de route, collines"
+  },
+  {
+    "id": "fire-2023-0515",
+    "lat_depart": 43.249176,
+    "lon_depart": 6.515881,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Chemin du Train des Pignes, Cogolin",
+    "contexte_depart": "piste"
+  },
+  {
+    "id": "fire-2023-0516",
+    "lat_depart": 43.099908,
+    "lon_depart": 6.087108,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D559 vers Carqueiranne, Hyères",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2023-0517",
+    "lat_depart": 43.785212,
+    "lon_depart": 6.021058,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Riez, Allemagne-en-Provence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2023-0518",
+    "lat_depart": 43.249351,
+    "lon_depart": 5.79483,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Circuit Paul Ricard, Le Castellet",
+    "contexte_depart": "zone périurbaine"
+  },
+  {
+    "id": "fire-2023-0519",
+    "lat_depart": 43.62399,
+    "lon_depart": 6.709382,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D562 vers Seillans, Fayence",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2023-0520",
+    "lat_depart": 43.771674,
+    "lon_depart": 6.263189,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D71 Route des Crêtes, Aiguines",
+    "contexte_depart": "bord de route touristique, garrigue"
+  },
+  {
+    "id": "fire-2023-0521",
+    "lat_depart": 43.783964,
+    "lon_depart": 6.324741,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Rougon, La Palud-sur-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2023-0522",
+    "lat_depart": 43.162639,
+    "lon_depart": 6.350265,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Verrerie, Bormes-les-Mimosas",
+    "contexte_depart": "piste forestière"
+  },
+  {
+    "id": "fire-2024-0523",
+    "lat_depart": 43.732032,
+    "lon_depart": 5.958113,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D82 vers Gréoux, Esparron-de-Verdon",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2024-0524",
+    "lat_depart": 43.265863,
+    "lon_depart": 6.498266,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Route de Collobrières D14, Grimaud",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2024-0525",
+    "lat_depart": 43.330273,
+    "lon_depart": 6.646554,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de la Grange D74, Sainte-Maxime",
+    "contexte_depart": "col forestier"
+  },
+  {
+    "id": "fire-2024-0526",
+    "lat_depart": 43.199852,
+    "lon_depart": 5.753025,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D66 vers Le Beausset, Le Castellet",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2024-0527",
+    "lat_depart": 43.228248,
+    "lon_depart": 6.084583,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D43 vers Pierrefeu, Cuers",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2024-0528",
+    "lat_depart": 44.09187,
+    "lon_depart": 6.24824,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D900 vers Barles, Digne-les-Bains",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2025-0529",
+    "lat_depart": 43.3672,
+    "lon_depart": 5.2864,
+    "source_depart": "La Provence juillet 2025 / Marins-Pompiers de Marseille",
+    "fiabilite_depart": "exacte",
+    "precision_m": 500,
+    "lieu_dit_depart": "16e arrondissement de Marseille, quartier Saint-André",
+    "contexte_depart": "interface urbain-forêt, zone périurbaine"
+  },
+  {
+    "id": "fire-2025-0530",
+    "lat_depart": 43.473785,
+    "lon_depart": 6.769817,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Malpasset/Reyran, Fréjus",
+    "contexte_depart": "garrigue, piste"
+  },
+  {
+    "id": "fire-2025-0531",
+    "lat_depart": 43.307538,
+    "lon_depart": 6.421455,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Campaux, La Garde-Freinet",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2025-0532",
+    "lat_depart": 43.738889,
+    "lon_depart": 5.863561,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Vinon, Gréoux-les-Bains",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2025-0533",
+    "lat_depart": 43.411496,
+    "lon_depart": 6.28967,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Les Bertrands, Le Luc",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2025-0534",
+    "lat_depart": 43.228589,
+    "lon_depart": 6.306042,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "La Capelle, Collobrières",
+    "contexte_depart": "interface habitat-forêt"
+  },
+  {
+    "id": "fire-2025-0535",
+    "lat_depart": 43.822985,
+    "lon_depart": 6.033448,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "D952 vers Riez, Valensole",
+    "contexte_depart": "bord de route"
+  },
+  {
+    "id": "fire-2025-0536",
+    "lat_depart": 43.167885,
+    "lon_depart": 6.368079,
+    "source_depart": "estimé",
+    "fiabilite_depart": "estimée",
+    "precision_m": 300,
+    "lieu_dit_depart": "Col de Caguo Ven, Bormes-les-Mimosas",
+    "contexte_depart": "col forestier"
+  }
+]
