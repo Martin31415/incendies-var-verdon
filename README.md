@@ -1,61 +1,78 @@
-# Carte interactive — Incendies Var / Verdon / Alpes-de-Haute-Provence
+# 🔥 Incendies Var · Verdon · Alpes-de-Haute-Provence
 
-Carte interactive de visualisation des incendies historiques dans le Var, le Verdon et les Alpes-de-Haute-Provence.
+Site web interactif de visualisation et d'analyse des incendies historiques dans le Var, le Verdon et les Alpes-de-Haute-Provence.
 
-## Déploiement (GitHub Pages)
+**Un seul fichier HTML statique** — publiable immédiatement sur GitHub Pages, sans build.
 
-1. Pusher ce dépôt sur GitHub :
+## 🚀 Déploiement (GitHub Pages)
+
+1. **Créer un dépôt GitHub** et pousser ce dossier :
    ```bash
+   git init
+   git add .
+   git commit -m "Site incendies Var - carte interactive & analyses"
    git remote add origin git@github.com:USER/incendies-var.git
    git push -u origin main
    ```
 
-2. Activer GitHub Pages dans **Settings → Pages** :
+2. **Activer GitHub Pages** dans **Settings → Pages** :
    - Source : `Deploy from a branch`
-   - Branch : `main` (ou `gh-pages`)
+   - Branch : `main`
    - Dossier : `/ (root)`
 
-3. La carte est accessible à `https://USER.github.io/incendies-var/`
+3. Le site est accessible à `https://USER.github.io/incendies-var/`
 
-## Ouverture en local
+## 💻 Ouverture en local
 
-Ouvrir `index.html` directement dans un navigateur (file://) OU via un serveur statique :
+Ouvrir `index.html` directement dans un navigateur, ou via un serveur statique :
 
 ```bash
 python3 -m http.server 8080
-# Puis ouvrir http://localhost:8080
+# Puis http://localhost:8080
 ```
 
-## Fonctionnalités
+## 🗺️ Fonctionnalités
 
+### Onglet Carte (deck.gl)
 - **Calque polygones** : périmètres approximatifs (cercles basés sur la surface) colorés par intensité
 - **Calque points** : points de départ avec taille proportionnelle à la surface
 - **Calque communes** : agrégation par commune
-- **Filtre temporel** : slider année début/fin + animation par décennie
-- **Filtre surface** : tous, >100 ha, >1000 ha, >5000 ha
-- **Filtre département** : Var, Alpes-de-Haute-Provence, Bouches-du-Rhône
-- **Filtre cause** : naturelle, humaine (accidentelle/volontaire), inconnue
-- **Click** → popup détaillée (nom, date, surface, durée, cause, notes, source)
-- **Survol** → info-bulle rapide
-- **Zoom automatique** sur la région au chargement
-- **Design sombre** avec dégradé de couleurs chaudes
-- **Responsive** (mobile-friendly)
+- **Filtres** : période (sliders + animation par décennie), surface minimale, département, cause
+- **Interactions** : clic → popup détaillée, survol → info-bulle
+- **Fond de carte** : CARTO dark (gratuit, pas de clé API)
 
-## Stack technique
+### Onglet Stats (Plotly.js)
+- **Cartes de synthèse** : nombre total d'incendies, surface cumulée, plus grand incendie, etc.
+- **Graphiques** : incendies par année, répartition par cause, par département, surface par décennie
 
-- **[deck.gl](https://deck.gl/)** (CDN, v8.9) — moteur de rendu géospatial d'Uber/vis.gl qui équipe Kepler.gl
-- **CARTO dark** — fond de carte raster sombre gratuit (pas de clé API)
-- **Vanilla JS** — interface de filtres, popups, interactions
-- **Aucun build step** — un seul fichier HTML auto-suffisant (~220 Ko)
+### Onglets d'analyse (en cours)
+- 🔥 **Heatmap** — densité spatiale des feux
+- 💨 **Corridors** — axes de propagation
+- ⚠️ **Risque** — carte de risque synthétique
+- 📈 **Climat** — corrélations climat-incendie + projections
 
-> **Note :** Kepler.gl nécessite React + Redux + un bundler, incompatible avec la contrainte
-> « un seul fichier HTML statique ». deck.gl, son moteur de rendu sous-jacent, expose la
-> même API de calques (GeoJsonLayer, ScatterplotLayer, TileLayer) en vanilla JS via CDN.
+## 📊 Données
 
-## Source des données
+537 incendies recensés de 1854 à 2025. Données compilées par recherche web et archives historiques.
 
-Les données (`data/incendies.json`, également embarquées dans `index.html`) proviennent
-d'une recherche web compilant les incendies historiques de la région.
-Les polygones sont approximés (cercles basés sur la surface déclarée) en l'absence de
-périmètres géoréférencés officiels. Quand `data/incendies_verified.json` sera produit avec
-les vrais périmètres, le code les utilisera automatiquement.
+Fichiers source :
+- `data/incendies_verified.json` — dataset complet (3.1 MB)
+- `data/points_depart.json` — points de départ (151 KB)
+
+Les polygones sont approximés (cercles basés sur la surface déclarée) en l'absence de périmètres géoréférencés officiels.
+
+## 🛠️ Stack technique
+
+| Librairie | Usage | CDN |
+|-----------|-------|-----|
+| [deck.gl](https://deck.gl/) v8.9 | Carte interactive, calques géospatiaux | unpkg |
+| [Plotly.js](https://plotly.com/) v2.32 | Graphiques statistiques | cdn.plot.ly |
+| CARTO dark | Fond de carte raster sombre | cartocdn.com |
+
+- **Vanilla JS** — Aucun framework, aucun build step
+- **CSS custom** — Design sombre (#0a0a0f), accent feu (#f0a050)
+- **Responsive** — Mobile-friendly
+
+## 📝 Sources & méthodologie
+
+Les données proviennent de recherches web, archives Prométhée et documentation historique. Les surfaces antérieures à 1950 sont des estimations basées sur les archives disponibles. Les polygones sont des cercles approximatifs centrés sur les coordonnées du lieu-dit, avec un rayon calculé à partir de la surface déclarée.
