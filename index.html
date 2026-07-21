@@ -428,13 +428,15 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 /* ── Map container ── */
 #map-container {
-  position: absolute;
-  inset: 0;
-  background: #ede6d8;
+  flex: 1;
+  position: relative;
+  min-height: 400px;
+  background: #e8e0d0;
 }
 #deck-canvas {
-  position: absolute;
-  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* ── Tooltip ── */
@@ -1087,15 +1089,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   </div>
 </div>
 
-<footer id="main-footer">
-  <span>Donn&eacute;es : recherche web, archives historiques &middot; Polygones approxim&eacute;s (cercles bas&eacute;s sur la surface)</span>
-  <span>
-    <a href="https://github.com" target="_blank">Sources &amp; m&eacute;thodologie</a> &middot;
-    Fonds de carte <a href="https://carto.com" target="_blank">CARTO dark</a> &middot;
-    <a href="https://deck.gl" target="_blank">deck.gl</a> &middot;
-    <a href="https://plotly.com" target="_blank">Plotly.js</a>
-  </span>
-</footer>
+<footer id="main-footer">Donn&eacute;es : recherche web, archives historiques &middot; <a href="https://deck.gl" target="_blank">deck.gl</a> &middot; <a href="https://plotly.com" target="_blank">Plotly.js</a></footer>
 
 <script>
 
@@ -7816,6 +7810,6 @@ function initFutureRiskMap() {
     });
 }
 </script>
-<div style="text-align:center;padding:6px 0 12px;font-size:0.6rem;color:#8a7d6e;opacity:0.5;font-family:var(--font-sans);">v1.3</div>
+<div style="text-align:center;padding:6px 0 12px;font-size:0.6rem;color:#8a7d6e;opacity:0.5;font-family:var(--font-sans);">v1.4</div>
 </body>
 </html>
