@@ -5278,12 +5278,12 @@
     "lieu_dit": "Massif des Maures (Les Mayons, Gonfaron, Le Cannet, La Garde-Freinet, Vidauban)",
     "lat": 43.4,
     "lon": 6.38,
-    "surface_ha": 18437,
+    "surface_ha": 12390,
     "cause": "inconnue",
     "duree_jours": 9,
     "perimetre_geojson": null,
     "source": "web",
-    "notes": "Été 2003 - canicule. 387 départs dans le Var. 7 grands feux: 18 437 ha. Flammes 20m, sauts 400-500m, vitesse 5-6 km/h.",
+    "notes": "Été 2003 - canicule. 387 départs dans le Var. Surface PROMETHEE : 12 390 ha (Vidauban 1: 6 744 ha + Vidauban 2: 5 646 ha). Flammes 20m, sauts 400-500m, vitesse 5-6 km/h.",
     "annee": 2003
   },
   {
