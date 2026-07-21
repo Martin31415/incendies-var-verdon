@@ -8,9 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/deck.gl@8.9.36/dist.min.js"></script>
-<script src="https://unpkg.com/@deck.gl/geo-layers@8.9.36/dist.min.js"></script>
-<script src="https://unpkg.com/@deck.gl/layers@8.9.36/dist.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
@@ -433,10 +430,9 @@ input[type="range"]::-webkit-slider-thumb:hover {
   min-height: 400px;
   background: #e8e0d0;
 }
-#deck-canvas {
+#leaflet-map {
   width: 100%;
   height: 100%;
-  display: block;
 }
 
 /* ── Tooltip ── */
@@ -1008,7 +1004,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
       </div>
     </div>
     <div id="map-container">
-      <canvas id="deck-canvas"></canvas>
+      <div id="leaflet-map"></div>
     </div>
   </div>
 
@@ -1161,7 +1157,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   </div>
 </div>
 
-<footer id="main-footer">Donn&eacute;es : recherche web, archives historiques &middot; <a href="https://deck.gl" target="_blank">deck.gl</a> &middot; <a href="https://plotly.com" target="_blank">Plotly.js</a></footer>
+<footer id="main-footer">Donn&eacute;es : recherche web, archives historiques &middot; <a href="https://leafletjs.com" target="_blank">Leaflet.js</a> &middot; <a href="https://plotly.com" target="_blank">Plotly.js</a></footer>
 
 <script>
 
@@ -1310,9 +1306,12 @@ document.querySelectorAll('.tab-btn').forEach(function(btn) {
 });
 
 // ═══════════════════════════════════════════════
-// DECK.GL MAP
+// LEAFLET MAP
 // ═══════════════════════════════════════════════
-var deckgl = null;
+var map = null;
+var polygonLayer = null;
+var pointLayer = null;
+var communeLayer = null;
 var filters = {
   yearStart: 1854, yearEnd: 2025, minSurface: 0,
   departements: new Set(['Var', 'Alpes-de-Haute-Provence', 'Bouches-du-Rhône']),
@@ -1321,6 +1320,13 @@ var filters = {
 var layerVisibility = { polygons: true, points: true, communes: true };
 var animationRunning = false;
 var animationTimer = null;
+
+// Inject Leaflet tooltip styles matching design system
+(function() {
+  var st = document.createElement('style');
+  st.textContent = '.leaflet-tooltip.fire-tooltip{background:rgba(26,21,18,0.96)!important;border:1px solid rgba(196,126,76,0.5)!important;border-radius:6px!important;padding:10px 15px!important;font-size:0.7rem;color:#8a7d6e!important;box-shadow:0 4px 20px rgba(0,0,0,0.5)!important}.leaflet-tooltip.fire-tooltip::before{border-top-color:rgba(26,21,18,0.96)!important}.leaflet-tooltip.fire-tooltip .tt-name{font-family:"Cormorant Garamond",Garamond,Georgia,serif;font-weight:600;font-size:0.85rem;color:#d4854a;letter-spacing:0.02em;margin-bottom:2px}.leaflet-tooltip.fire-tooltip .tt-row{font-size:0.65rem;color:#8a7d6e;margin-top:1px}';
+  document.head.appendChild(st);
+})();
 
 function applyFilters() {
   return processed.filter(function(f) {
@@ -1332,136 +1338,134 @@ function applyFilters() {
   });
 }
 
-function makeLayers(filteredData) {
-  var layers = [];
-  if (layerVisibility.polygons) {
-    var geojsonFC = {
-      type: 'FeatureCollection',
-      features: filteredData.map(function(f) {
-        return {
-          type: 'Feature',
-          geometry: f._geometry,
-          properties: {
-            id: f.id, name: f.commune, annee: f.annee, surface: f.surface_ha,
-            cause: f.cause, decade: f._decade, color: f._color,
-          }
-        };
-      })
-    };
-    layers.push(new deck.GeoJsonLayer({
-      id: 'fire-polygons', data: geojsonFC, pickable: true,
-      stroked: true, filled: true, extruded: false,
-      lineWidthScale: 1, lineWidthMinPixels: 1, lineWidthMaxPixels: 3,
-      getFillColor: function(d) { return d.properties.color; },
-      getLineColor: [200, 120, 60, 180], getLineWidth: 1.5, opacity: 0.55, getRadius: 0,
-    }));
-  }
-  if (layerVisibility.points) {
-    layers.push(new deck.ScatterplotLayer({
-      id: 'fire-points', data: filteredData, pickable: true, opacity: 0.85,
-      stroked: true, filled: true,
-      radiusScale: 1, radiusMinPixels: 3, radiusMaxPixels: 40, lineWidthMinPixels: 1,
-      getPosition: function(d) { return [d.lon, d.lat]; },
-      getRadius: function(d) { return Math.max(3, Math.sqrt(d.surface_ha) * 40); },
-      getFillColor: function(d) { return d._color; },
-      getLineColor: [255, 255, 255, 120], getLineWidth: 1,
-    }));
-  }
-  if (layerVisibility.communes) {
-    var filteredNames = new Set(filteredData.map(function(f) { return f.commune; }));
-    var filteredCommunes = communes.filter(function(c) { return filteredNames.has(c.commune); });
-    layers.push(new deck.ScatterplotLayer({
-      id: 'communes', data: filteredCommunes, pickable: true, opacity: 0.5,
-      stroked: true, filled: true,
-      radiusScale: 1, radiusMinPixels: 4, radiusMaxPixels: 30, lineWidthMinPixels: 1,
-      getPosition: function(d) { return [d.lon, d.lat]; },
-      getRadius: function(d) { return d._size; },
-      getFillColor: [91, 143, 168], getLineColor: [140, 190, 210, 120], getLineWidth: 1,
-    }));
-  }
-  return layers;
+function buildPolygonLayer(filteredData) {
+  var geojsonFC = {
+    type: 'FeatureCollection',
+    features: filteredData.map(function(f) {
+      return {
+        type: 'Feature',
+        geometry: f._geometry,
+        properties: {
+          id: f.id, name: f.commune, annee: f.annee, surface: f.surface_ha,
+          cause: f.cause, decade: f._decade, color: f._color,
+        }
+      };
+    })
+  };
+  return L.geoJSON(geojsonFC, {
+    style: function(feature) {
+      var c = feature.properties.color;
+      return {
+        fillColor: 'rgb(' + c[0] + ',' + c[1] + ',' + c[2] + ')',
+        color: 'rgb(200,120,60)',
+        weight: 1.5,
+        opacity: 0.7,
+        fillOpacity: 0.45
+      };
+    },
+    onEachFeature: function(feature, layer) {
+      var p = feature.properties;
+      layer.bindTooltip(
+        '<div class="tt-name">' + p.name + '</div><div class="tt-row">' + p.annee + ' &middot; ' + p.surface.toLocaleString('fr') + ' ha &middot; ' + p.cause.replace('humaine-','humaine ') + '</div>',
+        { sticky: true, className: 'fire-tooltip' }
+      );
+      layer.on('click', function(e) {
+        L.DomEvent.stopPropagation(e);
+        var f = processed.find(function(x) { return x.id === p.id; });
+        if (f) showPopup(f);
+      });
+    }
+  });
 }
 
-var basemapLayer = null;
+function buildPointLayer(filteredData) {
+  return L.layerGroup(
+    filteredData.map(function(f) {
+      var radius = Math.max(3, Math.min(40, Math.sqrt(f.surface_ha) * 1.5));
+      var c = f._color;
+      var marker = L.circleMarker([f.lat, f.lon], {
+        radius: radius,
+        fillColor: 'rgb(' + c[0] + ',' + c[1] + ',' + c[2] + ')',
+        color: 'rgba(255,255,255,0.5)',
+        weight: 1,
+        opacity: 0.85,
+        fillOpacity: 0.85
+      });
+      marker.bindTooltip(
+        '<div class="tt-name">' + f.commune + (f.lieu_dit && f.lieu_dit !== f.commune ? ' &mdash; ' + f.lieu_dit : '') + '</div><div class="tt-row">' + (f.date || f.annee) + ' &middot; ' + (f.surface_ha||0).toLocaleString('fr') + ' ha &middot; ' + (f.cause||'').replace('humaine-','humaine ') + '</div>',
+        { sticky: true, className: 'fire-tooltip' }
+      );
+      marker.on('click', function(e) { L.DomEvent.stopPropagation(e); showPopup(f); });
+      return marker;
+    })
+  );
+}
+
+function buildCommuneLayer(filteredData) {
+  var filteredNames = new Set(filteredData.map(function(f) { return f.commune; }));
+  var filteredCommunes = communes.filter(function(c) { return filteredNames.has(c.commune); });
+  return L.layerGroup(
+    filteredCommunes.map(function(c) {
+      var radius = Math.min(16, Math.max(5, Math.sqrt(c.surface) * 0.15));
+      var marker = L.circleMarker([c.lat, c.lon], {
+        radius: radius,
+        fillColor: 'rgb(91,143,168)',
+        color: 'rgba(140,190,210,0.5)',
+        weight: 1,
+        opacity: 0.5,
+        fillOpacity: 0.5
+      });
+      marker.bindTooltip(
+        '<div class="tt-name">' + c.commune + '</div><div class="tt-row">' + c.count + ' incendie(s) &middot; ' + c.surface.toLocaleString('fr') + ' ha cumulés</div>',
+        { sticky: true, className: 'fire-tooltip' }
+      );
+      marker.on('click', function(e) { L.DomEvent.stopPropagation(e); showCommunePopup(c); });
+      return marker;
+    })
+  );
+}
 
 function initMap() {
-  if (typeof deck === 'undefined') {
-    document.getElementById('map-container').innerHTML =
-      '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#c47e4c;font-family:var(--font-serif);font-size:1.1rem;">' +
-      '<div style="text-align:center;background:rgba(254,252,248,0.96);padding:32px;border-radius:10px;border:1px solid rgba(196,126,76,0.2);box-shadow:0 4px 20px rgba(0,0,0,0.08);">' +
-      '&#9888;&#65039; deck.gl n\'a pas pu être chargé.<br>' +
-      '<span style="font-size:0.8rem;color:#8a7d6e;">Vérifiez votre connexion internet.</span></div></div>';
-    return;
-  }
-  try {
-    basemapLayer = new deck.TileLayer({
-      id: 'basemap',
-      data: [
-        'https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png',
-        'https://b.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png',
-        'https://c.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png',
-      ],
-      tileSize: 256, minZoom: 0, maxZoom: 19,
-      renderSubLayers: function(props) {
-        var bbox = props.tile.bbox;
-        return new deck.BitmapLayer(Object.assign({}, props, {
-          data: null, image: props.data,
-          bounds: [bbox.west, bbox.south, bbox.east, bbox.north],
-        }));
-      },
-    });
-  } catch(e) { console.warn('TileLayer basemap unavailable'); }
+  map = L.map('leaflet-map', {
+    zoomControl: true,
+    attributionControl: true
+  }).setView([43.52, 6.45], 9);
 
-  deckgl = new deck.Deck({
-    canvas: document.getElementById('deck-canvas'),
-    initialViewState: {
-      latitude: 43.65, longitude: 6.25, zoom: 8, pitch: 0, bearing: 0,
-    },
-    controller: true,
-    layers: basemapLayer ? [basemapLayer] : [],
-    getTooltip: function(info) {
-      if (!info.object) return null;
-      if (info.object.properties && info.object.properties.id) {
-        var p = info.object.properties;
-        return {
-          html: '<div class="tt-name">' + p.name + '</div><div class="tt-row">' + p.annee + ' &middot; ' + p.surface.toLocaleString('fr') + ' ha &middot; ' + p.cause.replace('humaine-','humaine ') + '</div>',
-        };
-      }
-      if (info.object.commune && !info.object.id) {
-        return {
-          html: '<div class="tt-name">' + info.object.commune + '</div><div class="tt-row">' + info.object.count + ' incendie(s) &middot; ' + info.object.surface.toLocaleString('fr') + ' ha cumulés</div>',
-        };
-      }
-      if (info.object.id && info.object.id.indexOf('fire-') === 0) {
-        return {
-          html: '<div class="tt-name">' + info.object.commune + (info.object.lieu_dit ? ' &mdash; ' + info.object.lieu_dit : '') + '</div><div class="tt-row">' + (info.object.date || info.object.annee) + ' &middot; ' + (info.object.surface_ha||0).toLocaleString('fr') + ' ha &middot; ' + (info.object.cause||'').replace('humaine-','humaine ') + '</div>',
-        };
-      }
-      return null;
-    },
-    onClick: function(info) {
-      if (!info.object) { closePopup(); return; }
-      var f = null;
-      if (info.object.properties && info.object.properties.id) {
-        f = processed.find(function(x) { return x.id === info.object.properties.id; });
-      } else if (info.object.id && info.object.id.indexOf('fire-') === 0) {
-        f = info.object;
-      }
-      if (f) { showPopup(f); }
-      else if (info.object.commune && !info.object.id) { showCommunePopup(info.object); }
-      else { closePopup(); }
-    },
-  });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 19
+  }).addTo(map);
+
+  // Click on empty map closes popup
+  map.on('click', function() { closePopup(); });
 
   setupFilterHandlers();
   updateLayers();
 }
 
 function updateLayers() {
-  if (!deckgl) return;
+  if (!map) return;
+  if (polygonLayer) map.removeLayer(polygonLayer);
+  if (pointLayer) map.removeLayer(pointLayer);
+  if (communeLayer) map.removeLayer(communeLayer);
+
   var filtered = applyFilters();
-  var dataLayers = makeLayers(filtered);
-  deckgl.setProps({ layers: basemapLayer ? [basemapLayer].concat(dataLayers) : dataLayers });
+
+  if (layerVisibility.polygons) {
+    polygonLayer = buildPolygonLayer(filtered);
+    polygonLayer.addTo(map);
+  } else { polygonLayer = null; }
+
+  if (layerVisibility.points) {
+    pointLayer = buildPointLayer(filtered);
+    pointLayer.addTo(map);
+  } else { pointLayer = null; }
+
+  if (layerVisibility.communes) {
+    communeLayer = buildCommuneLayer(filtered);
+    communeLayer.addTo(map);
+  } else { communeLayer = null; }
+
   var subEl = document.querySelector('#main-header .sub');
   if (subEl) subEl.innerHTML = '<span>' + filtered.length + '</span> incendie(s) affiché(s) sur 537 &mdash; 1854 &ndash; 2025 &mdash; Carte interactive &amp; Analyses';
 }
