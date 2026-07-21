@@ -2,286 +2,837 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Incendies Var · Verdon · Alpes-de-Haute-Provence — Carte & Analyses</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Incendies Var · Verdon · Alpes-de-Haute-Provence — Carte &amp; Analyses</title>
 <meta name="description" content="Carte interactive et analyses des incendies historiques dans le Var, le Verdon et les Alpes-de-Haute-Provence. 537 incendies recensés de 1854 à 2025.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/deck.gl@8.9.36/dist.min.js"></script>
 <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
 <style>
 
+/* ═══════════════════════════════════════════════════════════════════════
+   CARTOGRAPHIC DESIGN SYSTEM — IGN / Cassini inspired
+   ═══════════════════════════════════════════════════════════════════════ */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #0a0a0f;
-  --bg-panel: rgba(16,16,24,0.92);
-  --accent: #f0a050;
-  --accent-glow: rgba(240,130,30,0.3);
-  --text: #e0e0e0;
-  --text-dim: #888;
-  --border: rgba(255,255,255,0.08);
-  --radius: 10px;
+  /* ── Palette: carte IGN pastel / papier ── */
+  --cream:       #f7f3eb;
+  --cream-warm:  #f0e8d8;
+  --paper-white: #fefcf8;
+  --paper:       #f5f0e6;
+  --ink:         #2a231c;
+  --ink-soft:    #4a4036;
+  --ink-muted:   #8a7d6e;
+  --terracotta:  #c47e4c;
+  --terracotta-bright: #d4854a;
+  --braise:      #d4533a;
+  --braise-glow: rgba(212,83,58,0.18);
+  --olive:       #7a8b5e;
+  --slate:       #6b7b8d;
+  --azure:       #5b8fa8;
+  --gold:        #b8942e;
+  --border:      rgba(0,0,0,0.08);
+  --border-active: rgba(196,126,76,0.4);
+  --shadow-sm:   0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md:   0 4px 20px rgba(0,0,0,0.08);
+
+  /* ── Semantic ── */
+  --bg:         var(--cream);
+  --bg-panel:   rgba(254,252,248,0.94);
+  --bg-card:    rgba(255,255,255,0.88);
+  --accent:     var(--terracotta-bright);
+  --accent-dim: var(--terracotta);
+  --accent-glow:var(--braise-glow);
+  --text:       var(--ink);
+  --text-dim:   var(--ink-soft);
+  --text-muted: var(--ink-muted);
+  --radius:     6px;
+  --radius-lg:  10px;
+  --font-serif: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  --font-sans:  'Inter', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-data:  'DM Sans', 'Inter', -apple-system, sans-serif;
+  --transition: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Noise texture overlay ── */
+body::after {
+  content: ''; position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+  opacity: 0.018;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-sans);
   background: var(--bg);
   color: var(--text);
-  height: 100vh;
+  height: 100vh; height: 100dvh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ── Header ── */
 #main-header {
-  background: linear-gradient(180deg, rgba(10,10,15,0.98) 0%, rgba(10,10,15,0.9) 100%);
+  background: linear-gradient(180deg, rgba(254,252,248,0.98) 0%, rgba(247,243,235,0.96) 100%);
   border-bottom: 1px solid var(--border);
-  padding: 12px 20px 8px;
+  padding: 14px 24px 10px;
   z-index: 500;
   flex-shrink: 0;
+  text-align: center;
 }
 #main-header h1 {
-  font-size: 1.15rem; font-weight: 600; letter-spacing: 0.02em;
-  color: var(--accent);
-  text-shadow: 0 0 18px var(--accent-glow);
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  line-height: 1.3;
+}
+#main-header h1 em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--terracotta);
 }
 #main-header .sub {
-  font-size: 0.68rem; color: var(--text-dim); margin-top: 2px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+#main-header .sub span {
+  color: var(--terracotta);
+}
+
+/* ── Compass rose decoration ── */
+.header-ornament {
+  display: inline-block;
+  width: 28px; height: 28px;
+  margin: 0 4px;
+  vertical-align: -5px;
+  opacity: 0.5;
 }
 
 /* ── Tab Navigation ── */
 #tab-nav {
   display: flex;
-  background: rgba(12,12,20,0.95);
+  background: rgba(250,247,240,0.97);
   border-bottom: 1px solid var(--border);
-  padding: 0 12px;
+  padding: 0 20px;
   z-index: 499;
   flex-shrink: 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  gap: 2px;
+  justify-content: center;
 }
-#tab-nav::-webkit-scrollbar { height: 2px; }
-#tab-nav::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); }
+#tab-nav::-webkit-scrollbar { height: 1px; }
+#tab-nav::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); }
 
 .tab-btn {
-  background: none; border: none; color: #777;
-  padding: 10px 16px; font-size: 0.78rem; cursor: pointer;
-  font-family: inherit; white-space: nowrap;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  padding: 11px 18px;
+  font-size: 0.76rem;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
   border-bottom: 2px solid transparent;
-  transition: all 0.2s;
-  display: flex; align-items: center; gap: 6px;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
 }
-.tab-btn:hover { color: #bbb; background: rgba(255,255,255,0.03); }
+.tab-btn:hover {
+  color: var(--ink);
+  background: rgba(196,126,76,0.05);
+}
 .tab-btn.active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-  background: rgba(240,130,30,0.08);
+  color: var(--terracotta);
+  border-bottom-color: var(--terracotta);
 }
+.tab-btn .tab-icon {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  transition: opacity var(--transition);
+}
+.tab-btn.active .tab-icon { opacity: 1; }
 
 /* ── Tab Contents ── */
 #tab-content-area {
-  flex: 1; position: relative; overflow: hidden;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
 }
 .tab-content {
   display: none;
-  position: absolute; inset: 0;
+  position: absolute;
+  inset: 0;
   overflow: auto;
+  opacity: 0;
+  transition: opacity 300ms ease;
 }
-.tab-content.active { display: flex; }
+.tab-content.active {
+  display: flex;
+  opacity: 1;
+}
 
-/* ── Carte tab (full map) ── */
+/* ── Carte tab ── */
 #tab-carte { flex-direction: column; }
 
-/* Sidebar */
+/* ── Sidebar ── */
 #sidebar {
-  position: absolute; top: 10px; left: 12px; bottom: 12px;
-  width: 270px; z-index: 100;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  bottom: 12px;
+  width: 280px;
+  z-index: 100;
   background: var(--bg-panel);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 14px;
+  border-radius: var(--radius-lg);
+  padding: 16px;
   overflow-y: auto;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  display: flex; flex-direction: column; gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), opacity var(--transition);
 }
-#sidebar::-webkit-scrollbar { width: 4px; }
-#sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 2px; }
+#sidebar::-webkit-scrollbar { width: 3px; }
+#sidebar::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 3px; }
 
 .filter-section h3 {
-  font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
-  letter-spacing: 0.08em; color: #a0a0b0; margin-bottom: 6px;
-  border-bottom: 1px solid var(--border); padding-bottom: 4px;
+  font-family: var(--font-serif);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted);
+  margin-bottom: 7px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 5px;
 }
 
+/* ── Range sliders ── */
 input[type="range"] {
-  -webkit-appearance: none; width: 100%; height: 4px;
-  background: rgba(255,255,255,0.1); border-radius: 2px; outline: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 3px;
+  outline: none;
+  margin: 3px 0;
 }
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; width: 16px; height: 16px;
-  background: var(--accent); border-radius: 50%; cursor: pointer;
-  box-shadow: 0 0 8px var(--accent-glow);
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: var(--terracotta-bright);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--accent-glow);
+  transition: transform 0.15s ease;
 }
-.range-labels { display: flex; justify-content: space-between; font-size: 0.62rem; color: #888; margin-top: 2px; }
-.range-val { text-align: center; font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 3px; }
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-data);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+.range-val {
+  text-align: center;
+  font-family: var(--font-data);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--terracotta-bright);
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
 
-.btn-row { display: flex; flex-wrap: wrap; gap: 3px; }
+/* ── Buttons ── */
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
 .btn {
-  background: rgba(255,255,255,0.05); color: #aaa; border: 1px solid var(--border);
-  padding: 3px 9px; border-radius: 14px; font-size: 0.65rem; cursor: pointer;
-  transition: all 0.15s; font-family: inherit; white-space: nowrap;
+  background: rgba(0,0,0,0.03);
+  color: var(--ink-muted);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 0.65rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  white-space: nowrap;
 }
-.btn:hover { background: rgba(255,255,255,0.1); color: #ddd; }
-.btn.active { background: rgba(240,130,30,0.25); border-color: var(--accent); color: var(--accent); }
+.btn:hover {
+  background: rgba(196,126,76,0.08);
+  color: var(--ink);
+  border-color: rgba(196,126,76,0.25);
+}
+.btn.active {
+  background: rgba(212,83,58,0.1);
+  border-color: var(--border-active);
+  color: var(--terracotta);
+}
 
-.check-row { display: flex; align-items: center; gap: 5px; font-size: 0.68rem; color: #bbb; margin-bottom: 2px; cursor: pointer; }
-.check-row input { accent-color: var(--accent); cursor: pointer; }
+/* ── Checkboxes ── */
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.69rem;
+  color: var(--ink);
+  margin-bottom: 3px;
+  cursor: pointer;
+  font-weight: 400;
+  transition: color 0.15s;
+}
+.check-row:hover { color: var(--terracotta); }
+.check-row input[type="checkbox"] {
+  accent-color: var(--terracotta-bright);
+  cursor: pointer;
+  width: 14px; height: 14px;
+}
+.check-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
 
-.layer-toggle { display: flex; align-items: center; gap: 6px; padding: 4px 0; cursor: pointer; font-size: 0.68rem; }
-.layer-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+/* ── Layer toggles ── */
+.layer-toggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 0;
+  cursor: pointer;
+  font-size: 0.69rem;
+  color: var(--ink);
+  font-weight: 400;
+  transition: color 0.15s;
+}
+.layer-toggle:hover { color: var(--terracotta); }
+.layer-toggle input[type="checkbox"] {
+  margin-left: auto;
+  accent-color: var(--terracotta-bright);
+  cursor: pointer;
+}
+.layer-dot {
+  width: 8px; height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Animation button ── */
+#anim-btn {
+  background: rgba(212,83,58,0.06);
+  color: var(--terracotta);
+  border: 1px solid rgba(196,126,76,0.2);
+  padding: 5px 14px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 0.66rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: all var(--transition);
+  margin-top: 6px;
+  width: 100%;
+}
+#anim-btn:hover {
+  background: rgba(212,83,58,0.14);
+  border-color: var(--border-active);
+}
+#anim-btn.running {
+  background: rgba(212,83,58,0.18);
+  border-color: var(--braise);
+  color: var(--braise);
+}
+
+/* ── Sidebar attribution ── */
+.sidebar-attribution {
+  font-size: 0.56rem;
+  color: var(--text-muted);
+  margin-top: auto;
+  font-style: italic;
+  line-height: 1.4;
+  opacity: 0.7;
+}
 
 /* ── Legend ── */
 #legend {
-  position: absolute; bottom: 20px; right: 16px; z-index: 100;
-  background: var(--bg-panel); border: 1px solid var(--border);
-  border-radius: 8px; padding: 8px 12px; font-size: 0.62rem;
+  position: absolute;
+  bottom: 20px;
+  right: 16px;
+  z-index: 100;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  font-size: 0.6rem;
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
+}
+#legend .legend-title {
+  font-family: var(--font-serif);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
 }
 .legend-bar {
-  width: 120px; height: 8px; border-radius: 4px;
-  background: linear-gradient(to right, #ffe066, #f59e0b, #ef4444, #7f1d1d);
-  margin: 3px 0;
+  width: 140px;
+  height: 7px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #dbae6a, #d88a3c, #d4533a, #a82e1e, #6b1a12);
+  margin: 4px 0;
 }
-.legend-labels { display: flex; justify-content: space-between; color: #888; }
+.legend-labels {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-muted);
+  font-size: 0.55rem;
+}
 
-#map-container { position: absolute; inset: 0; background: #0a0a12; }
-#deck-canvas { position: absolute; inset: 0; }
+/* ── Map container ── */
+#map-container {
+  position: absolute;
+  inset: 0;
+  background: #ede6d8;
+}
+#deck-canvas {
+  position: absolute;
+  inset: 0;
+}
 
 /* ── Tooltip ── */
 #tooltip {
-  position: absolute; z-index: 200; pointer-events: none;
-  background: rgba(20,20,28,0.94); border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 8px; padding: 10px 14px; font-size: 0.7rem;
-  color: #ddd; max-width: 260px;
-  display: none; box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: 200;
+  pointer-events: none;
+  background: rgba(26,21,18,0.96);
+  border: 1px solid var(--border-active);
+  border-radius: var(--radius);
+  padding: 10px 15px;
+  font-size: 0.7rem;
+  color: var(--ink);
+  max-width: 260px;
+  display: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
-#tooltip .tt-name { font-weight: 700; color: var(--accent); font-size: 0.78rem; }
-#tooltip .tt-row { margin-top: 2px; }
+#tooltip .tt-name {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--terracotta-bright);
+  letter-spacing: 0.02em;
+  margin-bottom: 2px;
+}
+#tooltip .tt-row {
+  font-size: 0.65rem;
+  color: var(--ink-muted);
+  margin-top: 1px;
+}
 
 /* ── Popup ── */
 #popup-overlay {
-  position: fixed; inset: 0; z-index: 500;
-  background: rgba(0,0,0,0.55);
-  display: none; align-items: center; justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 #popup-overlay.show { display: flex; }
 #popup {
-  background: rgba(20,20,30,0.97); border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 12px; padding: 20px 24px; max-width: 440px; width: 90vw;
-  max-height: 80vh; overflow-y: auto; box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  background: rgba(26,21,18,0.98);
+  border: 1px solid var(--border-active);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  max-width: 440px;
+  width: 92vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.55);
+  animation: popIn 200ms ease-out;
 }
-#popup h2 { font-size: 1rem; color: var(--accent); margin-bottom: 8px; }
-#popup .pop-row { display: flex; justify-content: space-between; font-size: 0.73rem; padding: 3px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
-#popup .pop-row .lbl { color: #999; }
-#popup .pop-row .val { color: #ddd; font-weight: 500; text-align: right; }
-#popup .pop-source { margin-top: 10px; font-size: 0.63rem; }
-#popup .pop-source a { color: var(--accent); }
-#popup button.pop-close {
-  position: sticky; top: 0; float: right;
-  background: rgba(255,255,255,0.08); color: #aaa; border: none;
-  width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: 0.85rem;
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
 }
+#popup::-webkit-scrollbar { width: 3px; }
+#popup::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 3px; }
+#popup h2 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--terracotta-bright);
+  margin-bottom: 12px;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+#popup .pop-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.73rem;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+#popup .pop-row .lbl { color: var(--text-muted); font-weight: 400; }
+#popup .pop-row .val { color: var(--ink); font-weight: 500; text-align: right; }
+#popup .pop-source {
+  margin-top: 12px;
+  font-size: 0.62rem;
+  color: var(--text-muted);
+}
+#popup .pop-source a { color: var(--terracotta); }
 
-#anim-btn {
-  background: rgba(240,130,30,0.15); color: var(--accent); border: 1px solid rgba(240,130,30,0.3);
-  padding: 4px 12px; border-radius: 14px; cursor: pointer; font-size: 0.65rem;
-  font-family: inherit; transition: all 0.15s; margin-top: 5px; width: 100%;
+/* ── Popup commune yearly table ── */
+#popup .commune-year-table {
+  width: 100%;
+  font-size: 0.68rem;
+  border-collapse: collapse;
+  margin-top: 4px;
 }
-#anim-btn:hover { background: rgba(240,130,30,0.3); }
-#anim-btn.running { background: rgba(239,68,68,0.3); border-color: #ef4444; color: #ef4444; }
+#popup .commune-year-table thead tr {
+  color: var(--text-muted);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+#popup .commune-year-table th {
+  padding: 3px 6px;
+  font-weight: 500;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+#popup .commune-year-table td {
+  padding: 3px 6px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+}
+#popup .commune-year-table tbody tr:hover td {
+  background: rgba(196,126,76,0.05);
+}
+#popup .commune-year-section {
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+#popup .commune-year-title {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+#popup button.pop-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  background: rgba(0,0,0,0.04);
+  color: var(--ink-muted);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  transition: all var(--transition);
+  line-height: 1;
+}
+#popup button.pop-close:hover {
+  background: rgba(212,83,58,0.15);
+  color: var(--terracotta-bright);
+}
 
 /* ── Analysis tabs (shared) ── */
 .analysis-panel {
-  flex: 1; display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  padding: 40px 20px; text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 30%, rgba(196,126,76,0.04) 0%, transparent 70%);
 }
-.analysis-panel .placeholder-icon { font-size: 3rem; margin-bottom: 16px; opacity: 0.6; }
-.analysis-panel h2 { font-size: 1.3rem; color: var(--accent); margin-bottom: 8px; }
-.analysis-panel p { color: #999; font-size: 0.85rem; max-width: 500px; line-height: 1.5; }
+.analysis-panel .placeholder-icon {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+.analysis-panel h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 12px;
+  letter-spacing: 0.03em;
+}
+.analysis-panel p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  max-width: 480px;
+  line-height: 1.6;
+}
 .analysis-panel .coming-soon {
-  margin-top: 16px; padding: 8px 20px;
-  background: rgba(240,130,30,0.1); border: 1px solid rgba(240,130,30,0.2);
-  border-radius: 20px; font-size: 0.75rem; color: var(--accent);
+  margin-top: 20px;
+  padding: 8px 24px;
+  background: rgba(212,83,58,0.08);
+  border: 1px solid rgba(196,126,76,0.15);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: var(--terracotta);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.03em;
 }
 
-/* Stats tab */
-#tab-stats { flex-direction: column; padding: 20px; }
+/* ── Stats tab ── */
+#tab-stats {
+  flex-direction: column;
+  padding: 24px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(196,126,76,0.03) 0%, transparent 60%);
+}
 .stats-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px; margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
 }
 .stat-card {
-  background: var(--bg-panel); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 18px 20px; text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.stat-card:hover {
+  border-color: var(--border-active);
+  transform: translateY(-1px);
 }
 .stat-card .stat-num {
-  font-size: 1.8rem; font-weight: 700; color: var(--accent);
-  text-shadow: 0 0 12px var(--accent-glow);
+  font-family: var(--font-data);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--terracotta-bright);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
 }
-.stat-card .stat-label { font-size: 0.7rem; color: #888; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+.stat-card .stat-label {
+  font-family: var(--font-serif);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
 
-#stats-charts { display: flex; flex-wrap: wrap; gap: 16px; }
+#stats-charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
 .chart-container {
-  background: var(--bg-panel); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 12px;
-  flex: 1; min-width: 400px; min-height: 350px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  flex: 1;
+  min-width: 400px;
+  min-height: 360px;
+  box-shadow: var(--shadow-sm);
 }
 
 /* ── Footer ── */
 #main-footer {
-  background: rgba(10,10,15,0.95);
+  background: rgba(247,243,235,0.97);
   border-top: 1px solid var(--border);
-  padding: 10px 20px;
-  font-size: 0.62rem; color: #666;
-  display: flex; justify-content: space-between;
+  padding: 10px 24px;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
   z-index: 400;
+  font-family: var(--font-sans);
+  letter-spacing: 0.02em;
 }
-#main-footer a { color: #888; text-decoration: none; }
-#main-footer a:hover { color: var(--accent); }
+#main-footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+#main-footer a:hover { color: var(--terracotta); }
 
-/* ── Mobile ── */
-@media (max-width: 640px) {
-  #main-header h1 { font-size: 0.9rem; }
-  #tab-nav { padding: 0 4px; }
-  .tab-btn { padding: 8px 10px; font-size: 0.7rem; gap: 3px; }
-  #sidebar { width: calc(100vw - 12px); left: 6px; right: 6px; top: auto; bottom: 6px;
-    max-height: 40vh; border-radius: 12px 12px 0 0; }
-  #legend { bottom: 42vh; right: 6px; font-size: 0.56rem; padding: 6px 8px; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .chart-container { min-width: 100%; min-height: 280px; }
-  #main-footer { flex-direction: column; gap: 4px; text-align: center; }
+/* ═══════════════════════════════════════════════════════════════════════
+   MOBILE — < 700px
+   ═══════════════════════════════════════════════════════════════════════ */
+@media (max-width: 700px) {
+  #main-header {
+    padding: 10px 14px 8px;
+  }
+  #main-header h1 {
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+  }
+  #main-header .sub {
+    font-size: 0.62rem;
+  }
+
+  #tab-nav {
+    padding: 0 6px;
+    gap: 0;
+    justify-content: flex-start;
+  }
+  .tab-btn {
+    padding: 9px 10px;
+    font-size: 0.64rem;
+    gap: 3px;
+  }
+  .tab-btn .tab-icon { font-size: 0.75rem; }
+
+  #sidebar {
+    left: 4px; right: 4px;
+    top: auto; bottom: 4px;
+    width: auto;
+    max-height: 44vh;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    padding: 12px;
+    gap: 8px;
+    flex-direction: column;
+  }
+  .filter-section h3 { font-size: 0.62rem; }
+  .range-val { font-size: 0.72rem; }
+  .btn { padding: 3px 8px; font-size: 0.6rem; }
+  .check-row, .layer-toggle { font-size: 0.64rem; }
+  .sidebar-attribution { display: none; }
+
+  #legend {
+    bottom: 46vh;
+    right: 6px;
+    font-size: 0.52rem;
+    padding: 6px 8px;
+  }
+  .legend-bar { width: 100px; height: 5px; }
+
+  #popup {
+    width: 94vw;
+    max-width: 94vw;
+    padding: 16px 18px;
+    max-height: 85vh;
+    border-radius: 8px;
+  }
+  #popup h2 { font-size: 0.95rem; }
+  #popup .pop-row { font-size: 0.68rem; }
+  #popup .commune-year-table {
+    font-size: 0.62rem;
+  }
+  #popup .commune-year-table th,
+  #popup .commune-year-table td {
+    padding: 2px 4px;
+  }
+  #popup .commune-year-table th {
+    font-size: 0.55rem;
+  }
+  #popup .commune-year-title {
+    font-size: 0.58rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .stat-card {
+    padding: 14px 12px;
+  }
+  .stat-card .stat-num {
+    font-size: 1.5rem;
+  }
+  .chart-container {
+    min-width: 100%;
+    min-height: 280px;
+  }
+
+  #main-footer {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    padding: 8px 14px;
+    font-size: 0.55rem;
+  }
+
+  #tab-stats {
+    padding: 12px;
+  }
+
+  .analysis-panel {
+    padding: 32px 16px;
+  }
+  .analysis-panel h2 { font-size: 1.2rem; }
+  .analysis-panel p { font-size: 0.78rem; }
+}
+
+/* ── Tablet ── */
+@media (min-width: 701px) and (max-width: 1024px) {
+  #sidebar {
+    width: 250px;
+  }
 }
 
 </style>
 </head>
 <body>
-
 <div id="main-header">
-  <h1>&#128293; Incendies Var &middot; Verdon &middot; Alpes-de-Haute-Provence</h1>
-  <div class="sub">537 incendies recens&eacute;s &mdash; 1854 &agrave; 2025 &mdash; Carte interactive &amp; Analyses</div>
+  <h1>Incendies <em>Var</em> &middot; <em>Verdon</em> &middot; <em>Alpes-de-Haute-Provence</em></h1>
+  <div class="sub">537 incendies recens&eacute;s &mdash; <span>1854 &ndash; 2025</span> &mdash; Carte interactive &amp; Analyses historiques</div>
 </div>
 
 <nav id="tab-nav">
-  <button class="tab-btn active" data-tab="carte"><span>&#128506;&#65039;</span> Carte</button>
-  <button class="tab-btn" data-tab="heatmap"><span>&#128293;</span> Heatmap</button>
-  <button class="tab-btn" data-tab="corridors"><span>&#128168;</span> Corridors</button>
-  <button class="tab-btn" data-tab="risque"><span>&#9888;&#65039;</span> Risque</button>
-  <button class="tab-btn" data-tab="climat"><span>&#128200;</span> Climat</button>
-  <button class="tab-btn" data-tab="stats"><span>&#128202;</span> Stats</button>
+  <button class="tab-btn active" data-tab="carte"><span class="tab-icon">&#9906;</span> Carte</button>
+  <button class="tab-btn" data-tab="heatmap"><span class="tab-icon">&#9925;</span> Heatmap</button>
+  <button class="tab-btn" data-tab="corridors"><span class="tab-icon">&#8599;</span> Corridors</button>
+  <button class="tab-btn" data-tab="risque"><span class="tab-icon">&#9888;</span> Risque</button>
+  <button class="tab-btn" data-tab="climat"><span class="tab-icon">&#9730;</span> Climat</button>
+  <button class="tab-btn" data-tab="stats"><span class="tab-icon">&#9783;</span> Stats</button>
 </nav>
 
 <div id="tab-content-area">
@@ -298,50 +849,50 @@ input[type="range"]::-webkit-slider-thumb {
         <button id="anim-btn">&#9654; Animation par d&eacute;cennie</button>
       </div>
       <div class="filter-section">
-        <h3>Surface</h3>
+        <h3>Surface br&ucirc;l&eacute;e</h3>
         <div class="btn-row">
-          <button class="btn active surface-btn" data-min="0">Tous</button>
-          <button class="btn surface-btn" data-min="100">&gt;100 ha</button>
-          <button class="btn surface-btn" data-min="1000">&gt;1 000 ha</button>
-          <button class="btn surface-btn" data-min="5000">&gt;5 000 ha</button>
+          <button class="btn active surface-btn" data-min="0">Toutes</button>
+          <button class="btn surface-btn" data-min="100">&gt; 100 ha</button>
+          <button class="btn surface-btn" data-min="1000">&gt; 1&thinsp;000 ha</button>
+          <button class="btn surface-btn" data-min="5000">&gt; 5&thinsp;000 ha</button>
         </div>
       </div>
       <div class="filter-section">
         <h3>D&eacute;partement</h3>
-        <label class="check-row"><input type="checkbox" class="dept-cb" value="Var" checked><span style="color:#f0a050">&#9679;</span> Var</label>
-        <label class="check-row"><input type="checkbox" class="dept-cb" value="Alpes-de-Haute-Provence" checked><span style="color:#60a5fa">&#9679;</span> Alpes-de-Haute-Provence</label>
-        <label class="check-row"><input type="checkbox" class="dept-cb" value="Bouches-du-Rh&ocirc;ne" checked><span style="color:#a78bfa">&#9679;</span> Bouches-du-Rh&ocirc;ne</label>
+        <label class="check-row"><input type="checkbox" class="dept-cb" value="Var" checked><span class="check-dot" style="background:#c47e4c"></span> Var</label>
+        <label class="check-row"><input type="checkbox" class="dept-cb" value="Alpes-de-Haute-Provence" checked><span class="check-dot" style="background:#5b8fa8"></span> Alpes-de-Haute-Provence</label>
+        <label class="check-row"><input type="checkbox" class="dept-cb" value="Bouches-du-Rh&ocirc;ne" checked><span class="check-dot" style="background:#7a8b5e"></span> Bouches-du-Rh&ocirc;ne</label>
       </div>
       <div class="filter-section">
         <h3>Cause</h3>
-        <label class="check-row"><input type="checkbox" class="cause-cb" value="naturelle" checked> &#127807; Naturelle</label>
-        <label class="check-row"><input type="checkbox" class="cause-cb" value="humaine-accidentelle" checked> &#9888; Humaine (accidentelle)</label>
-        <label class="check-row"><input type="checkbox" class="cause-cb" value="humaine-volontaire" checked> &#128293; Humaine (volontaire)</label>
-        <label class="check-row"><input type="checkbox" class="cause-cb" value="inconnue" checked> &#10067; Inconnue</label>
+        <label class="check-row"><input type="checkbox" class="cause-cb" value="naturelle" checked><span class="check-dot" style="background:#7a8b5e"></span> Naturelle</label>
+        <label class="check-row"><input type="checkbox" class="cause-cb" value="humaine-accidentelle" checked><span class="check-dot" style="background:#c4a44a"></span> Humaine (accidentelle)</label>
+        <label class="check-row"><input type="checkbox" class="cause-cb" value="humaine-volontaire" checked><span class="check-dot" style="background:#d4533a"></span> Humaine (volontaire)</label>
+        <label class="check-row"><input type="checkbox" class="cause-cb" value="inconnue" checked><span class="check-dot" style="background:#6b7b8d"></span> Inconnue</label>
       </div>
       <div class="filter-section">
         <h3>Calques</h3>
         <label class="layer-toggle" id="toggle-polygons">
-          <span class="layer-dot" style="background:#f0a050"></span> P&eacute;rim&egrave;tres
-          <input type="checkbox" checked style="margin-left:auto">
+          <span class="layer-dot" style="background:#c47e4c"></span> P&eacute;rim&egrave;tres
+          <input type="checkbox" checked>
         </label>
         <label class="layer-toggle" id="toggle-points">
-          <span class="layer-dot" style="background:#ef4444"></span> Points de d&eacute;part
-          <input type="checkbox" checked style="margin-left:auto">
+          <span class="layer-dot" style="background:#d4533a"></span> Points de d&eacute;part
+          <input type="checkbox" checked>
         </label>
         <label class="layer-toggle" id="toggle-communes">
-          <span class="layer-dot" style="background:#60a5fa"></span> Communes impact&eacute;es
-          <input type="checkbox" checked style="margin-left:auto">
+          <span class="layer-dot" style="background:#5b8fa8"></span> Communes impact&eacute;es
+          <input type="checkbox" checked>
         </label>
       </div>
-      <div style="font-size:0.58rem;color:#555;margin-top:auto;">
-        Donn&eacute;es : recherche web &middot; Polygones approxim&eacute;s (surface) &middot; Fonds : CARTO dark
+      <div class="sidebar-attribution">
+        Donn&eacute;es : recherche web &middot; Polygones approxim&eacute;s &middot; Fonds : CARTO dark
       </div>
     </div>
     <div id="legend">
-      <span style="color:#bbb">Surface (ha)</span>
+      <div class="legend-title">Surface (ha)</div>
       <div class="legend-bar"></div>
-      <div class="legend-labels"><span>&lt;100</span><span>1k</span><span>5k</span><span>&gt;10k</span></div>
+      <div class="legend-labels"><span>&lt; 100</span><span>1 000</span><span>5 000</span><span>&gt; 10 000</span></div>
     </div>
     <div id="tooltip"></div>
     <div id="popup-overlay">
@@ -358,46 +909,46 @@ input[type="range"]::-webkit-slider-thumb {
   <!-- ═══ HEATMAP ═══ -->
   <div id="tab-heatmap" class="tab-content">
     <div class="analysis-panel">
-      <div class="placeholder-icon">&#128293;</div>
+      <div class="placeholder-icon">&#9925;</div>
       <h2>Carte de densit&eacute; des feux</h2>
       <p>Analyse de la densit&eacute; spatiale des incendies dans le Var, le Verdon et les Alpes-de-Haute-Provence. Cette visualisation montrera les zones les plus touch&eacute;es par accumulation historique.</p>
-      <div class="coming-soon">Analyse en cours de g&eacute;n&eacute;ration...</div>
+      <div class="coming-soon">Analyse en cours de g&eacute;n&eacute;ration&hellip;</div>
     </div>
   </div>
 
   <!-- ═══ CORRIDORS ═══ -->
   <div id="tab-corridors" class="tab-content">
     <div class="analysis-panel">
-      <div class="placeholder-icon">&#128168;</div>
+      <div class="placeholder-icon">&#8599;</div>
       <h2>Axes de propagation</h2>
       <p>Analyse des corridors de propagation des incendies bas&eacute;e sur la direction des vents dominants (Mistral, Tramontane), la topographie et les s&eacute;quences historiques de propagation.</p>
-      <div class="coming-soon">Analyse en cours de g&eacute;n&eacute;ration...</div>
+      <div class="coming-soon">Analyse en cours de g&eacute;n&eacute;ration&hellip;</div>
     </div>
   </div>
 
   <!-- ═══ RISQUE ═══ -->
   <div id="tab-risque" class="tab-content">
     <div class="analysis-panel">
-      <div class="placeholder-icon">&#9888;&#65039;</div>
+      <div class="placeholder-icon">&#9888;</div>
       <h2>Carte de risque synth&eacute;tique</h2>
       <p>Indice de risque combinant l'historique des feux, la sensibilit&eacute; de la v&eacute;g&eacute;tation, la proximit&eacute; des zones urbaines et les conditions m&eacute;t&eacute;orologiques favorables aux d&eacute;parts de feu.</p>
-      <div class="coming-soon">Analyse en cours de g&eacute;n&eacute;ration...</div>
+      <div class="coming-soon">Analyse en cours de g&eacute;n&eacute;ration&hellip;</div>
     </div>
   </div>
 
   <!-- ═══ CLIMAT ═══ -->
   <div id="tab-climat" class="tab-content">
     <div class="analysis-panel">
-      <div class="placeholder-icon">&#127777;&#65039;</div>
+      <div class="placeholder-icon">&#9730;</div>
       <h2>Climat &amp; Incendies</h2>
-      <p>Graphiques de corr&eacute;lation entre les variables climatiques (temp&eacute;rature, s&eacute;cheresse, vent) et l'occurrence des incendies. Projections climatiques &agrave; horizon 2050-2100.</p>
-      <div class="coming-soon">Analyse en cours de g&eacute;n&eacute;ration...</div>
+      <p>Graphiques de corr&eacute;lation entre les variables climatiques (temp&eacute;rature, s&eacute;cheresse, vent) et l'occurrence des incendies. Projections climatiques &agrave; horizon 2050&ndash;2100.</p>
+      <div class="coming-soon">Analyse en cours de g&eacute;n&eacute;ration&hellip;</div>
     </div>
   </div>
 
   <!-- ═══ STATS ═══ -->
   <div id="tab-stats" class="tab-content">
-    <div style="flex:1;overflow:auto;padding:20px 16px;">
+    <div style="flex:1;overflow:auto;padding:0;">
       <div class="stats-grid" id="stats-cards"></div>
       <div id="stats-charts">
         <div class="chart-container" id="chart-annee"></div>
@@ -495,8 +1046,6 @@ var communes = Object.values(communeMap).map(function(c) {
     lat: c.lats / c.count,
     lon: c.lons / c.count,
     _size: Math.min(8000, Math.max(2000, Math.sqrt(c.surface) * 200)),
-  });
-});
 
 // ═══════════════════════════════════════════════
 // TAB SWITCHING
@@ -567,7 +1116,7 @@ function makeLayers(filteredData) {
       stroked: true, filled: true, extruded: false,
       lineWidthScale: 1, lineWidthMinPixels: 1, lineWidthMaxPixels: 3,
       getFillColor: function(d) { return d.properties.color; },
-      getLineColor: [255, 160, 60, 180], getLineWidth: 1.5, opacity: 0.55, getRadius: 0,
+      getLineColor: [200, 120, 60, 180], getLineWidth: 1.5, opacity: 0.55, getRadius: 0,
     }));
   }
   if (layerVisibility.points) {
@@ -578,7 +1127,7 @@ function makeLayers(filteredData) {
       getPosition: function(d) { return [d.lon, d.lat]; },
       getRadius: function(d) { return Math.max(3, Math.sqrt(d.surface_ha) * 40); },
       getFillColor: function(d) { return d._color; },
-      getLineColor: [255, 255, 255, 150], getLineWidth: 1,
+      getLineColor: [255, 255, 255, 120], getLineWidth: 1,
     }));
   }
   if (layerVisibility.communes) {
@@ -590,7 +1139,7 @@ function makeLayers(filteredData) {
       radiusScale: 1, radiusMinPixels: 4, radiusMaxPixels: 30, lineWidthMinPixels: 1,
       getPosition: function(d) { return [d.lon, d.lat]; },
       getRadius: function(d) { return d._size; },
-      getFillColor: [96, 165, 250], getLineColor: [180, 210, 255, 120], getLineWidth: 1,
+      getFillColor: [91, 143, 168], getLineColor: [140, 190, 210, 120], getLineWidth: 1,
     }));
   }
   return layers;
@@ -601,19 +1150,19 @@ var basemapLayer = null;
 function initMap() {
   if (typeof deck === 'undefined') {
     document.getElementById('map-container').innerHTML =
-      '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#f0a050;font-size:1.2rem;">' +
-      '<div style="text-align:center;background:rgba(20,20,28,0.9);padding:30px;border-radius:12px;">' +
+      '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#c47e4c;font-family:var(--font-serif);font-size:1.1rem;">' +
+      '<div style="text-align:center;background:rgba(254,252,248,0.96);padding:32px;border-radius:10px;border:1px solid rgba(196,126,76,0.2);box-shadow:0 4px 20px rgba(0,0,0,0.08);">' +
       '&#9888;&#65039; deck.gl n\'a pas pu être chargé.<br>' +
-      '<span style="font-size:0.8rem;color:#888;">Vérifiez votre connexion internet.</span></div></div>';
+      '<span style="font-size:0.8rem;color:#8a7d6e;">Vérifiez votre connexion internet.</span></div></div>';
     return;
   }
   try {
     basemapLayer = new deck.TileLayer({
       id: 'basemap',
       data: [
-        'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
-        'https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
-        'https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
+        'https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png',
+        'https://b.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png',
+        'https://c.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png',
       ],
       tileSize: 256, minZoom: 0, maxZoom: 19,
       renderSubLayers: function(props) {
@@ -638,17 +1187,17 @@ function initMap() {
       if (info.object.properties && info.object.properties.id) {
         var p = info.object.properties;
         return {
-          html: '<div class="tt-name">' + p.name + '</div><div class="tt-row">&#128197; ' + p.annee + ' &middot; ' + p.surface.toLocaleString('fr') + ' ha</div><div class="tt-row">&#128293; ' + p.cause.replace('humaine-','humaine ') + '</div>',
+          html: '<div class="tt-name">' + p.name + '</div><div class="tt-row">' + p.annee + ' &middot; ' + p.surface.toLocaleString('fr') + ' ha &middot; ' + p.cause.replace('humaine-','humaine ') + '</div>',
         };
       }
       if (info.object.commune && !info.object.id) {
         return {
-          html: '<div class="tt-name">' + info.object.commune + '</div><div class="tt-row">&#128293; ' + info.object.count + ' incendie(s)</div><div class="tt-row">&#128208; ' + info.object.surface.toLocaleString('fr') + ' ha cumulés</div>',
+          html: '<div class="tt-name">' + info.object.commune + '</div><div class="tt-row">' + info.object.count + ' incendie(s) &middot; ' + info.object.surface.toLocaleString('fr') + ' ha cumulés</div>',
         };
       }
       if (info.object.id && info.object.id.indexOf('fire-') === 0) {
         return {
-          html: '<div class="tt-name">' + info.object.commune + ' &mdash; ' + (info.object.lieu_dit || '') + '</div><div class="tt-row">&#128197; ' + (info.object.date || info.object.annee) + ' &middot; ' + (info.object.surface_ha||0).toLocaleString('fr') + ' ha</div><div class="tt-row">&#128293; ' + (info.object.cause||'').replace('humaine-','humaine ') + ' &middot; ' + (info.object.departement||'') + '</div>',
+          html: '<div class="tt-name">' + info.object.commune + (info.object.lieu_dit ? ' &mdash; ' + info.object.lieu_dit : '') + '</div><div class="tt-row">' + (info.object.date || info.object.annee) + ' &middot; ' + (info.object.surface_ha||0).toLocaleString('fr') + ' ha &middot; ' + (info.object.cause||'').replace('humaine-','humaine ') + '</div>',
         };
       }
       return null;
@@ -677,13 +1226,13 @@ function updateLayers() {
   var dataLayers = makeLayers(filtered);
   deckgl.setProps({ layers: basemapLayer ? [basemapLayer].concat(dataLayers) : dataLayers });
   var subEl = document.querySelector('#main-header .sub');
-  if (subEl) subEl.textContent = filtered.length + ' incendie(s) affiché(s) sur 537 — 1854 à 2025 — Carte interactive & Analyses';
+  if (subEl) subEl.innerHTML = '<span>' + filtered.length + '</span> incendie(s) affiché(s) sur 537 &mdash; 1854 &ndash; 2025 &mdash; Carte interactive &amp; Analyses';
 }
 
 function showPopup(f) {
   var duree = f.duree_jours ? f.duree_jours + ' jour(s)' : 'inconnue';
   document.getElementById('popup-content').innerHTML =
-    '<h2>' + f.commune + (f.lieu_dit && f.lieu_dit !== f.commune ? ' — ' + f.lieu_dit : '') + '</h2>' +
+    '<h2>' + f.commune + (f.lieu_dit && f.lieu_dit !== f.commune ? ' &mdash; ' + f.lieu_dit : '') + '</h2>' +
     '<div class="pop-row"><span class="lbl">Date</span><span class="val">' + (f.date || f.annee) + (f.date_fin ? ' → ' + f.date_fin : '') + '</span></div>' +
     '<div class="pop-row"><span class="lbl">Surface</span><span class="val">' + (f.surface_ha||0).toLocaleString('fr') + ' ha</span></div>' +
     '<div class="pop-row"><span class="lbl">Durée</span><span class="val">' + duree + '</span></div>' +
@@ -697,11 +1246,40 @@ function showPopup(f) {
 }
 
 function showCommunePopup(c) {
+  // Build yearly breakdown table from processed data
+  var communeFires = processed.filter(function(f) { return f.commune === c.commune; });
+
+  // Group by year
+  var yearMap = {};
+  communeFires.forEach(function(f) {
+    var y = f.annee;
+    if (!yearMap[y]) yearMap[y] = { count: 0, surface: 0 };
+    yearMap[y].count += 1;
+    yearMap[y].surface += f.surface_ha;
+  });
+  var years = Object.keys(yearMap).sort(function(a,b){ return b-a; }); // most recent first
+
+  var tableRows = '';
+  years.forEach(function(y) {
+    tableRows += '<tr><td>' + y + '</td><td>' + yearMap[y].count + '</td><td>' + yearMap[y].surface.toLocaleString('fr') + ' ha</td></tr>';
+  });
+
   document.getElementById('popup-content').innerHTML =
     '<h2>' + c.commune + '</h2>' +
     '<div class="pop-row"><span class="lbl">Nombre d\'incendies</span><span class="val">' + c.count + '</span></div>' +
     '<div class="pop-row"><span class="lbl">Surface totale brûlée</span><span class="val">' + c.surface.toLocaleString('fr') + ' ha</span></div>' +
-    '<div class="pop-row"><span class="lbl">Département</span><span class="val">' + c.departement + '</span></div>';
+    '<div class="pop-row"><span class="lbl">Département</span><span class="val">' + c.departement + '</span></div>' +
+    '<div class="commune-year-section">' +
+      '<div class="commune-year-title">Détail par année</div>' +
+      '<table class="commune-year-table">' +
+        '<thead><tr>' +
+          '<th>Année</th>' +
+          '<th style="text-align:center;">Nb</th>' +
+          '<th style="text-align:right;">Surface</th>' +
+        '</tr></thead>' +
+        '<tbody>' + tableRows + '</tbody>' +
+      '</table>' +
+    '</div>';
   document.getElementById('popup-overlay').classList.add('show');
 }
 
@@ -776,14 +1354,14 @@ function setupFilterHandlers() {
   function stopAnimation() {
     animationRunning = false;
     clearTimeout(animationTimer);
-    animBtn.textContent = '▶ Animation par décennie';
+    animBtn.innerHTML = '&#9654; Animation par décennie';
     animBtn.classList.remove('running');
   }
 
   animBtn.addEventListener('click', function() {
     if (animationRunning) { stopAnimation(); return; }
     animationRunning = true;
-    animBtn.textContent = '⏹ Arrêter';
+    animBtn.innerHTML = '&#9632; Arrêter';
     animBtn.classList.add('running');
     animIdx = 0;
 
@@ -814,6 +1392,21 @@ function setupFilterHandlers() {
 // ═══════════════════════════════════════════════
 // STATS (Plotly.js)
 // ═══════════════════════════════════════════════
+var PLOTLY_COLORS = {
+  paper: '#fefcf8',
+  plot: 'rgba(0,0,0,0.02)',
+  grid: 'rgba(0,0,0,0.06)',
+  text: '#8a7d6e',
+  title: '#2a231c',
+  accent: '#c47e4c',
+  accentBright: '#d4854a',
+  braise: '#d4533a',
+  gold: '#b8942e',
+  olive: '#7a8b5e',
+  azure: '#5b8fa8',
+  slate: '#6b7b8d',
+};
+
 function initStats() {
   // Summary cards
   var totalFires = processed.length;
@@ -833,9 +1426,18 @@ function initStats() {
   document.getElementById('stats-cards').innerHTML = cardsHTML;
 
   if (typeof Plotly === 'undefined') {
-    document.getElementById('stats-charts').innerHTML = '<p style="color:#888;text-align:center;width:100%">Plotly.js non chargé. Vérifiez votre connexion internet.</p>';
+    document.getElementById('stats-charts').innerHTML = '<p style="color:#8a7d6e;text-align:center;width:100%;padding:40px;">Plotly.js non chargé. Vérifiez votre connexion internet.</p>';
     return;
   }
+
+  var layoutBase = {
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: PLOTLY_COLORS.plot,
+    font: { color: PLOTLY_COLORS.text, size: 10, family: 'Inter, DM Sans, sans-serif' },
+    margin: { l: 50, r: 15, t: 45, b: 45 },
+    dragmode: false,
+    title: { font: { color: PLOTLY_COLORS.title, size: 13, family: 'Cormorant Garamond, serif' } },
+  };
 
   // Chart 1: Fires per year (bar)
   var yearData = {};
@@ -847,34 +1449,29 @@ function initStats() {
 
   Plotly.newPlot('chart-annee', [{
     x: years, y: counts, type: 'bar',
-    marker: { color: '#f0a050', line: { color: 'rgba(240,160,80,0.3)', width: 1 } },
+    marker: { color: PLOTLY_COLORS.accent, line: { color: 'rgba(196,126,76,0.3)', width: 1 } },
     hovertemplate: '%{x}: %{y} incendie(s)<extra></extra>',
-  }], {
-    title: { text: 'Nombre d\'incendies par année', font: { color: '#e0e0e0', size: 13 } },
-    paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0.2)',
-    font: { color: '#888', size: 10 },
-    xaxis: { gridcolor: 'rgba(255,255,255,0.05)', title: { text: 'Année' } },
-    yaxis: { gridcolor: 'rgba(255,255,255,0.05)', title: { text: 'Nombre d\'incendies' } },
-    margin: { l: 50, r: 10, t: 40, b: 40 },
-    dragmode: false,
-  }, { responsive: true, displayModeBar: false });
+  }], Object.assign({}, layoutBase, {
+    title: Object.assign({}, layoutBase.title, { text: 'Nombre d\'incendies par année' }),
+    xaxis: { gridcolor: PLOTLY_COLORS.grid, title: { text: 'Année', font: { color: PLOTLY_COLORS.text } } },
+    yaxis: { gridcolor: PLOTLY_COLORS.grid, title: { text: 'Nb incendies', font: { color: PLOTLY_COLORS.text } } },
+  }), { responsive: true, displayModeBar: false });
 
-  // Chart 2: Causes pie
+  // Chart 2: Causes donut
   var causeData = { naturelle: 0, 'humaine-accidentelle': 0, 'humaine-volontaire': 0, inconnue: 0 };
   processed.forEach(function(f) { causeData[f.cause] = (causeData[f.cause] || 0) + 1; });
   Plotly.newPlot('chart-causes', [{
     labels: ['Naturelle', 'Humaine (accidentelle)', 'Humaine (volontaire)', 'Inconnue'],
     values: [causeData.naturelle, causeData['humaine-accidentelle'], causeData['humaine-volontaire'], causeData.inconnue],
     type: 'pie',
-    marker: { colors: ['#4ade80', '#facc15', '#ef4444', '#6b7280'] },
-    textinfo: 'label+percent', textfont: { size: 10 },
-    hole: 0.35,
-  }], {
-    title: { text: 'Répartition par cause', font: { color: '#e0e0e0', size: 13 } },
-    paper_bgcolor: 'rgba(0,0,0,0)', font: { color: '#ddd', size: 10 },
-    margin: { l: 10, r: 10, t: 40, b: 10 },
+    marker: { colors: [PLOTLY_COLORS.olive, PLOTLY_COLORS.gold, PLOTLY_COLORS.braise, PLOTLY_COLORS.slate] },
+    textinfo: 'label+percent', textfont: { size: 10, color: PLOTLY_COLORS.title },
+    hole: 0.4,
+  }], Object.assign({}, layoutBase, {
+    title: Object.assign({}, layoutBase.title, { text: 'Répartition par cause' }),
+    margin: { l: 10, r: 10, t: 45, b: 10 },
     showlegend: false,
-  }, { responsive: true, displayModeBar: false });
+  }), { responsive: true, displayModeBar: false });
 
   // Chart 3: By department
   var deptData = {};
@@ -885,43 +1482,35 @@ function initStats() {
   var deptCounts = depts.map(function(d) { return deptData[d]; });
   Plotly.newPlot('chart-departement', [{
     x: depts, y: deptCounts, type: 'bar',
-    marker: { color: ['#f0a050', '#60a5fa', '#a78bfa'] },
+    marker: { color: [PLOTLY_COLORS.accent, PLOTLY_COLORS.azure, PLOTLY_COLORS.olive] },
     hovertemplate: '%{x}: %{y} incendie(s)<extra></extra>',
-  }], {
-    title: { text: 'Incendies par département', font: { color: '#e0e0e0', size: 13 } },
-    paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0.2)',
-    font: { color: '#888', size: 10 },
-    xaxis: { gridcolor: 'rgba(255,255,255,0.05)' },
-    yaxis: { gridcolor: 'rgba(255,255,255,0.05)', title: { text: 'Nombre d\'incendies' } },
-    margin: { l: 50, r: 10, t: 40, b: 40 },
-  }, { responsive: true, displayModeBar: false });
+  }], Object.assign({}, layoutBase, {
+    title: Object.assign({}, layoutBase.title, { text: 'Incendies par département' }),
+    xaxis: { gridcolor: PLOTLY_COLORS.grid, title: { text: '', font: { color: PLOTLY_COLORS.text } } },
+    yaxis: { gridcolor: PLOTLY_COLORS.grid, title: { text: 'Nb incendies', font: { color: PLOTLY_COLORS.text } } },
+  }), { responsive: true, displayModeBar: false });
 
-  // Chart 4: Surface per decade
-  var decData = {};
+  // Chart 4: Surface per year
+  var yearSurfData = {};
   processed.forEach(function(f) {
-    var d = decade(f.annee);
-    decData[d] = (decData[d] || 0) + f.surface_ha;
+    yearSurfData[f.annee] = (yearSurfData[f.annee] || 0) + f.surface_ha;
   });
-  var decKeys = Object.keys(decData).sort();
-  var decVals = decKeys.map(function(k) { return decData[k]; });
+  var ysYears = Object.keys(yearSurfData).sort();
+  var ysVals = ysYears.map(function(y) { return yearSurfData[y]; });
   Plotly.newPlot('chart-surface', [{
-    x: decKeys.map(function(d) { return d + 's'; }), y: decVals, type: 'bar',
-    marker: { color: '#ef4444', line: { color: 'rgba(239,68,68,0.3)', width: 1 } },
+    x: ysYears, y: ysVals, type: 'bar',
+    marker: { color: PLOTLY_COLORS.braise, line: { color: 'rgba(212,83,58,0.25)', width: 1 } },
     hovertemplate: '%{x}: %{y:.0f} ha<extra></extra>',
-  }], {
-    title: { text: 'Surface brûlée par décennie', font: { color: '#e0e0e0', size: 13 } },
-    paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0.2)',
-    font: { color: '#888', size: 10 },
-    xaxis: { gridcolor: 'rgba(255,255,255,0.05)', title: { text: 'Décennie' } },
-    yaxis: { gridcolor: 'rgba(255,255,255,0.05)', title: { text: 'Surface (ha)' } },
-    margin: { l: 50, r: 10, t: 40, b: 40 },
-  }, { responsive: true, displayModeBar: false });
+  }], Object.assign({}, layoutBase, {
+    title: Object.assign({}, layoutBase.title, { text: 'Surface brûlée par année' }),
+    xaxis: { gridcolor: PLOTLY_COLORS.grid, title: { text: 'Année', font: { color: PLOTLY_COLORS.text } } },
+    yaxis: { gridcolor: PLOTLY_COLORS.grid, title: { text: 'Surface (ha)', font: { color: PLOTLY_COLORS.text } } },
+  }), { responsive: true, displayModeBar: false });
 }
 
 // ═══════════════════════════════════════════════
 // STARTUP
 // ═══════════════════════════════════════════════
-// Initialize the map immediately (Carte tab is active by default)
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', function() {
     initMap();
