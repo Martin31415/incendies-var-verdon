@@ -545,9 +545,47 @@ input[type="range"]::-webkit-slider-thumb:hover {
   padding: 3px 6px;
   color: var(--ink);
   border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+#popup .commune-year-table td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-data);
+}
+#popup .commune-year-table th.num {
+  text-align: right;
 }
 #popup .commune-year-table tbody tr:hover td {
   background: rgba(196,126,76,0.05);
+}
+#popup .commune-year-table tr.row-estimee td {
+  background: rgba(212,83,58,0.06);
+  color: var(--ink-soft);
+}
+#popup .commune-year-table tr.row-estimee:hover td {
+  background: rgba(212,83,58,0.12);
+}
+#popup .badge-estimee {
+  display: inline-block;
+  background: rgba(212,83,58,0.15);
+  color: var(--braise);
+  font-size: 0.55rem;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-left: 4px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+}
+#popup .estimee-warning {
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: rgba(212,83,58,0.08);
+  border-left: 3px solid var(--braise);
+  color: var(--ink-soft);
+  font-size: 0.62rem;
+  line-height: 1.4;
+  border-radius: 3px;
 }
 #popup .commune-year-section {
   margin-top: 12px;
@@ -878,6 +916,14 @@ input[type="range"]::-webkit-slider-thumb:hover {
   }
   #popup .commune-year-title {
     font-size: 0.58rem;
+  }
+  #popup .badge-estimee {
+    font-size: 0.5rem;
+    padding: 1px 3px;
+  }
+  #popup .estimee-warning {
+    font-size: 0.58rem;
+    padding: 4px 8px;
   }
 
   .stats-grid {
@@ -1250,21 +1296,26 @@ function runPipeline() {
   });
 });
 
-// Commune aggregation
+// Commune aggregation — one circle per locality, size = max surface_ha
 var communeMap = {};
 processed.forEach(function(f) {
   var c = f.commune;
-  if (!communeMap[c]) communeMap[c] = { commune: c, count: 0, surface: 0, lats: 0, lons: 0, departement: f.departement };
+  if (!communeMap[c]) communeMap[c] = { commune: c, count: 0, surface: 0, maxSurface: 0, lats: 0, lons: 0, departement: f.departement, hasEstimee: false, fires: [] };
   communeMap[c].count++;
   communeMap[c].surface += f.surface_ha;
+  if (f.surface_ha > communeMap[c].maxSurface) communeMap[c].maxSurface = f.surface_ha;
   communeMap[c].lats += f.lat;
   communeMap[c].lons += f.lon;
+  if (f.source === 'estimee') communeMap[c].hasEstimee = true;
+  communeMap[c].fires.push(f);
 });
 communes = Object.values(communeMap).map(function(c) {
+  // Sort fires by year descending
+  c.fires.sort(function(a, b) { return b.annee - a.annee; });
   return Object.assign({}, c, {
     lat: c.lats / c.count,
     lon: c.lons / c.count,
-    _size: Math.min(8000, Math.max(2000, Math.sqrt(c.surface) * 200)),
+    _size: Math.min(8000, Math.max(2000, Math.sqrt(c.maxSurface) * 200)),
   });
 });
 }
@@ -1435,21 +1486,41 @@ function buildPointLayer(filteredData) {
 
 function buildCommuneLayer(filteredData) {
   if (!communes) return L.layerGroup();
-  var filteredNames = new Set(filteredData.map(function(f) { return f.commune; }));
-  var filteredCommunes = communes.filter(function(c) { return filteredNames.has(c.commune); });
+  // Build a fresh aggregation from filtered data so circles scale to visible fires only
+  var visibleMap = {};
+  filteredData.forEach(function(f) {
+    var c = f.commune;
+    if (!visibleMap[c]) visibleMap[c] = { commune: c, count: 0, maxSurface: 0, surface: 0, lats: 0, lons: 0, departement: f.departement, hasEstimee: false, fires: [] };
+    visibleMap[c].count++;
+    visibleMap[c].surface += f.surface_ha;
+    if (f.surface_ha > visibleMap[c].maxSurface) visibleMap[c].maxSurface = f.surface_ha;
+    visibleMap[c].lats += f.lat;
+    visibleMap[c].lons += f.lon;
+    if (f.source === 'estimee') visibleMap[c].hasEstimee = true;
+    visibleMap[c].fires.push(f);
+  });
+  var visibleCommunes = Object.values(visibleMap).map(function(c) {
+    c.fires.sort(function(a, b) { return b.annee - a.annee; });
+    return Object.assign({}, c, {
+      lat: c.lats / c.count,
+      lon: c.lons / c.count,
+    });
+  });
   return L.layerGroup(
-    filteredCommunes.map(function(c) {
-      var radius = Math.min(16, Math.max(5, Math.sqrt(c.surface) * 0.15));
+    visibleCommunes.map(function(c) {
+      // One circle per locality, area proportional to max surface_ha
+      // (radius ∝ √surface), clamped for readability at all zoom levels
+      var radius = Math.max(5, Math.min(24, Math.sqrt(c.maxSurface) * 0.32));
       var marker = L.circleMarker([c.lat, c.lon], {
         radius: radius,
         fillColor: 'rgb(91,143,168)',
         color: 'rgba(140,190,210,0.5)',
-        weight: 1,
-        opacity: 0.5,
-        fillOpacity: 0.5
+        weight: 1.5,
+        opacity: 0.6,
+        fillOpacity: 0.55
       });
       marker.bindTooltip(
-        '<div class="tt-name">' + c.commune + '</div><div class="tt-row">' + c.count + ' incendie(s) &middot; ' + c.surface.toLocaleString('fr') + ' ha cumulés</div>',
+        '<div class="tt-name">' + c.commune + '</div><div class="tt-row">' + c.count + ' incendie(s) &middot; max ' + c.maxSurface.toLocaleString('fr') + ' ha &middot; total ' + c.surface.toLocaleString('fr') + ' ha' + (c.hasEstimee ? ' <span style="color:#d4533a;">⚠ est.</span>' : '') + '</div>',
         { sticky: true, className: 'fire-tooltip' }
       );
       marker.on('click', function(e) { L.DomEvent.stopPropagation(e); showCommunePopup(c); });
@@ -1507,6 +1578,7 @@ function updateLayers() {
 
 function showPopup(f) {
   var duree = f.duree_jours ? f.duree_jours + ' jour(s)' : 'inconnue';
+  var sourceWarning = (f.source === 'estimee') ? '<div class="estimee-warning">⚠ Cette donn&eacute;e est estim&eacute;e et n\'a pas &eacute;t&eacute; v&eacute;rifi&eacute;e dans la base Prom&eacute;th&eacute;e.</div>' : '';
   document.getElementById('popup-content').innerHTML =
     '<h2>' + f.commune + (f.lieu_dit && f.lieu_dit !== f.commune ? ' &mdash; ' + f.lieu_dit : '') + '</h2>' +
     '<div class="pop-row"><span class="lbl">Date</span><span class="val">' + (f.date || f.annee) + (f.date_fin ? ' → ' + f.date_fin : '') + '</span></div>' +
@@ -1517,42 +1589,51 @@ function showPopup(f) {
     '<div class="pop-row"><span class="lbl">Décennie</span><span class="val">' + f._decade + '</span></div>' +
     '<div class="pop-row"><span class="lbl">Coordonnées</span><span class="val">' + f.lat.toFixed(4) + ', ' + f.lon.toFixed(4) + '</span></div>' +
     (f.notes ? '<div class="pop-row"><span class="lbl">Notes</span><span class="val">' + f.notes + '</span></div>' : '') +
-    '<div class="pop-source">Source : ' + (f.source || 'web') + (f.source && f.source.indexOf('http') === 0 ? ' <a href="' + f.source + '" target="_blank">→ lien</a>' : '') + '</div>';
+    '<div class="pop-source">Source : ' + (f.source || 'web') + (f.source && f.source.indexOf('http') === 0 ? ' <a href="' + f.source + '" target="_blank">→ lien</a>' : '') + '</div>' +
+    sourceWarning;
   document.getElementById('popup-overlay').classList.add('show');
 }
 
 function showCommunePopup(c) {
   if (!processed) return;
-  // Build yearly breakdown table from processed data
-  var communeFires = processed.filter(function(f) { return f.commune === c.commune; });
+  // Use fires stored in the commune object (from buildCommuneLayer)
+  var communeFires = (c.fires && c.fires.length > 0) ? c.fires : processed.filter(function(f) { return f.commune === c.commune; });
+  // Sort by year descending
+  communeFires.sort(function(a, b) { return b.annee - a.annee; });
 
-  // Group by year
-  var yearMap = {};
-  communeFires.forEach(function(f) {
-    var y = f.annee;
-    if (!yearMap[y]) yearMap[y] = { count: 0, surface: 0 };
-    yearMap[y].count += 1;
-    yearMap[y].surface += f.surface_ha;
-  });
-  var years = Object.keys(yearMap).sort(function(a,b){ return b-a; }); // most recent first
+  var hasAnyEstimee = communeFires.some(function(f) { return f.source === 'estimee'; });
 
   var tableRows = '';
-  years.forEach(function(y) {
-    tableRows += '<tr><td>' + y + '</td><td>' + yearMap[y].count + '</td><td>' + yearMap[y].surface.toLocaleString('fr') + ' ha</td></tr>';
+  communeFires.forEach(function(f) {
+    var sourceClass = (f.source === 'estimee') ? ' class="row-estimee"' : '';
+    var sourceBadge = (f.source === 'estimee') ? ' <span class="badge-estimee" title="Donnée estimée, non vérifiée Prométhée">estimée</span>' : '';
+    tableRows += '<tr' + sourceClass + '>' +
+      '<td>' + (f.date || f.annee) + '</td>' +
+      '<td class="num">' + (f.surface_ha||0).toLocaleString('fr') + ' ha</td>' +
+      '<td>' + (f.cause||'inconnue').replace('humaine-','humaine ') + '</td>' +
+      '<td>' + (f.source||'web') + sourceBadge + '</td>' +
+    '</tr>';
   });
+
+  var estimeeWarning = hasAnyEstimee
+    ? '<div class="estimee-warning">⚠ Certaines donn&eacute;es de cette localit&eacute; sont estim&eacute;es et n\'ont pas &eacute;t&eacute; v&eacute;rifi&eacute;es dans la base Prom&eacute;th&eacute;e.</div>'
+    : '';
 
   document.getElementById('popup-content').innerHTML =
     '<h2>' + c.commune + '</h2>' +
-    '<div class="pop-row"><span class="lbl">Nombre d\'incendies</span><span class="val">' + c.count + '</span></div>' +
+    '<div class="pop-row"><span class="lbl">Nombre d\'incendies</span><span class="val">' + communeFires.length + '</span></div>' +
+    '<div class="pop-row"><span class="lbl">Surface max</span><span class="val">' + (c.maxSurface||0).toLocaleString('fr') + ' ha</span></div>' +
     '<div class="pop-row"><span class="lbl">Surface totale brûlée</span><span class="val">' + c.surface.toLocaleString('fr') + ' ha</span></div>' +
     '<div class="pop-row"><span class="lbl">Département</span><span class="val">' + c.departement + '</span></div>' +
+    estimeeWarning +
     '<div class="commune-year-section">' +
-      '<div class="commune-year-title">Détail par année</div>' +
+      '<div class="commune-year-title">D&eacute;tail des incendies</div>' +
       '<table class="commune-year-table">' +
         '<thead><tr>' +
           '<th>Année</th>' +
-          '<th style="text-align:center;">Nb</th>' +
-          '<th style="text-align:right;">Surface</th>' +
+          '<th class="num">Surface (ha)</th>' +
+          '<th>Cause</th>' +
+          '<th>Source</th>' +
         '</tr></thead>' +
         '<tbody>' + tableRows + '</tbody>' +
       '</table>' +
