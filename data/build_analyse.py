@@ -15,6 +15,11 @@ DATA_DIR = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(DATA_DIR, 'incendies_verified.json')) as f:
     incendies = json.load(f)
 
+# Normalize unknown surfaces (null in JSON) to 0 for aggregations
+for inc in incendies:
+    if inc.get('surface_ha') is None:
+        inc['surface_ha'] = 0
+
 with open(os.path.join(DATA_DIR, 'points_depart.json')) as f:
     points_depart = json.load(f)
 
