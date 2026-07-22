@@ -1248,7 +1248,7 @@ processed.forEach(function(f) {
   communeMap[c].lats += f.lat;
   communeMap[c].lons += f.lon;
 });
-var communes = Object.values(communeMap).map(function(c) {
+communes = Object.values(communeMap).map(function(c) {
   return Object.assign({}, c, {
     lat: c.lats / c.count,
     lon: c.lons / c.count,
@@ -1275,32 +1275,55 @@ document.querySelectorAll('.tab-btn').forEach(function(btn) {
     var tabId = 'tab-' + btn.dataset.tab;
     document.getElementById(tabId).classList.add('active');
 
-    if (btn.dataset.tab === 'carte' && !mapInitialized) {
-      initMap();
-      mapInitialized = true;
+    if (btn.dataset.tab === 'carte') {
+      if (!mapInitialized) {
+        initMap();
+        mapInitialized = true;
+      } else if (map) {
+        setTimeout(function() { map.invalidateSize(); }, 50);
+      }
     }
     if (btn.dataset.tab === 'stats' && !statsInitialized) {
       initStats();
       statsInitialized = true;
     }
-    if (btn.dataset.tab === 'heatmap' && !window._heatmapInit) {
-      setTimeout(function() { if (typeof initHeatmap === 'function') initHeatmap(); }, 100);
-      window._heatmapInit = true;
+    if (btn.dataset.tab === 'heatmap') {
+      if (!window._heatmapInit) {
+        setTimeout(function() { if (typeof initHeatmap === 'function') initHeatmap(); }, 100);
+        window._heatmapInit = true;
+      } else if (window.heatmapMap) {
+        setTimeout(function() { window.heatmapMap.invalidateSize(); }, 50);
+      }
     }
-    if (btn.dataset.tab === 'corridors' && !window._corridorsInit) {
-      setTimeout(function() { if (typeof initCorridors === 'function') initCorridors(); }, 100);
-      window._corridorsInit = true;
+    if (btn.dataset.tab === 'corridors') {
+      if (!window._corridorsInit) {
+        setTimeout(function() { if (typeof initCorridors === 'function') initCorridors(); }, 100);
+        window._corridorsInit = true;
+      } else if (window.corridorMap) {
+        setTimeout(function() { window.corridorMap.invalidateSize(); }, 50);
+      }
     }
-    if (btn.dataset.tab === 'risque' && !window._risqueInit) {
-      setTimeout(function() { if (typeof initRiskMap === 'function') initRiskMap(); }, 100);
-      window._risqueInit = true;
+    if (btn.dataset.tab === 'risque') {
+      if (!window._risqueInit) {
+        setTimeout(function() { if (typeof initRiskMap === 'function') initRiskMap(); }, 100);
+        window._risqueInit = true;
+      } else if (window.riskMap) {
+        setTimeout(function() { window.riskMap.invalidateSize(); }, 50);
+      }
     }
-    if (btn.dataset.tab === 'climat' && !window._climatInit) {
-      setTimeout(function() {
-        if (typeof initFutureRiskMap === 'function') initFutureRiskMap();
-        if (typeof initClimateCharts === 'function') initClimateCharts();
-      }, 100);
-      window._climatInit = true;
+    if (btn.dataset.tab === 'climat') {
+      if (!window._climatInit) {
+        setTimeout(function() {
+          if (typeof initFutureRiskMap === 'function') initFutureRiskMap();
+          if (typeof initClimateCharts === 'function') initClimateCharts();
+        }, 100);
+        window._climatInit = true;
+      } else {
+        if (window.futureRiskMap) { setTimeout(function() { window.futureRiskMap.invalidateSize(); }, 50); }
+        if (typeof Plotly !== 'undefined' && typeof initClimateCharts === 'function') {
+          // Re-render climate charts if needed (Plotly handles resize automatically)
+        }
+      }
     }
   });
 });
