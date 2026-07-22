@@ -1027,10 +1027,10 @@ input[type="range"]::-webkit-slider-thumb:hover {
         </label>
         <label class="layer-toggle" id="toggle-points">
           <span class="layer-dot" style="background:#d4533a"></span> Points de d&eacute;part
-          <input type="checkbox" id="layer-points" name="layer-points" checked>
+          <input type="checkbox" id="layer-points" name="layer-points">
         </label>
         <label class="layer-toggle" id="toggle-communes">
-          <span class="layer-dot" style="background:#5b8fa8"></span> Communes impact&eacute;es
+          <span class="layer-dot" style="background:#5b8fa8"></span> Par localit&eacute; (cercles agr&eacute;g&eacute;s)
           <input type="checkbox" id="layer-communes" name="layer-communes" checked>
         </label>
       </div>
@@ -1399,7 +1399,7 @@ var filters = {
   departements: new Set(['Var', 'Alpes-de-Haute-Provence', 'Bouches-du-Rhône']),
   causes: new Set(['naturelle', 'humaine-accidentelle', 'humaine-volontaire', 'inconnue']),
 };
-var layerVisibility = { polygons: true, points: true, communes: true };
+var layerVisibility = { polygons: true, points: false, communes: true };
 var animationRunning = false;
 var animationTimer = null;
 
@@ -1510,7 +1510,7 @@ function buildCommuneLayer(filteredData) {
     visibleCommunes.map(function(c) {
       // One circle per locality, area proportional to max surface_ha
       // (radius ∝ √surface), clamped for readability at all zoom levels
-      var radius = Math.max(5, Math.min(24, Math.sqrt(c.maxSurface) * 0.32));
+      var radius = Math.max(6, Math.sqrt(c.maxSurface) * 0.8);
       var marker = L.circleMarker([c.lat, c.lon], {
         radius: radius,
         fillColor: 'rgb(91,143,168)',
