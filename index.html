@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Incendies Var · Verdon · Alpes-de-Haute-Provence — Carte &amp; Analyses</title>
 <meta name="description" content="Carte interactive et analyses des incendies historiques dans le Var, le Verdon et les Alpes-de-Haute-Provence. 537 incendies recensés de 1854 à 2025.">
+<link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
@@ -961,34 +962,34 @@ input[type="range"]::-webkit-slider-thumb:hover {
       </div>
       <div class="filter-section">
         <h3>D&eacute;partement</h3>
-        <label class="check-row"><input type="checkbox" class="dept-cb" value="Var" checked><span class="check-dot" style="background:#c47e4c"></span> Var</label>
-        <label class="check-row"><input type="checkbox" class="dept-cb" value="Alpes-de-Haute-Provence" checked><span class="check-dot" style="background:#5b8fa8"></span> Alpes-de-Haute-Provence</label>
-        <label class="check-row"><input type="checkbox" class="dept-cb" value="Bouches-du-Rh&ocirc;ne" checked><span class="check-dot" style="background:#7a8b5e"></span> Bouches-du-Rh&ocirc;ne</label>
+        <label class="check-row"><input type="checkbox" class="dept-cb" id="dept-var" name="dept" value="Var" checked><span class="check-dot" style="background:#c47e4c"></span> Var</label>
+        <label class="check-row"><input type="checkbox" class="dept-cb" id="dept-aHP" name="dept" value="Alpes-de-Haute-Provence" checked><span class="check-dot" style="background:#5b8fa8"></span> Alpes-de-Haute-Provence</label>
+        <label class="check-row"><input type="checkbox" class="dept-cb" id="dept-bdr" name="dept" value="Bouches-du-Rh&ocirc;ne" checked><span class="check-dot" style="background:#7a8b5e"></span> Bouches-du-Rh&ocirc;ne</label>
       </div>
       <div class="filter-section">
         <h3>Cause</h3>
-        <label class="check-row"><input type="checkbox" class="cause-cb" value="naturelle" checked><span class="check-dot" style="background:#7a8b5e"></span> Naturelle</label>
-        <label class="check-row"><input type="checkbox" class="cause-cb" value="humaine-accidentelle" checked><span class="check-dot" style="background:#c4a44a"></span> Humaine (accidentelle)</label>
-        <label class="check-row"><input type="checkbox" class="cause-cb" value="humaine-volontaire" checked><span class="check-dot" style="background:#d4533a"></span> Humaine (volontaire)</label>
-        <label class="check-row"><input type="checkbox" class="cause-cb" value="inconnue" checked><span class="check-dot" style="background:#6b7b8d"></span> Inconnue</label>
+        <label class="check-row"><input type="checkbox" class="cause-cb" id="cause-naturelle" name="cause" value="naturelle" checked><span class="check-dot" style="background:#7a8b5e"></span> Naturelle</label>
+        <label class="check-row"><input type="checkbox" class="cause-cb" id="cause-humaine-accidentelle" name="cause" value="humaine-accidentelle" checked><span class="check-dot" style="background:#c4a44a"></span> Humaine (accidentelle)</label>
+        <label class="check-row"><input type="checkbox" class="cause-cb" id="cause-humaine-volontaire" name="cause" value="humaine-volontaire" checked><span class="check-dot" style="background:#d4533a"></span> Humaine (volontaire)</label>
+        <label class="check-row"><input type="checkbox" class="cause-cb" id="cause-inconnue" name="cause" value="inconnue" checked><span class="check-dot" style="background:#6b7b8d"></span> Inconnue</label>
       </div>
       <div class="filter-section">
         <h3>Calques</h3>
         <label class="layer-toggle" id="toggle-polygons">
           <span class="layer-dot" style="background:#c47e4c"></span> P&eacute;rim&egrave;tres
-          <input type="checkbox" checked>
+          <input type="checkbox" id="layer-polygons" name="layer-polygons" checked>
         </label>
         <label class="layer-toggle" id="toggle-points">
           <span class="layer-dot" style="background:#d4533a"></span> Points de d&eacute;part
-          <input type="checkbox" checked>
+          <input type="checkbox" id="layer-points" name="layer-points" checked>
         </label>
         <label class="layer-toggle" id="toggle-communes">
           <span class="layer-dot" style="background:#5b8fa8"></span> Communes impact&eacute;es
-          <input type="checkbox" checked>
+          <input type="checkbox" id="layer-communes" name="layer-communes" checked>
         </label>
       </div>
       <div class="sidebar-attribution">
-        Donn&eacute;es : recherche web &middot; Polygones approxim&eacute;s &middot; Fonds : CARTO dark
+        Donn&eacute;es : recherche web &middot; Polygones approxim&eacute;s &middot; Fonds : OpenStreetMap
       </div>
     </div>
     <div id="legend">
@@ -1215,10 +1216,21 @@ var communes = null;
     .then(function(data) {
       window.RAW_DATA = data;
       runPipeline();
+      // Map init is separate from data-load error handling so a transient map bug
+      // never wipes the map container.
+      try {
+        if (!mapInitialized) {
+          initMap();
+          mapInitialized = true;
+        }
+      } catch (e) {
+        console.error('Map initialization error', e);
+      }
     })
     .catch(function(e) {
       console.error('Failed to load data', e);
-      document.getElementById('map-container') && (document.getElementById('map-container').innerHTML = '<div style="padding:2rem;text-align:center">Erreur chargement données</div>');
+      var mc = document.getElementById('map-container');
+      if (mc) mc.innerHTML = '<div style="padding:2rem;text-align:center">Erreur chargement données</div>';
     });
 })();
 
@@ -1255,10 +1267,6 @@ communes = Object.values(communeMap).map(function(c) {
     _size: Math.min(8000, Math.max(2000, Math.sqrt(c.surface) * 200)),
   });
 });
-
-  // Auto-init first tab
-  initMap();
-  mapInitialized = true;
 }
 
 // ═══════════════════════════════════════════════
@@ -1352,6 +1360,7 @@ var animationTimer = null;
 })();
 
 function applyFilters() {
+  if (!processed) return [];
   return processed.filter(function(f) {
     return f.annee >= filters.yearStart &&
       f.annee <= filters.yearEnd &&
@@ -1425,6 +1434,7 @@ function buildPointLayer(filteredData) {
 }
 
 function buildCommuneLayer(filteredData) {
+  if (!communes) return L.layerGroup();
   var filteredNames = new Set(filteredData.map(function(f) { return f.commune; }));
   var filteredCommunes = communes.filter(function(c) { return filteredNames.has(c.commune); });
   return L.layerGroup(
@@ -1449,6 +1459,8 @@ function buildCommuneLayer(filteredData) {
 }
 
 function initMap() {
+  if (!processed || !document.getElementById('leaflet-map')) return;
+  if (map) return; // already initialized
   map = L.map('leaflet-map', {
     zoomControl: true,
     attributionControl: true
@@ -1510,6 +1522,7 @@ function showPopup(f) {
 }
 
 function showCommunePopup(c) {
+  if (!processed) return;
   // Build yearly breakdown table from processed data
   var communeFires = processed.filter(function(f) { return f.commune === c.commune; });
 
@@ -1672,6 +1685,7 @@ var PLOTLY_COLORS = {
 };
 
 function initStats() {
+  if (!processed) return;
   // Summary cards
   var totalFires = processed.length;
   var totalSurface = processed.reduce(function(s, f) { return s + f.surface_ha; }, 0);
@@ -1775,15 +1789,19 @@ function initStats() {
 // ═══════════════════════════════════════════════
 // STARTUP
 // ═══════════════════════════════════════════════
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', function() {
-    initMap();
-    mapInitialized = true;
-  });
-} else {
-  initMap();
-  mapInitialized = true;
-}
+// Map initialization is triggered once data/incendies_verified.json has
+// loaded successfully. Also guard against the case where the DOM becomes
+// ready after the fetch has already finished.
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.RAW_DATA && !mapInitialized) {
+    try {
+      initMap();
+      mapInitialized = true;
+    } catch (e) {
+      console.error('Map initialization error', e);
+    }
+  }
+});
 
 
 
